@@ -1,0 +1,16 @@
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\VideoSteganography.exe.config
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\VideoSteganography.exe
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\VideoSteganography.pdb
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\VideoSteganography.csproj.AssemblyReference.cache
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\VideoSteganography.csproj.SuggestedBindingRedirects.cache
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\VideoSteganography.Form1.resources
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\VideoSteganography.Properties.Resources.resources
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\VideoSteganography.csproj.GenerateResource.cache
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\VideoSteganography.csproj.CoreCompileInputs.cache
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\VideoSteganography.exe
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\VideoSteganography.pdb
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\Interop.WMPLib.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\AxInterop.WMPLib.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\Interop.WMPLib.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\AxInterop.WMPLib.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\obj\Debug\VideoSteganography.csproj.ResolveComReference.cache
