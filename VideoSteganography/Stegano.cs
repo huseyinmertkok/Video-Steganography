@@ -15,9 +15,6 @@ namespace VideoSteganography
         { 
         }
 
-        //------------------------------------------------------GETTERS & SETTERS------------------------------------------------------
-
-        //cover text
         public void setCoverText(string coverText)
         {
             this.coverText = coverText;
@@ -28,7 +25,7 @@ namespace VideoSteganography
             return this.coverText;
         }
 
-        //coveredMessage
+        
         public void setCoveredMessage(string coveredMessage)
         {
             this.coveredMessage = coveredMessage;

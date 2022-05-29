@@ -1,0 +1,19 @@
+<FileList>
+  <File Reference = "VisioForge.Core.dll">
+    <ToolboxItems UIFramework="WPF" VSCategory="VisioForge" BlendCategory="VisioForge">
+      <Item Type="VisioForge.Core.UI.WPF.VideoView" />
+      <Item Type="VisioForge.Core.UI.WPF.VolumeMeterPro.SpectrumAnalyzer" />
+      <Item Type="VisioForge.Core.UI.WPF.VolumeMeterPro.VolumeMeter" />
+      <Item Type="VisioForge.Core.UI.WPF.VolumeMeterPro.WaveformPainter" />
+    </ToolboxItems>
+  </File>
+
+  <File Reference = "VisioForge.Core.dll">
+    <ToolboxItems UIFramework="WinForms" VSCategory="VisioForge" BlendCategory="VisioForge">
+      <Item Type="VisioForge.Core.UI.WinForms.VideoView" />
+      <Item Type="VisioForge.Core.UI.WinForms.VolumeMeterPro.VolumeMeter" />
+      <Item Type="VisioForge.Core.UI.WinForms.VolumeMeterPro.WaveformPainter" />
+      <Item Type="VisioForge.Core.UI.WinForms.PeakMeterCtrl" />
+    </ToolboxItems>
+  </File>
+</FileList>
