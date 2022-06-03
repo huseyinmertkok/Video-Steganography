@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone ="yes"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+	<assemblyIdentity name="Leadtools.Multimedia" version="22.0.0.0"/>
+	<trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+		<security>
+			<requestedPrivileges>
+				<requestedExecutionLevel level="asInvoker" uiAccess="false" />
+			</requestedPrivileges>
+		</security>
+	</trustInfo>
+	<file name="ltmm22.dll" hashalg="SHA1">
+		<typelib tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" version="1.0" helpdir="" flags="hasdiskimage"/>
+		<comClass clsid="{00220019-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCapture Class" threadingModel="both"/>
+		<comClass clsid="{0022001A-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCaptureCtrl Class" threadingModel="both" miscStatusContent="recomposeonresize,cantlinkinside,insideout,activatewhenvisible,setclientsitefirst"/>
+		<comClass clsid="{0022001B-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCaptureInput Class" threadingModel="both"/>
+		<comClass clsid="{0022001C-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCaptureInputs Class" threadingModel="both"/>
+		<comClass clsid="{00220037-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCaptureSize Class" threadingModel="both"/>
+		<comClass clsid="{00220038-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCaptureSizes Class" threadingModel="both"/>
+		<comClass clsid="{00220087-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmVideoFormat Class" threadingModel="both"/>
+		<comClass clsid="{00220088-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmVideoFormats Class" threadingModel="both"/>
+		<comClass clsid="{00220078-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmAudioFormat Class" threadingModel="both"/>
+		<comClass clsid="{00220079-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmAudioFormats Class" threadingModel="both"/>
+		<comClass clsid="{00220071-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCaptureSubType Class" threadingModel="both"/>
+		<comClass clsid="{00220072-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCaptureSubTypes Class" threadingModel="both"/>
+		<comClass clsid="{00220041-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmTargetFormat Class" threadingModel="both"/>
+		<comClass clsid="{00220042-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmTargetFormats Class" threadingModel="both"/>
+		<comClass clsid="{0022001D-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCompressor Class" threadingModel="both"/>
+		<comClass clsid="{0022001E-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCompressors Class" threadingModel="both"/>
+		<comClass clsid="{0022001F-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmConvert Class" threadingModel="both"/>
+		<comClass clsid="{00220020-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmConvertCtrl Class" threadingModel="both" miscStatusContent="recomposeonresize,cantlinkinside,insideout,activatewhenvisible,invisibleatruntime,setclientsitefirst"/>
+		<comClass clsid="{00220021-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmDevice Class" threadingModel="both"/>
+		<comClass clsid="{00220022-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmDevices Class" threadingModel="both"/>
+		<comClass clsid="{00220047-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmTargetDevice Class" threadingModel="both"/>
+		<comClass clsid="{00220048-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmTargetDevices Class" threadingModel="both"/>
+		<comClass clsid="{0022002F-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmRenderer Class" threadingModel="both"/>
+		<comClass clsid="{00220030-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmRenderers Class" threadingModel="both"/>
+		<comClass clsid="{00220023-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmMediaSample Class" threadingModel="both"/>
+		<comClass clsid="{00220024-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmMediaType Class" threadingModel="both"/>
+		<comClass clsid="{00220025-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmPlay Class" threadingModel="both"/>
+		<comClass clsid="{00220026-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmPlayCtrl Class" threadingModel="both" miscStatusContent="recomposeonresize,cantlinkinside,insideout,activatewhenvisible,setclientsitefirst"/>
+		<comClass clsid="{00220027-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmProcessor Class" threadingModel="both"/>
+		<comClass clsid="{00220028-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmProcessors Class" threadingModel="both"/>
+		<comClass clsid="{00220029-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmSampleSource Class" threadingModel="both"/>
+		<comClass clsid="{00220064-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmMultiStreamSource Class" threadingModel="both"/>
+		<comClass clsid="{0022002A-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmSampleTarget Class" threadingModel="both"/>
+		<comClass clsid="{00220066-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmMultiStreamTarget Class" threadingModel="both"/>
+		<comClass clsid="{0022003D-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmVCRControl Class" threadingModel="both"/>
+		<comClass clsid="{0022007C-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmDVDControl Class" threadingModel="both"/>
+		<comClass clsid="{00220069-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmCameraControl Class" threadingModel="both"/>
+		<comClass clsid="{00220081-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmVideoProcAmp Class" threadingModel="both"/>
+		<comClass clsid="{00220055-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmWMMutualExclusion Class" threadingModel="both"/>
+		<comClass clsid="{00220053-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmWMStreamConfig Class" threadingModel="both"/>
+		<comClass clsid="{00220051-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmWMProfile Class" threadingModel="both"/>
+		<comClass clsid="{0022004F-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmWMProfileManager Class" threadingModel="both"/>
+		<comClass clsid="{002200AD-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmDVDSubpictureStream Class" threadingModel="both"/>
+		<comClass clsid="{002200AB-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmDVDAudioStream Class" threadingModel="both"/>
+		<comClass clsid="{002200A9-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmDVDChapter Class" threadingModel="both"/>
+		<comClass clsid="{002200A7-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmDVDTitle Class" threadingModel="both"/>
+		<comClass clsid="{002200A5-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmDVDSource Class" threadingModel="both"/>
+		<comClass clsid="{002200B3-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmDVDPlaylistParser Class" threadingModel="both"/>
+		<comClass clsid="{00220057-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmTVTuner Class" threadingModel="both"/>
+		<comClass clsid="{0022008B-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmAnalogVideoDecoder Class" threadingModel="both"/>
+		<comClass clsid="{00220059-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmStreamMoniker Class" threadingModel="both"/>
+		<comClass clsid="{0022005B-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmMemory Class" threadingModel="both"/>
+		<comClass clsid="{0022005E-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmAudioInput Class" threadingModel="both"/>
+		<comClass clsid="{00220060-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmAudioInputs Class" threadingModel="both"/>
+		<comClass clsid="{0022006E-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmMediaInfo Class" threadingModel="both"/>
+		<comClass clsid="{002200A1-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmSupportManager Class" threadingModel="both"/>
+		<comClass clsid="{002200BE-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmFilterEnum Class" threadingModel="both"/>
+		<comClass clsid="{E2B7DF7D-38C5-11D5-91F6-00104BDB8FF9}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmNetworkProviderPropertyPage Class" threadingModel="both"/>
+		<comClass clsid="{C8F79FF7-2E6D-4F8F-A38D-81D2C0BD5112}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmAsfMuxPropertyPage Class" threadingModel="both"/>
+		<comClass clsid="{002200D2-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}" description="ltmmRTSPServer Class" threadingModel="both"/>
+		<comInterfaceProxyStub name="IltmmMediaType" iid="{0022000A-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"/>
+		<comInterfaceProxyStub name="IltmmObjectWrapper" iid="{00220009-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"/>
+		<comInterfaceProxyStub name="IltmmStreamMoniker" iid="{0022005A-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"/>
+	</file>
+	<comInterfaceExternalProxyStub name="IltmmWMScript" iid="{002200C6-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmDVDSubpictureStream" iid="{002200AE-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmDVDAudioStream" iid="{002200AC-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmDVDChapter" iid="{002200AA-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmDVDTitle" iid="{002200A8-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmDVDSource" iid="{002200A6-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmDVDPlaylistParser" iid="{002200B4-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmTVTuner1" iid="{00220058-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmTVTuner" iid="{002200BD-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmAnalogVideoDecoder" iid="{0022008C-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmAudioInput" iid="{0022005F-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmAudioInputs" iid="{00220061-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureInput" iid="{00220001-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureInputs1" iid="{00220002-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureInputs" iid="{0022008D-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureSize" iid="{00220039-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureSizes" iid="{0022003A-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmVideoFormat" iid="{00220089-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmVideoFormats" iid="{0022008A-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmAudioFormat" iid="{0022007A-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmAudioFormats" iid="{0022007B-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureSubType" iid="{00220073-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureSubTypes" iid="{00220074-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmTargetFormat1" iid="{00220043-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmTargetFormat2" iid="{00220093-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmTargetFormat" iid="{0022009B-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmTargetFormats1" iid="{00220044-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmTargetFormats2" iid="{00220094-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmTargetFormats" iid="{0022009C-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCompressor1" iid="{00220003-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCompressor" iid="{00220095-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCompressors1" iid="{00220004-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCompressors" iid="{00220096-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmDevice" iid="{00220005-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmDevices" iid="{00220006-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmRenderer" iid="{0022002D-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmRenderers" iid="{0022002E-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmTargetDevice" iid="{00220045-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmTargetDevices" iid="{00220046-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmProcessor1" iid="{00220007-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmProcessor" iid="{00220075-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmProcessors1" iid="{00220008-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmProcessors" iid="{002200BC-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMediaTypeDisp" iid="{0022000B-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmWMMutualExclusion" iid="{00220056-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmWMStreamConfig" iid="{00220054-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmWMProfile" iid="{00220052-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmWMProfileManager1" iid="{00220050-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmWMProfileManager" iid="{002200B9-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMediaSampleDisp1" iid="{0022000C-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMediaSampleDisp2" iid="{002200D3-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMediaSampleDisp" iid="{002200E1-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmSampleSource" iid="{0022000D-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMultiStreamSource" iid="{00220063-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmSampleTarget1" iid="{0022000E-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmSampleTarget" iid="{002200C9-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMultiStreamTarget1" iid="{00220065-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMultiStreamTarget" iid="{002200CA-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmVCRControl" iid="{0022003E-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmDVDControl" iid="{0022007E-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCameraControl" iid="{0022006A-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmVideoProcAmp" iid="{00220082-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture1" iid="{0022000F-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture2" iid="{0022002B-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture3" iid="{00220035-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture4" iid="{0022004B-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture5" iid="{00220067-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture6" iid="{00220076-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture7" iid="{00220083-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture8" iid="{00220099-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture9" iid="{002200B7-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture10" iid="{002200BA-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture11" iid="{002200CF-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture12" iid="{002200D4-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCapture" iid="{002200D8-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert1" iid="{00220010-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert2" iid="{00220033-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert3" iid="{0022003F-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert4" iid="{0022004D-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert5" iid="{0022006B-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert6" iid="{00220085-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert7" iid="{0022008F-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert8" iid="{00220097-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert9" iid="{0022009D-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert10" iid="{0022009F-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert11" iid="{002200A3-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert12" iid="{002200AF-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert13" iid="{002200B5-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert14" iid="{002200C0-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert15" iid="{002200C4-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert16" iid="{002200C7-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert17" iid="{002200CB-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert18" iid="{002200D6-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvert" iid="{002200DD-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay1" iid="{00220011-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay2" iid="{00220031-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay3" iid="{0022003B-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay4" iid="{00220049-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay5" iid="{0022006F-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay6" iid="{0022007F-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay7" iid="{00220091-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay8" iid="{002200B1-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay9" iid="{002200C1-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay10" iid="{002200CD-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay11" iid="{002200DB-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlay" iid="{002200DF-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl1" iid="{00220012-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl2" iid="{0022002C-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl3" iid="{00220036-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl4" iid="{0022004C-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl5" iid="{00220068-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl6" iid="{00220077-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl7" iid="{00220084-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl8" iid="{0022009A-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl9" iid="{002200B8-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl10" iid="{002200BB-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl11" iid="{002200D0-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl12" iid="{002200D5-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmCaptureCtrl" iid="{002200D9-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="_IltmmCaptureCtrlEvents" iid="{00220015-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl1" iid="{00220013-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl2" iid="{00220034-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl3" iid="{00220040-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl4" iid="{0022004E-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl5" iid="{0022006C-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl6" iid="{00220086-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl7" iid="{00220090-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl8" iid="{00220098-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl9" iid="{0022009E-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl10" iid="{002200A0-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl11" iid="{002200A4-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl12" iid="{002200B0-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl13" iid="{002200B6-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl14" iid="{002200C3-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl15" iid="{002200C5-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl16" iid="{002200C8-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl17" iid="{002200CC-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl18" iid="{002200D7-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmConvertCtrl" iid="{002200DE-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="_IltmmConvertCtrlEvents" iid="{00220016-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl1" iid="{00220014-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl2" iid="{00220032-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl3" iid="{0022003C-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl4" iid="{0022004A-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl5" iid="{00220070-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl6" iid="{00220080-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl7" iid="{00220092-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl8" iid="{002200B2-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl9" iid="{002200C2-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl10" iid="{002200CE-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl11" iid="{002200DC-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmPlayCtrl" iid="{002200E0-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="_IltmmPlayCtrlEvents" iid="{00220018-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMemory" iid="{0022005C-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMediaInfo1" iid="{0022006D-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMediaInfo2" iid="{0022008E-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmMediaInfo" iid="{002200DA-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmSupportManager" iid="{002200A2-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmFilterEnum" iid="{002200BF-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+	<comInterfaceExternalProxyStub name="IltmmRTSPServer" iid="{002200D1-B1BA-11CE-ABC6-F5B2E79D9E3F}" tlbid="{00220000-B1BA-11CE-ABC6-F5B2E79D9E3F}"  proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+</assembly>

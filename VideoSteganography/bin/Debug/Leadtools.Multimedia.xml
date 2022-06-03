@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Leadtools.Multimedia</name>
+  </assembly>
+  <members>
+    <member name="T:Leadtools.Multimedia.ConvertVideoOptions">
+      <summary>Options to use when converting an uploaded video resource.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.ConvertVideoOptions.#ctor">
+      <summary>Initializes a new instance of the VideoViewer.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.ConvertVideoOptions.preFetch">
+      <summary>Callback function that will fire before the toolkit fires a fetch request.</summary>
+    </member>
+    <member name="P:Leadtools.Multimedia.ConvertVideoOptions.chunkSize">
+      <summary>The chunk size to use when uploading the document.  Default value is 64 * 1024.</summary>
+    </member>
+    <member name="T:Leadtools.Multimedia.MultimediaFactory">
+      <summary>The MultimediaFactory is the main interface used for retrieving HTML5-safe multimedia resources.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.MultimediaFactory.convertVideo">
+      <summary>Converts an uploaded video resource to a web-compatible URL.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.MultimediaFactory.convertVideo">
+      <summary>Deletes any cached resources associated with a video source.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.MultimediaFactory.getPlayableUrl">
+      <summary>Retrieves a URL for a video source in a format that is web-compatible.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.MultimediaFactory.getPlayableUrlAsync">
+      <summary>Retrieves a URL for a video source in a format that is web-compatible.</summary>
+    </member>
+    <member name="T:Leadtools.Multimedia.VideoViewer">
+      <summary>VideoViewer is the main class used by the Leadtools.Multimedia library for HTML5 multimedia viewing.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.VideoViewer.#ctor">
+      <summary>Initializes a new instance of the VideoViewer.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.VideoViewer.clear">
+      <summary>Clears the current video element from the viewer.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.VideoViewer.dispose">
+      <summary>Disposes of all resources that the `VideoViewer` instance is using.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.VideoViewer.setVideo">
+      <summary>Creates a new video element based off the source uri.</summary>
+    </member>
+    <member name="P:Leadtools.Multimedia.VideoViewer.containerClass">
+      <summary>The CSS class that will be applied to the `viewerContainer` element.</summary>
+    </member>
+    <member name="P:Leadtools.Multimedia.VideoViewer.rootElement">
+      <summary>The element where the viewer is created into.</summary>
+    </member>
+    <member name="P:Leadtools.Multimedia.VideoViewer.video">
+      <summary>The current video element that is loaded into the viewer.</summary>
+    </member>
+    <member name="P:Leadtools.Multimedia.VideoViewer.videoClass">
+      <summary>The CSS class that will be applied to the `video` element.</summary>
+    </member>
+    <member name="P:Leadtools.Multimedia.VideoViewer.viewerElement">
+      <summary>The element associated with the viewer.</summary>
+    </member>
+    <member name="T:Leadtools.Multimedia.ServiceOptions">
+      <summary>Interface describing service related options.</summary>
+    </member>
+    <member name="M:Leadtools.Multimedia.ServiceOptions.preFetch">
+      <summary>Callback function that will fire before the toolkit fires a fetch request.</summary>
+    </member>
+    <member name="T:Leadtools.Multimedia.VideoViewerCreateOptions">
+      <summary>Options that are used to create a new instance of the `VideoViewer`.</summary>
+    </member>
+  </members>
+</doc>

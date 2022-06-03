@@ -1,0 +1,1111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Leadtools.Drawing</name>
+  </assembly>
+  <members>
+    <member name="T:Leadtools.Drawing.RasterColorConverter">
+      <summary>Converts between LEADTOOLS Leadtools.RasterColor and System.Drawing (GDI+) System.Drawing.Color objects.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterColorConverter.FromColor(Color)">
+      <summary>Converts a System.Drawing (GDI+) System.Drawing.Color object to a LEADTOOLS Leadtools.RasterColor object.</summary>
+      <param name="color">The source System.Drawing (GDI+) color.</param>
+      <returns>The corresponding LEADTOOLS Leadtools.RasterColor object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterColorConverter.ToColor(Leadtools.RasterColor)">
+      <summary>Converts a LEADTOOLS Leadtools.RasterColor object to a System.Drawing (GDI+) System.Drawing.Color object.</summary>
+      <param name="color">The source LEADTOOLS Leadtools.RasterColor color.</param>
+      <returns>The System.Drawing (GDI+) System.Drawing.Color object.</returns>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterGraphics">
+      <summary>Represents a GDI+ System.Drawing.Graphics object using a Leadtools.RasterImage as the display surface.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterGraphics.Dispose">
+      <summary>Releases all the resources used by this RasterGraphics.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterGraphics.Dispose(System.Boolean)">
+      <summary>Releases all the resources used by this RasterGraphics.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterGraphics.Finalize">
+      <summary>This member overrides System.Object.Finalize.</summary>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterGraphics.Graphics">
+      <summary>Gets the GDI+ System.Drawing.Graphics object that represents the display surface of the Leadtools.RasterImage.</summary>
+      <value>A GDI+ System.Drawing.Graphics object that represents the display surface of the Leadtools.RasterImage.</value>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterImageConverter">
+      <summary>Converts a LEADTOOLS Leadtools.RasterImage to and from GDI and GDI+ image objects.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeFromEmf(System.IntPtr,System.Int32,System.Int32)">
+      <summary>Changes a Windows Enhanced Metafile (EMF) into a LEADTOOLS Leadtools.RasterImage object and, if successful, frees the Enhanced Metafile.</summary>
+      <param name="hemf">Handle to the EMF to be changed.</param>
+      <param name="width">Amount by which to scale the enhanced metafile's original width.</param>
+      <param name="height">Amount by which to scale the enhanced metafile's original height.</param>
+      <returns>The newly created Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeFromEmf(System.IntPtr,System.Int32,System.Int32,Leadtools.RasterColor)">
+      <summary>Changes a Windows Enhanced Metafile (EMF) into a LEADTOOLS Leadtools.RasterImage object and, if successful, frees the Enhanced Metafile.</summary>
+      <param name="hemf">Handle to the EMF to be changed.</param>
+      <param name="width">Amount by which to scale the enhanced metafile's original width.</param>
+      <param name="height">Amount by which to scale the enhanced metafile's original height.</param>
+      <param name="backColor">The color to use to fill the image area before painting the metafile objects.</param>
+      <returns>The newly created Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeFromHBitmap(System.IntPtr,System.IntPtr)">
+      <summary>Changes a Windows Device-Dependent Bitmap (DDB) to a LEADTOOLS Leadtools.RasterImage object.</summary>
+      <param name="hbitmap">Handle to the DDB to be changed.</param>
+      <param name="hpalette">Handle to the palette. This value can be IntPtr.Zero if the \hbitmap\ parameter refers to a bitmap that is greater than 8 bits, or if the bitmap will use the system palette.</param>
+      <returns>The newly created Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeFromHBitmap(System.IntPtr,System.IntPtr,System.IntPtr)">
+      <summary>Changes a Windows Device-Dependent Bitmap (DDB) to a LEADTOOLS Leadtools.RasterImage object.</summary>
+      <param name="hdc">Handle to the device responsible for the conversion. The mapping mode of the device context must be MM_TEXT.</param>
+      <param name="hbitmap">Handle to the DDB to be changed.</param>
+      <param name="hpalette">Handle to the palette. This value can be IntPtr.Zero if the \hdc\ parameter refers to a device that is greater than 8 bits, or if the bitmap will use the system palette.</param>
+      <returns>The newly create Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeFromWmf(System.IntPtr,System.Int32,System.Int32)">
+      <summary>Changes a Windows Metafile (WMF) into a LEADTOOLS Leadtools.RasterImage object and, if successful, frees the Metafile.</summary>
+      <param name="hwmf">Handle to the WMF to be changed.</param>
+      <param name="width">Amount by which to scale the metafiles original width.</param>
+      <param name="height">Amount by which to scale the metafiles original height.</param>
+      <returns>The newly create Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeFromWmf(System.IntPtr,System.Int32,System.Int32,Leadtools.RasterColor)">
+      <summary>Changes a Windows Metafile (WMF) into a LEADTOOLS Leadtools.RasterImage object and, if successful, frees the Metafile.</summary>
+      <param name="hwmf">Handle to the WMF to be changed.</param>
+      <param name="width">Amount by which to scale the metafiles original width.</param>
+      <param name="height">Amount by which to scale the metafiles original height.</param>
+      <param name="backColor">The color to use to fill the image area before painting the metafile objects.</param>
+      <returns>The newly created Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeToEmf(Leadtools.RasterImage)">
+      <summary>Changes a LEADTOOLS Leadtools.RasterImage object into a Windows Enhanced Metafile (EMF) and, if successful, frees the image data.</summary>
+      <param name="image">The source image.</param>
+      <returns>A handle to the Windows enhanced metafile (EMF) this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeToHBitmap(Leadtools.RasterImage)">
+      <summary>Changes a LEADTOOLS Leadtools.RasterImage object to a Windows Device-Dependent Bitmap (DDB).</summary>
+      <param name="image">The source image.</param>
+      <returns>A handle to the device dependent bitmap (DDB) this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeToHBitmap(Leadtools.RasterImage,System.IntPtr)">
+      <summary>Changes a LEADTOOLS Leadtools.RasterImage object to a Windows Device-Dependent Bitmap (DDB).</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">Handle to the device responsible for the conversion. The mapping mode of the device context must be MM_TEXT.</param>
+      <returns>A handle to the device dependent bitmap (DDB) this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeToImage(Leadtools.RasterImage,Leadtools.Drawing.ChangeToImageOptions)">
+      <summary>Changes a LEADTOOLS Leadtools.RasterImage to a GDI+ System.Drawing.Image.</summary>
+      <param name="image">The source image.</param>
+      <param name="options">The conversion options.</param>
+      <returns>The GDI+ image that this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ChangeToWmf(Leadtools.RasterImage)">
+      <summary>Changes a LEADTOOLS Leadtools.RasterImage object into a Windows Metafile (WMF) and, if successful, frees the image data.</summary>
+      <param name="image">The source image.</param>
+      <returns>A handle to the Windows metafile (WMF) this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ConvertFromImage(Image,Leadtools.Drawing.ConvertFromImageOptions)">
+      <summary>Creates a new Leadtools.RasterImage from the specified existing GDI+ System.Drawing.Image object.</summary>
+      <param name="image">The System.Drawing.Image from which to create the new Leadtools.RasterImage.</param>
+      <param name="options">The conversion options.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ConvertToImage(Leadtools.RasterImage,Leadtools.Drawing.ConvertToImageOptions)">
+      <summary>Converts a LEADTOOLS Leadtools.RasterImage to a GDI+ System.Drawing.Image.</summary>
+      <param name="image">The source image.</param>
+      <param name="options">The conversion options.</param>
+      <returns>The GDI+ image this method creates</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.FromEmf(System.IntPtr,System.Int32,System.Int32)">
+      <summary>Converts an Enhanced Windows Metafile (EMF) into a LEADTOOLS Leadtools.RasterImage object.</summary>
+      <param name="hemf">Handle to the EMF to be converted.</param>
+      <param name="width">Amount by which to scale the enhanced metafiles original width.</param>
+      <param name="height">Amount by which to scale the enhanced metafiles original height.</param>
+      <returns>The newly created Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.FromEmf(System.IntPtr,System.Int32,System.Int32,Leadtools.RasterColor)">
+      <summary>Converts an Enhanced Windows Metafile (EMF) into a LEADTOOLS Leadtools.RasterImage object.</summary>
+      <param name="hemf">Handle to the EMF to be converted.</param>
+      <param name="width">Amount by which to scale the enhanced metafiles original width.</param>
+      <param name="height">Amount by which to scale the enhanced metafiles original height.</param>
+      <param name="backColor">The color to use to fill the image area before painting the metafile objects.</param>
+      <returns>The newly created Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.FromHBitmap(System.IntPtr,System.IntPtr)">
+      <summary>Creates a new Leadtools.RasterImage from the specified Windows Device-Dependent Bitmap (DDB).</summary>
+      <param name="hbitmap">Handle to the Windows DDB.</param>
+      <param name="hpalette">Handle to the Windows palette. This value can be IntPtr.Zero if the DDB is dependent on a device that is greater than 8 bits, or if the image will use the system palette.</param>
+      <returns>The newly create Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.FromHBitmap(System.IntPtr,System.IntPtr,System.IntPtr)">
+      <summary>Creates a new Leadtools.RasterImage from the specified Windows Device-Dependent Bitmap (DDB).</summary>
+      <param name="hdc">Handle to the Windows device context responsible for the conversion. The mapping mode of the device context must be MM_TEXT.</param>
+      <param name="hbitmap">Handle to the Windows DDB.</param>
+      <param name="hpalette">Handle to the Windows palette. This value can be IntPtr.Zero if the DDB is dependent on a device that is greater than 8 bits, or if the image will use the system palette.</param>
+      <returns>The newly created Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.FromWmf(System.IntPtr,System.Int32,System.Int32)">
+      <summary>Converts a Windows Metafile (WMF) into a LEADTOOLS Leadtools.RasterImage object.</summary>
+      <param name="hwmf">Handle to the WMF to be converted.</param>
+      <param name="width">Amount by which to scale the metafile's original width.</param>
+      <param name="height">Amount by which to scale the metafile's original height.</param>
+      <returns>The newly created Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.FromWmf(System.IntPtr,System.Int32,System.Int32,Leadtools.RasterColor)">
+      <summary>Converts a Windows Metafile (WMF) into a LEADTOOLS Leadtools.RasterImage object.</summary>
+      <param name="hwmf">Handle to the WMF to be converted.</param>
+      <param name="width">Amount by which to scale the metafile's original width.</param>
+      <param name="height">Amount by which to scale the metafile's original height.</param>
+      <param name="backColor">The color to use to fill the image area before painting the metafile objects.</param>
+      <returns>The newly created Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.GetNearestBitsPerPixel(PixelFormat)">
+      <summary>Gets the nearest bits per pixel value supported by LEADTOOLS for the specified GDI+ pixel format.</summary>
+      <param name="pixelFormat">The input pixel format.</param>
+      <returns>The nearest bits per pixel value supported by LEAD for the specified image pixel format.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.GetNearestPixelFormat(Leadtools.RasterImage)">
+      <summary>Gets the GDI+ System.Drawing.Imaging.PixelFormat that is closest to a source Leadtools.RasterImage data.</summary>
+      <param name="image">The source image.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ImagePhysicalSize(Leadtools.RasterImage,Graphics)">
+      <summary>Gets a Leadtools.RasterImage's dimensions corrected for resolution (DPI).</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The reference System.Drawing.Graphics object.</param>
+      <returns>This Leadtools.RasterImage dimensions corrected for resolution (DPI)</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.IsValidBitsPerPixel(System.Int32)">
+      <summary>Determines whether the specified bits per pixel value supported by LEADTOOLS is compatible with GDI+.</summary>
+      <param name="bitsPerPixel">The input bits per pixel value.</param>
+      <returns>true if \bitsPerPixel\ is compatible with GDI+, otherwise it is false.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.MakeCompatible(Leadtools.RasterImage,PixelFormat,System.Boolean)">
+      <summary>Makes a Leadtools.RasterImage GDI+ compatible.</summary>
+      <param name="image">The source image.</param>
+      <param name="pixelFormat">The pixel format to use.</param>
+      <param name="noPalette">Fails if the image is palletized.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.TestCompatible(Leadtools.RasterImage,System.Boolean)">
+      <summary>Tests a Leadtools.RasterImage to see if it is compatible with the GDI+ Image.</summary>
+      <param name="image">The source image.</param>
+      <param name="noPalette">Fails if the image is palletized.</param>
+      <returns>Value indicating the compatibility.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ToEmf(Leadtools.RasterImage)">
+      <summary>Converts a LEADTOOLS Leadtools.RasterImage object into a Windows Enhanced Metafile (EMF).</summary>
+      <param name="image">The source image.</param>
+      <returns>A handle to the Windows enhanced metafile (EMF) this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ToHBitmap(Leadtools.RasterImage)">
+      <summary>Creates a Windows Device-Dependent Bitmap (DDB) from a Leadtools.RasterImage.</summary>
+      <param name="image">The source image</param>
+      <returns>A handle to the Windows DDB this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ToHBitmap(Leadtools.RasterImage,System.IntPtr)">
+      <summary>Creates a Windows Device-Dependent Bitmap (DDB) from a Leadtools.RasterImage.</summary>
+      <param name="image">The source image</param>
+      <param name="hdc">Handle to the Windows device responsible for the conversion. The mapping mode of the device context must be MM_TEXT.</param>
+      <returns>A handle to the Windows DDB this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageConverter.ToWmf(Leadtools.RasterImage)">
+      <summary>Converts a LEADTOOLS Leadtools.RasterImage object into a Windows Metafile (WMF).</summary>
+      <param name="image">The source image.</param>
+      <returns>A handle to the Windows metafile (WMF) this method creates.</returns>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterImageGdiPlusGraphicsContainer">
+      <summary>Encapsulates a GDI+ object used when creating a System.Drawing.Graphics surface of a Leadtools.RasterImage.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageGdiPlusGraphicsContainer.#ctor(Leadtools.RasterImage)">
+      <summary>Creates a new instance of the RasterImageGdiPlusGraphicsContainer class from a Leadtools.RasterImage.</summary>
+      <param name="image">The source Leadtools.RasterImage.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageGdiPlusGraphicsContainer.Dispose">
+      <summary>Releases all the resources used by this RasterImageGdiPlusGraphicsContainer.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageGdiPlusGraphicsContainer.Dispose(System.Boolean)">
+      <summary>Releases all the resources used by this RasterImageGdiPlusGraphicsContainer.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImageGdiPlusGraphicsContainer.Finalize">
+      <summary>This member overrides System.Object.Finalize.</summary>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterImageGdiPlusGraphicsContainer.Graphics">
+      <summary>Gets the System.Drawing.Graphics object associated with this RasterImageGdiPlusGraphicsContainer.</summary>
+      <value>The System.Drawing.Graphics object associated with this RasterImageGdiPlusGraphicsContainer.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterImageGdiPlusGraphicsContainer.Image">
+      <summary>Gets the System.Drawing.Image object associated with this RasterImageGdiPlusGraphicsContainer.</summary>
+      <value>The System.Drawing.Image object associated with this RasterImageGdiPlusGraphicsContainer.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterImageGdiPlusGraphicsContainer.Region">
+      <summary>Gets the System.Drawing.Region object associated with this RasterImageGdiPlusGraphicsContainer.</summary>
+      <value>The System.Drawing.Region object associated with this RasterImageGdiPlusGraphicsContainer.</value>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterImagePainter">
+      <summary>Support for painting a LEADTOOLS Leadtools.RasterImage using GDI and GDI+ platforms.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.CreateGraphics(Leadtools.RasterImage)">
+      <summary>Creates a GDI+ System.Drawing.Graphics object using this Leadtools.RasterImage as the display surface.</summary>
+      <param name="image">The source image.</param>
+      <returns>The GDI+ System.Drawing.Graphics object this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.CreateLeadDC(Leadtools.RasterImage)">
+      <summary>Creates a Windows GDI device context using this Leadtools.RasterImage as the display surface.</summary>
+      <param name="image">The source image.</param>
+      <returns>The Windows HDC object this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.DeleteLeadDC(System.IntPtr)">
+      <summary>Deletes the device context that was created using the CreateLeadDC method.</summary>
+      <param name="hdc">Handle to a device context that was created using the CreateLeadDC method.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.FillRegion(Leadtools.RasterImage,Graphics,Leadtools.RasterRegionXForm,Leadtools.RasterColor)">
+      <summary>Highlights a region by displaying a filled, color representation of the region in the given System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">Graphics object where the image is displayed and where the frame is to appear.</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates.</param>
+      <param name="color">The color value to be XORed with colors within a region to determine the new colors for displaying the region. The color corresponding to a particular part of the region is determined as follows: `Region Color Displayed = (color of pixel in region) XOR (crRgnColor)`</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.FillRegion(Leadtools.RasterImage,System.IntPtr,Leadtools.RasterRegionXForm,Leadtools.RasterColor)">
+      <summary>Highlights a region by displaying a filled, color representation of the region in the given Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">Windows device context handle where the image is displayed and where the frame is to appear.</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates.</param>
+      <param name="color">The color value to be XORed with colors within a region to determine the new colors for displaying the region. The color corresponding to a particular part of the region is determined as follows: `Region Color Displayed = (color of pixel in region) XOR (crRgnColor)`</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.FrameRegion(System.IntPtr,Graphics,System.Int32)">
+      <summary>Displays an outline of the Windows HRGN in the given System.Drawing.Graphics object.</summary>
+      <param name="hrgn">Windows HRGN object.</param>
+      <param name="graphics">System.Drawing.Graphics object where the frame is to appear.</param>
+      <param name="frameIndex">Zero-index of the frame to display. Possible values are from 0 to MaxRegionFrameIndex. You can animate the region frame by cycling between these values.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.FrameRegion(Leadtools.RasterImage,Graphics,Leadtools.RasterRegionXForm,System.Int32)">
+      <summary>Displays an outline of the image region in the given System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">System.Drawing.Graphics object where the image is displayed and where the frame is to appear.</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates.</param>
+      <param name="frameIndex">Zero-index of the frame to display. Possible values are from 0 to MaxRegionFrameIndex. You can animate the region frame by cycling between these values.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.FrameRegion(Leadtools.RasterImage,System.IntPtr,Leadtools.RasterRegionXForm,System.Int32)">
+      <summary>Displays an outline of the image region in the given Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">Windows device context handle where the image is displayed and where the frame is to appear.</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates.</param>
+      <param name="frameIndex">Zero-index of the frame to display. Possible values are from 0 to MaxRegionFrameIndex. You can animate the region frame by cycling between these values.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.GetPaintColors(Leadtools.RasterImage,Graphics)">
+      <summary>Returns a palette corresponding to this Leadtools.RasterImage if painted on the given graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The graphics object on which this image is painted.</param>
+      <returns>An array of color for the palette</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.GetPaintHPalette(Leadtools.RasterImage,System.IntPtr)">
+      <summary>Returns a Windows palette handle corresponding to this Leadtools.RasterImage if painted on the given device context.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The device context object on which this Leadtools.RasterImage is painted.</param>
+      <returns>A Windows palette handle (HPALETTE). You must delete this palette with the Windows DeleteObject API after using it.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.GetPaintPalette(Leadtools.RasterImage,Graphics)">
+      <summary>Returns a GDI+ palette corresponding to this Leadtools.RasterImage if painted on the given graphic object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The graphics object on which this Leadtools.RasterImage is painted.</param>
+      <returns>a GDI+ palette</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.Paint(Leadtools.RasterImage,Graphics,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Displays this Leadtools.RasterImage in the given System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The destination System.Drawing.Graphics object where the image will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object that specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">Leadtools.LeadRect</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.Paint(Leadtools.RasterImage,Graphics,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Displays this Leadtools.RasterImage in the given System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The destination System.Drawing.Graphics object where the image will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="destRect">Leadtools.LeadRect</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.Paint(Leadtools.RasterImage,Graphics,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Displays this Leadtools.RasterImage in the given System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The destination System.Drawing.Graphics object where the image will be displayed.</param>
+      <param name="destRect">Leadtools.LeadRect</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.Paint(Leadtools.RasterImage,System.IntPtr,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Displays this Leadtools.RasterImage in the given Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The destination Windows device context handle where the image will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object that specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">Leadtools.LeadRect</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.Paint(Leadtools.RasterImage,System.IntPtr,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Displays this Leadtools.RasterImage in the given Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The destination Windows device context where the image will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="destRect">Leadtools.LeadRect</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.Paint(Leadtools.RasterImage,System.IntPtr,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Displays this Leadtools.RasterImage in the given Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The destination Windows device context where the image will be displayed.</param>
+      <param name="destRect">Leadtools.LeadRect</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintBuffer(Leadtools.RasterImage,Graphics,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,System.Byte[],System.Int32,System.Int32,System.Int32,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints image data from a buffer into a System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The destination System.Drawing.Graphics object where the image data will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \graphics\ object.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="buffer">The buffer that contains the image data to paint</param>
+      <param name="bufferOffset">Offset into \buffer\ where the data starts.</param>
+      <param name="row">The first row to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="count">The number of rows to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintBuffer(Leadtools.RasterImage,Graphics,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,System.IntPtr,System.Int32,System.Int32,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints image data from an unmanaged memory buffer into a System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The destination System.Drawing.Graphics object where the image data will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \graphics\ object.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="buffer">Pointer to the unmanaged memory buffer that contains the image data to paint</param>
+      <param name="row">The first row to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="count">The number of rows to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintBuffer(Leadtools.RasterImage,System.IntPtr,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,System.Byte[],System.Int32,System.Int32,System.Int32,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints image data from a buffer into a Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The destination Windows device context handle where the image data will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \hdc\ handle.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="buffer">The buffer that contains the image data to paint</param>
+      <param name="bufferOffset">Offset into \buffer\ where the data starts.</param>
+      <param name="row">The first row to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="count">The number of rows to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintBuffer(Leadtools.RasterImage,System.IntPtr,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,System.IntPtr,System.Int32,System.Int32,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints image data from an unmanaged memory buffer into a Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The destination Windows device context handle where the image data will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \hdc\ handle.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="buffer">Pointer to the unmanaged memory buffer that contains the image data to paint</param>
+      <param name="row">The first row to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="count">The number of rows to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintCmykPlanes(Leadtools.RasterImage,Graphics,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties,System.Object)">
+      <summary>Displays the CMYK planes stored in the image in the given System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The destination System.Drawing.Graphics object where the CMYK planes will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \graphics\ object.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="properties">Options for the display.</param>
+      <param name="colorConverter">Optional RasterColorConverter object used to convert CMYK data to BGR during painting. Pass null (Nothing in VB) to let LEADTOOLS use the built-in color conversion functions.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintCmykPlanes(Leadtools.RasterImage,System.IntPtr,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties,System.Object)">
+      <summary>Displays the CMYK planes stored in the image in the given Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The destination Windows device context handle where the CMYK planes will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \hdc\ handle.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="properties">Options for the display.</param>
+      <param name="colorConverter">Optional RasterColorConverter object used to convert CMYK data to BGR during painting. Pass null (Nothing in VB) to let LEADTOOLS use the built-in color conversion functions.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintOverlay(Leadtools.RasterImage,Graphics,System.Int32,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints the overlay at the specified index. Use this method to paint overlays that are not automatically painted.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The destination graphics object where the image will be displayed.</param>
+      <param name="index">The index of the overlay used for painting. The overlay should have an image. If the overlay is embedded into an image bitplane, make sure you create an overlay image prior to calling this method. This index is zero-based.</param>
+      <param name="srcRect">Rectangle which determines the portion of the image to paint.</param>
+      <param name="srcClipRect">Rectangle which further clips the source image.</param>
+      <param name="destRect">Rectangle which determines where the image is placed, and how it is scaled.</param>
+      <param name="destClipRect">Rectangle which clips the image display.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintOverlay(Leadtools.RasterImage,System.IntPtr,System.Int32,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints the overlay at the specified index. Use this method to paint overlays that are not automatically painted.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The destination device context where the image will be displayed.</param>
+      <param name="index">The index of the overlay used for painting. The overlay should have an image. If the overlay is embedded into an image bitplane, make sure you create an overlay image prior to calling this method. This index is zero-based.</param>
+      <param name="srcRect">Rectangle which determines the portion of the image to paint.</param>
+      <param name="srcClipRect">Rectangle which further clips the source image.</param>
+      <param name="destRect">Rectangle which determines where the image is placed, and how it is scaled.</param>
+      <param name="destClipRect">Rectangle which clips the image display.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintRegion(Leadtools.RasterImage,Graphics,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints the image region to a System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The destination System.Drawing.Graphics object where the image region will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \graphics\ object.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintRegion(Leadtools.RasterImage,System.IntPtr,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints the image region to a Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The destination Windows device context handle where the image data will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \hdc\ handle.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintRegionBuffer(Leadtools.RasterImage,Graphics,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,System.Byte[],System.Int32,System.Int32,System.Int32,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints image region data from a buffer into a System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The destination System.Drawing.Graphics object where the image data will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \graphics\ object.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="buffer">The buffer that contains the image data to paint</param>
+      <param name="bufferOffset">Offset into \buffer\ where the data starts.</param>
+      <param name="row">The first row to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="count">The number of rows to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintRegionBuffer(Leadtools.RasterImage,Graphics,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,System.IntPtr,System.Int32,System.Int32,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints image region data from an unmanaged memory buffer into a System.Drawing.Graphics object.</summary>
+      <param name="image">The source image.</param>
+      <param name="graphics">The destination System.Drawing.Graphics object where the image data will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \graphics\ object.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="buffer">Pointer to the unmanaged memory buffer that contains the image data to paint</param>
+      <param name="row">The first row to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="count">The number of rows to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintRegionBuffer(Leadtools.RasterImage,System.IntPtr,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,System.Byte[],System.Int32,System.Int32,System.Int32,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints image region data from a buffer into a Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The destination Windows device context handle where the image data will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \hdc\ handle.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="buffer">The buffer that contains the image data to paint</param>
+      <param name="bufferOffset">Offset into \buffer\ where the data starts.</param>
+      <param name="row">The first row to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="count">The number of rows to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterImagePainter.PaintRegionBuffer(Leadtools.RasterImage,System.IntPtr,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,Leadtools.LeadRect,System.IntPtr,System.Int32,System.Int32,Leadtools.Drawing.RasterPaintProperties)">
+      <summary>Paints image region data from an unmanaged memory buffer into a Windows device context handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="hdc">The destination Windows device context handle where the image data will be displayed.</param>
+      <param name="srcRect">A Leadtools.LeadRect object that specifies the part of the image to use as the display source.</param>
+      <param name="srcClipRect">A Leadtools.LeadRect object specifies the portion of the display source to paint. Generally, this is used for updating the display when part of the source image has changed.</param>
+      <param name="destRect">A Leadtools.LeadRect object that determines how the source rectangle is scaled and how the image is positioned in the destination \hdc\ handle.</param>
+      <param name="destClipRect">A Leadtools.LeadRect object that specifies the portion of the display rectangle to paint. Generally, this is used for updating changes in the display surface, such as when a user moves another window, uncovering a part of the image that had been covered up.</param>
+      <param name="buffer">Pointer to the unmanaged memory buffer that contains the image data to paint</param>
+      <param name="row">The first row to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="count">The number of rows to paint. The painted portion of any row may be limited by the rectangle parameters.</param>
+      <param name="properties">Options for the display.</param>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePainter.MaxRegionFrameIndex">
+      <summary>Gets the maximum region frame index.</summary>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterPaintCallbacks">
+      <summary>The RasterPaintCallbacks class is used to implement custom painting. The RasterPaintProperties.PaintCallbacks property contains a list of such classes.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterPaintCallbacks.#ctor">
+      <summary>Constructs a new RasterPaintCallbacks class.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterPaintCallbacks.SetCallback(Leadtools.Drawing.RasterImagePaintCallbackFunction,Leadtools.Drawing.PaintCallbackDelegate)">
+      <summary>Adds a callback to the RasterPaintProperties.PaintCallbacks member.</summary>
+      <param name="functionType">The type of callback to add.</param>
+      <param name="functionPointer">The callback function.</param>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterPaintDibInfo">
+      <summary>This class describes the image data expected by the custom paint callbacks. It is used with the RasterPaintCallbacks callbacks.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterPaintDibInfo.#ctor">
+      <summary>Constructs a new RasterPaintDibInfo class.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterPaintDibInfo.Default">
+      <summary>Fills the RasterPaintCallbacks class with the default settings.</summary>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintDibInfo.BitsPerPixel">
+      <summary>Set or get the default bits per pixel of the data expected by the graphics device.</summary>
+      <value>Valid values are 0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 24, 32, 48, and 64.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintDibInfo.BytesPerLine">
+      <summary>Gets the expected stride (number of bytes per line).</summary>
+      <value>This is usually the number of bytes rounded up to a multiple of 4 bytes.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintDibInfo.Flags">
+      <summary>Collection of flags indicating various options for the bitmap.</summary>
+      <value>See the RasterPaintDibInfoFlags enumeration for possible values.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintDibInfo.HighBit">
+      <summary>Indicates the high bit of the image data (valid only for grayscale 12 or 16-bit data).</summary>
+      <value>Valid values are LowBit through BitsPerPixel - 1.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintDibInfo.LowBit">
+      <summary>Indicates the low bit of the image data (valid only for grayscale 12 or 16-bit data).</summary>
+      <value>Valid values are 0 through HighBit - 1.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintDibInfo.Order">
+      <summary>Indicates the data order (grayscale, BGR, RGB, etc).</summary>
+      <value>See the Leadtools.RasterByteOrder enumeration for valid values.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintDibInfo.PlaneCount">
+      <summary>Indicates whether the image data should be interleaved or planar.</summary>
+      <value>This is usually 1. If the image data is supposed to be planar, it can be the number of planes. It should be positive in any case.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintDibInfo.ViewPerspective">
+      <summary>Indicates the expected orientation of the image data.</summary>
+      <value>See the Leadtools.RasterViewPerspective enumeration for possible values.</value>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterRegionConverter">
+      <summary>Converts between a LEADTOOLS Leadtools.RasterRegion and GDI HRGN and System.Drawing (GDI+) System.Drawing.Region objects.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterRegionConverter.AddGdiDataToRegion(Leadtools.RasterImage,Leadtools.RasterRegionXForm,System.Byte[],System.Int32,Leadtools.RasterRegionCombineMode)">
+      <summary>Creates or updates a LEADTOOLS image region using the specified GDI+ region data.</summary>
+      <param name="image">The source image.</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates. If you specify **null** (**Nothing** in VB) for this parameter, the scalar fields default to 1, the offsets default to 0, and the view perspective defaults to the image view perspective.</param>
+      <param name="data">An array of System.Byte that defines the region to add.</param>
+      <param name="dataOffset">Byte offset into \data\ where the data starts.</param>
+      <param name="combineMode">The action to take regarding the existing image region, if one is defined.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterRegionConverter.AddGdiPlusDataToRegion(Leadtools.RasterImage,Leadtools.RasterRegionXForm,RegionData,Leadtools.RasterRegionCombineMode)">
+      <summary>Creates or updates a LEADTOOLS image region using the specified GDI+ region data.</summary>
+      <param name="image">The source image.</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates. If you specify **null** (**Nothing** in VB) for this parameter, the scalar fields default to 1, the offsets default to 0, and the view perspective defaults to the image view perspective.</param>
+      <param name="data">A System.Drawing.Drawing2D.RegionData object that defines the region to add.</param>
+      <param name="combineMode">The action to take regarding the existing image region, if one is defined.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterRegionConverter.AddRegionToRegion(Leadtools.RasterImage,Leadtools.RasterRegionXForm,System.IntPtr,Leadtools.RasterRegionCombineMode)">
+      <summary>Creates or updates a LEADTOOLS image region by adding the specified Windows region handle.</summary>
+      <param name="image">The source image.</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates. If you specify null (Nothing in VB) in this parameter, the scalar fields default to 1, the offsets default to 0, and the view perspective defaults to the image view perspective.</param>
+      <param name="region">The Windows region handle to add.</param>
+      <param name="combineMode">The action to take regarding the existing image region, if one is defined.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterRegionConverter.AddRegionToRegion(Leadtools.RasterImage,Leadtools.RasterRegionXForm,Region,Leadtools.RasterRegionCombineMode)">
+      <summary>Creates or updates a LEADTOOLS image region by adding the specified GDI+ region.</summary>
+      <param name="image">The source image.</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates. If you specify null (Nothing in VB) in this parameter, the scalar fields default to 1, the offsets default to 0, and the view perspective defaults to the image view perspective.</param>
+      <param name="region">The GDI+ region to add.</param>
+      <param name="combineMode">The action to take regarding the existing image region, if one is defined.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterRegionConverter.ConvertFromRegion(Region)">
+      <summary>Converts a System.Drawing (GDI+) System.Drawing.Region object to a LEADTOOLS Leadtools.RasterRegion.</summary>
+      <param name="region">The source GDI+ region. This parameter cannot be null (Nothing in VB).</param>
+      <returns>The LEADTOOLS Leadtools.RasterRegion object this method creates. You must dispose this object after using it.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterRegionConverter.ConvertFromRegionHandle(System.IntPtr)">
+      <summary>Converts a GDI HRGN object to a LEADTOOLS Leadtools.RasterRegion.</summary>
+      <param name="hrgn">The source GDI HRGN object. This parameter cannot be IntPtr.Zero.</param>
+      <returns>The LEADTOOLS Leadtools.RasterRegion object this method creates. You must dispose this object after using it.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterRegionConverter.ConvertToRegion(Leadtools.RasterRegion,Leadtools.RasterRegionXForm)">
+      <summary>Converts a LEADTOOLS Leadtools.RasterRegion to a System.Drawing (GDI+) System.Drawing.Region object.</summary>
+      <param name="region">The source LEADTOOLS region. This parameter cannot be null (Nothing in VB).</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates.</param>
+      <returns>The System.Drawing.Region object this method creates. You must dispose this object after using it.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterRegionConverter.ConvertToRegionHandle(Leadtools.RasterRegion,Leadtools.RasterRegionXForm)">
+      <summary>Converts a LEADTOOLS Leadtools.RasterRegion to a GDI HRGN object.</summary>
+      <param name="region">The source LEADTOOLS region. This parameter cannot be null (Nothing in VB).</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates.</param>
+      <returns>The GDI HRGN object this method creates. You must delete this object after using it using the Windows DeleteObject API.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterRegionConverter.GetGdiPlusRegionData(Leadtools.RasterImage,Leadtools.RasterRegionXForm)">
+      <summary>Gets the GDI+ data that describes the image region.</summary>
+      <param name="image">The source image.</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates. If you specify **null** (**Nothing** in VB) for this parameter, the scalar fields default to 1, the offsets default to 0, and the view perspective defaults to the image view perspective.</param>
+      <returns>A System.Drawing.Drawing2D.RegionData object that contains the information that describes the region in this Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterRegionConverter.GetGdiRegionData(Leadtools.RasterImage,Leadtools.RasterRegionXForm)">
+      <summary>Gets the GDI data that describes the image region.</summary>
+      <param name="image">The source image.</param>
+      <param name="xform">Leadtools.RasterRegionXForm object that LEADTOOLS uses to translate between display coordinates and image coordinates. If you specify **null** (**Nothing** in VB) for this parameter, the scalar fields default to 1, the offsets default to 0, and the view perspective defaults to the image view perspective.</param>
+      <returns>An array of System.Byte that contains the information that describes the region in this Leadtools.RasterImage object.</returns>
+    </member>
+    <member name="T:Leadtools.Drawing.RenderingEngineFactory">
+      <summary>Engine that can be used to render SVG documents to a GDI+ Graphics or Windows HDC object.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RenderingEngineFactory.Create">
+      <summary>Creates a new rendering engine from a GDI+ Graphics.</summary>
+      <returns>The newly created Leadtools.IRenderingEngine instance that is ready to be used.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RenderingEngineFactory.Create(Graphics)">
+      <summary>Creates a new rendering engine from a GDI+ Graphics.</summary>
+      <param name="graphics">Target GDI+ graphics object for the rendering. This cannot be **null**.</param>
+      <returns>The newly created Leadtools.IRenderingEngine instance that is ready to be used.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RenderingEngineFactory.Create(System.IntPtr)">
+      <summary>Creates a new rendering engine from a Windows HDC.</summary>
+      <param name="hdc">Windows HDC. This cannot be IntPtr.Zero.</param>
+      <returns>The newly created Leadtools.IRenderingEngine instance that is ready to be used.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.RenderingEngineFactory.Create(Leadtools.RasterImage)">
+      <summary>Creates a new rendering engine from RasterImage object.</summary>
+      <param name="image">RasterImage object. This cannot be null.</param>
+      <returns>The newly created Leadtools.IRenderingEngine instance that is ready to be used.</returns>
+    </member>
+    <member name="T:Leadtools.Drawing.Transformer">
+      <summary>Helper class used for converting physical to logical coordinates and vise-versa based on a given matrix.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.#ctor">
+      <summary>Creates a new instance of the Transformer class with default settings.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.#ctor(Matrix)">
+      <summary>Creates a new instance of the Transformer class with specific settings.</summary>
+      <param name="transform">The transformation matrix for this Transformer.</param>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.LengthToLogical(System.Single)">
+      <summary>Converts the specified length value from physical to logical coordinates.</summary>
+      <param name="length">The input physical length.</param>
+      <returns>The length converted from physical to logical coordinates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.LengthToPhysical(System.Single)">
+      <summary>Converts the specified length value from logical to physical coordinates.</summary>
+      <param name="length">The input logical length.</param>
+      <returns>The length converted from logical to physical coordinates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.PointToLogical(PointF)">
+      <summary>Converts the specified point from physical to logical coordinates.</summary>
+      <param name="pt">The input physical point.</param>
+      <returns>The point converted from physical to logical coordinates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.PointToLogical(PointF[])">
+      <summary>Converts the specified points from physical to logical coordinates.</summary>
+      <param name="pts">The input physical points.</param>
+      <returns>The points converted from physical to logical coordinates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.PointToPhysical(PointF)">
+      <summary>Converts the specified point from logical to physical coordinates.</summary>
+      <param name="pt">The input logical points.</param>
+      <returns>The point converted from logical to physical coordinates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.PointToPhysical(PointF[])">
+      <summary>Converts the specified points from logical to physical coordinates.</summary>
+      <param name="pts">The input logical points.</param>
+      <returns>The points converted from logical to physical coordinates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.RectangleToLogical(RectangleF)">
+      <summary>Converts the specified rectangle from physical to logical coordinates.</summary>
+      <param name="rc">The input physical rectangle.</param>
+      <returns>The rectangle converted from physical to logical coordinates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.RectangleToPhysical(RectangleF)">
+      <summary>Converts the specified rectangle from logical to physical coordinates.</summary>
+      <param name="rc">The input logical rectangle.</param>
+      <returns>The rectangle converted from logical to physical coordinates.</returns>
+    </member>
+    <member name="M:Leadtools.Drawing.Transformer.TransformPoints(PointF[],Matrix)">
+      <summary>Converts the specified points from logical to physical coordinates.</summary>
+      <param name="pts">The input logical points</param>
+      <param name="matrix">The transformation matrix to use.</param>
+      <returns>The points converted from logical to physical coordinates.</returns>
+    </member>
+    <member name="P:Leadtools.Drawing.Transformer.Transform">
+      <summary>Gets and sets the transformation matrix for this Transformer.</summary>
+      <value>The transformation matrix for this Transformer.</value>
+    </member>
+    <member name="T:Leadtools.Drawing.PaintCallbackDelegate">
+      <summary>The prototype for all the RasterPaintCallbacks.</summary>
+      <param name="image">The Leadtools.RasterImage being painted.</param>
+      <param name="args">The arguments for the callback.</param>
+    </member>
+    <member name="T:Leadtools.Drawing.ChangeToImageOptions">
+      <summary>Options to use when changing a LEADTOOLS Leadtools.RasterImage object to GDI+ System.Drawing.Bitmap.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.ChangeToImageOptions.None">
+      <summary>Default</summary>
+      <platforms>NET</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.Drawing.ChangeToImageOptions.ForceChange">
+      <summary>If the image is not GDI+ compatible, this flag forces the conversion.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.Drawing.ChangeToImageOptions.NoPalette">
+      <summary>Fail if the image has a palette.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000002</value>
+    </member>
+    <member name="F:Leadtools.Drawing.ChangeToImageOptions.TopLeftAlways">
+      <summary>Force the image to have RasterViewPerspective.TopLeft view perspective.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000004</value>
+    </member>
+    <member name="T:Leadtools.Drawing.ConvertFromImageOptions">
+      <summary>Options to use when converting a GDI+ System.Drawing.Bitmap to LEADTOOLS Leadtools.RasterImage object.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.ConvertFromImageOptions.None">
+      <summary>Default</summary>
+      <platforms>NET</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="T:Leadtools.Drawing.ConvertToImageOptions">
+      <summary>Options to use when converting a LEADTOOLS Leadtools.RasterImage object to GDI+ System.Drawing.Bitmap.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.ConvertToImageOptions.None">
+      <summary>Default</summary>
+      <platforms>NET</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.Drawing.ConvertToImageOptions.InitAlpha">
+      <summary>Initialize the destination image alpha values if supported (when the result of the conversion is a 32 or 64-bit image). If this flagged is specified, the result image will always have an alpha value of all 1's (255 for 32-bit images or 65535 for 64-bit images) regardless of the alpha values in the source image. This can be useful when converting some 32-bit images that may have 0 for the alpha (such as BMP files) which translates into an GDI+ image that is completely transparent. If this flag is not specified, then the source image alpha values will be used as is.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="T:Leadtools.Drawing.ImageIncompatibleReason">
+      <summary>Indicates the reason that the LEADTOOLS Leadtools.RasterImage object is not compatible with GDI+.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.ImageIncompatibleReason.Compatible">
+      <summary>Image is compatible</summary>
+      <platforms>NET</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.Drawing.ImageIncompatibleReason.BitsPerPixel">
+      <summary>Unsupported Bits/Pixel</summary>
+      <platforms>NET</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.Drawing.ImageIncompatibleReason.Order">
+      <summary>Unsupported color byte order</summary>
+      <platforms>NET</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.Drawing.ImageIncompatibleReason.Palette">
+      <summary>Unsupported palette</summary>
+      <platforms>NET</platforms>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.Drawing.ImageIncompatibleReason.Data">
+      <summary>Unsupported raw data</summary>
+      <platforms>NET</platforms>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.Drawing.ImageIncompatibleReason.ViewPerspective">
+      <summary>Unsupported view perspective</summary>
+      <platforms>NET</platforms>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.Drawing.ImageIncompatibleReason.Other">
+      <summary>Unspecified reason</summary>
+      <platforms>NET</platforms>
+      <value>6</value>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterImagePaintCallbackFunction">
+      <summary>Used to identify the callbacks in a RasterPaintCallbacks class.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.IsCompatibleDCCallback">
+      <summary>This callback checks whether the DC is compatible with a particular RasterPaintDibInfo class.</summary>
+      <platforms>NET</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.GetDeviceCapsCallback">
+      <summary>This callback replaces the GetDeviceCaps GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.SetStretchBltModeCallback">
+      <summary>This callback replaces the SetStretchBltMode GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.IntersectClipRectCallback">
+      <summary>This callback replaces the IntersectClipRect GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.SaveDCCallback">
+      <summary>This callback replaces the SaveDC GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.RestoreDCCallback">
+      <summary>This callback replaces the RestoreDC GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.StretchDIBitsCallback">
+      <summary>This callback replaces the StretchDIBits GDI function. Use it to perform the actual painting.</summary>
+      <platforms>NET</platforms>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.SetViewportOrgExCallback">
+      <summary>This callback replaces the SetViewportOrgEx GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>7</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.GetViewportOrgExCallback">
+      <summary>This callback replaces the GetViewportOrgEx GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>8</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.SelectPaletteCallback">
+      <summary>This callback replaces the SelectPalette GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>9</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.RealizePaletteCallback">
+      <summary>This callback replaces the RealizePalette GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>10</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.GetMapModeCallback">
+      <summary>This callback replaces the GetMapMode GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>11</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.ExtSelectClipRgnCallback">
+      <summary>This callback replaces the ExtSelectClipRgn GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>12</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.GetGraphicsModeCallback">
+      <summary>This callback replaces the GetGraphicsMode GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>13</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.GetWorldTransformCallback">
+      <summary>This callback replaces the GetWorldTransform GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>14</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.ConvertLineCallback">
+      <summary>This callback converts a line of data.</summary>
+      <platforms>NET</platforms>
+      <value>15</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.GetDibInfoCallback">
+      <summary>This callback provides information on the data expected by the device. See RasterPaintDibInfo for more details.</summary>
+      <platforms>NET</platforms>
+      <value>16</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.PrePaintCallback">
+      <summary>This callback informs your RasterPaintCallbacks class that it has been selected for painting. It is called before painting starts. Use it to allocate any memory needed for painting.</summary>
+      <platforms>NET</platforms>
+      <value>17</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.PostPaintCallback">
+      <summary>This callback gets called after painting is finished. Use it to free any memory allocated in PrePaintCallback.</summary>
+      <platforms>NET</platforms>
+      <value>18</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterImagePaintCallbackFunction.FillRectCallback">
+      <summary>This callback replaces the FillRect GDI function.</summary>
+      <platforms>NET</platforms>
+      <value>19</value>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterPaintDibInfoFlags">
+      <summary>Flags that make up RasterPaintDibInfo.Flags.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDibInfoFlags.None">
+      <summary>No flags are set</summary>
+      <platforms>NET</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDibInfoFlags.IgnoreLut">
+      <summary>Ignore the raster image color lookup (LUT) table when performing color conversion. This is valid only for grayscale images.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDibInfoFlags.LowHighBitValid">
+      <summary>LowBit and HighBit members of RasterPaintDibInfo are valid. This is valid only for grayscale images.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000002</value>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterPaintDisplayModeFlags">
+      <summary>Contains value that controls the speed, quality, and style of painting operations.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.None">
+      <summary>Default</summary>
+      <platforms>NET</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.OrderedDither">
+      <summary>Enables or disables ordered dithering when painting. Ordered dithering is faster than the default dithering method, which uses error diffusion, but the quality of the image is not as good.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.FastPaint">
+      <summary>Enables or disables fast painting. Fast painting should be performed only if the current video driver is good, and the image does not need to be dithered or resized to paint. No safety check for a faulty driver is performed.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000002</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.IndexedPaint">
+      <summary>Enables or disables painting that is mapped directly to the selected palette. You can this and let Windows do color matching between the paint palette and the selected palette. Indexed painting uses the colors from the currently selected palette. It is not used if the image is not palletized.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000004</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.DitheredPaint">
+      <summary>Enables or disables painting that is mapped directly to the selected palette. This is enabled by default; you can set this flag to disable it and let Windows do color matching between the paint palette and the selected palette. Indexed painting uses the colors from the currently selected palette. It is not used if the image is not palletized.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000008</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.ScaleToGray">
+      <summary>(Document/Medical only) Enables grayscaling of 1-bit images when they are displayed. This improves the readability of the images when they are zoomed in or zoomed out, but it slows down the display.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000010</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.HalftonePrint">
+      <summary>Enables use of the printing halftone (rather than the viewing halftone) when painting to a 1-bit device.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000020</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.FavorBlack">
+      <summary>(Document/Medical only) Enables a bias in preserving black objects when displaying zoomed-out 1-bit images. This can prevent the disappearance of fine lines and details, but it slows down the display.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000040</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.FixedPalette">
+      <summary>Enables the LEAD Fixed palette when displaying 24-bit (or greater) images on 8-bit (or less) devices.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000080</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.NetscapePalette">
+      <summary>Enables the Netscape Fixed palette when displaying 24-bit (or greater) images on 8-bit (or less) devices.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000100</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.Resample">
+      <summary>Enables resample resize when displaying images at zoom factors other than 1:1.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000200</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintDisplayModeFlags.Bicubic">
+      <summary>Enables bicubic resize when displaying images at zoom factors other than 1:1.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000400</value>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterPaintEngine">
+      <summary>Indicates the painting engine to use when rendering images using the Windows GDI or GDI+ engines..</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintEngine.Gdi">
+      <summary>Use Windows GDI when painting Leadtools.RasterImage objects</summary>
+      <platforms>NET</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintEngine.GdiPlus">
+      <summary>Use Windows GDI+ when painting Leadtools.RasterImage objects</summary>
+      <platforms>NET</platforms>
+      <value>1</value>
+    </member>
+    <member name="T:Leadtools.Drawing.RasterPaintProperties">
+      <summary>Controls the speed, quality, and style used when painting a Leadtools.RasterImage object using the Windows GDI or GDI+ engines.</summary>
+    </member>
+    <member name="M:Leadtools.Drawing.RasterPaintProperties.MakeRasterOperation(System.Int32,System.Int32)">
+      <summary>Creates a ROP4 value from the specified foreground and background color values.</summary>
+      <param name="fore">The foreground color.</param>
+      <param name="back">The background color.</param>
+      <returns>The ROP4 value.</returns>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintProperties.Default">
+      <summary>Returns a new instance of the RasterPaintProperties structure with all members set to default values.</summary>
+      <value>The instance of the RasterPaintProperties structure that this property creates.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintProperties.Opacity">
+      <summary>Gets or sets a value that indicates the opacity to use when painting the Leadtools.RasterImage.</summary>
+      <value>A value between 0 and 255 representing the opacity level to use when painting the Leadtools.RasterImage. Default value is 255.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintProperties.PaintCallbacks">
+      <summary>Gets the list of RasterPaintCallbacks objects containing the custom callbacks.</summary>
+      <value>A list of RasterPaintCallbacks objects containing custom callbacks.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintProperties.PaintDisplayMode">
+      <summary>Gets and sets options that control the speed, quality, and style of painting operations.</summary>
+      <value>A combination of the RasterPaintDisplayModeFlags enumeration members that control the speed, quality, and style of painting operations.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintProperties.PaintEngine">
+      <summary>Gets and sets the paint engine to use when displaying images.</summary>
+      <value>A RasterPaintEngine enumeration value that specifies the paint engine to use when displaying images.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintProperties.RasterOperation">
+      <summary>Gets or sets the ROP value.</summary>
+      <value>An integer value that represents the ROP value.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintProperties.UsePaintPalette">
+      <summary>Enables or disables automatically using the Leadtools.RasterImage object palette when displaying the image.</summary>
+      <value>true to automatically use the Leadtools.RasterImage object palette, false to ignore it.</value>
+    </member>
+    <member name="P:Leadtools.Drawing.RasterPaintProperties.UseTransform">
+      <summary>Gets or sets a value that indicate wherer to use the current transform in the destination System.Drawing.Graphics object when painting the image and regions.</summary>
+      <value>**true** to use the current transform in the destination System.Drawing.Graphics object when painting the image and regions, otherwise; **false**. Default value is **false**.</value>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.Blackness">
+      <summary>Fills the destination rectangle using the color associated with index 0 in the physical palette. (This color is black for the default physical palette.)</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.DestinationInvert">
+      <summary>Inverts the destination rectangle.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.MergeCopy">
+      <summary>Merges the colors of the source rectangle with the brush currently selected in hdcDest, by using the Boolean AND operator.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.MergePaint">
+      <summary>Merges the colors of the inverted source rectangle with the colors of the destination rectangle by using the Boolean OR operator.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.NotSourceCopy">
+      <summary>Copies the inverted source rectangle to the destination.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.NotSourceErase">
+      <summary>Combines the colors of the source and destination rectangles by using the Boolean OR operator and then inverts the resultant color.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.PatternCopy">
+      <summary>Copies the brush currently selected in hdcDest, into the destination bitmap.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.PatternInvert">
+      <summary>Combines the colors of the brush currently selected in hdcDest, with the colors of the destination rectangle by using the Boolean XOR operator.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.PatternPaint">
+      <summary>Combines the colors of the brush currently selected in hdcDest, with the colors of the inverted source rectangle by using the Boolean OR operator. The result of this operation is combined with the colors of the destination rectangle by using the Boolean OR operator.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.SourceAnd">
+      <summary>Combines the colors of the source and destination rectangles by using the Boolean AND operator.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.SourceCopy">
+      <summary>Copies the source rectangle directly to the destination rectangle.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.SourceErase">
+      <summary>Combines the inverted colors of the destination rectangle with the colors of the source rectangle by using the Boolean AND operator.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.SourceInvert">
+      <summary>Combines the colors of the source and destination rectangles by using the Boolean XOR operator.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.SourcePaint">
+      <summary>Combines the colors of the source and destination rectangles by using the Boolean OR operator.</summary>
+    </member>
+    <member name="F:Leadtools.Drawing.RasterPaintProperties.Whiteness">
+      <summary>Fills the destination rectangle using the color associated with index 1 in the physical palette. (This color is white for the default physical palette.)</summary>
+    </member>
+  </members>
+</doc>
