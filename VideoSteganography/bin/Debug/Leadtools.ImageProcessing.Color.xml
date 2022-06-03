@@ -1,0 +1,2328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Leadtools.ImageProcessing.Color</name>
+  </assembly>
+  <members>
+    <member name="T:Leadtools.ImageProcessing.Color.AdaptiveContrastCommand">
+      <summary>Performs adaptive contrast enhancement (ACE) to regions that are originally low in contrast. This command is available in the Medical and above toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AdaptiveContrastCommand.#ctor">
+      <summary>Initializes a new AdaptiveContrastCommand with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AdaptiveContrastCommand.#ctor(System.Int32,System.Int32,Leadtools.ImageProcessing.Color.AdaptiveContrastCommandType)">
+      <summary>Initializes a new AdaptiveContrastCommand with explicit parameters.</summary>
+      <param name="dimension">Dimensions of the neighborhood used for filtering (Dimension x Dimension), in pixels.</param>
+      <param name="amount">Value that represents an adjustment factor. Its range starts from 100 and has no upper limit.</param>
+      <param name="type">Value that indicates the adjustment method.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AdaptiveContrastCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this command.</summary>
+      <returns>Character string that contains the name of this command.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AdaptiveContrastCommand.Amount">
+      <summary>Gets or sets the adjustment factor.</summary>
+      <value>Value that represents an adjustment factor. Its range starts from 100 and has no upper limit.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AdaptiveContrastCommand.Dimension">
+      <summary>Gets or sets the dimensions of the neighborhood used for filtering (Dimension x Dimension), in pixels.</summary>
+      <value>Value that represents the dimensions of the neighborhood used for filtering (Dimension x Dimension), in pixels.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AdaptiveContrastCommand.Type">
+      <summary>Gets or sets the adjustment method.</summary>
+      <value>The adjustment method to use.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.AddCommand">
+      <summary>Adds or averages the images in a list. AddCommand gets the 'list' of bitmaps from the RasterImage's BitmapList property.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AddCommand.#ctor">
+      <summary>Initializes a new AddCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AddCommand.#ctor(Leadtools.ImageProcessing.Color.AddCommandType)">
+      <summary>Initializes a new AddCommand class object with explicit parameters.</summary>
+      <param name="type">Value that indicates the operation to perform.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AddCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this method.</summary>
+      <returns>Character string that contains the name of this method.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AddCommand.DestinationImage">
+      <summary>Gets the RasterImage object that references the resulting image on which the effect is applied.</summary>
+      <value>The RasterImage object that references the resulting image on which the effect is applied.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AddCommand.Type">
+      <summary>Gets or sets a value that indicates the operation to perform.</summary>
+      <value>Value that indicates the operation to perform.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.AddWeightedCommand">
+      <summary>Adds or averages the images in a list according to their weight factors.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AddWeightedCommand.#ctor">
+      <summary>Initializes a new AddWeightedCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AddWeightedCommand.#ctor(Leadtools.ImageProcessing.Color.AddWeightedCommandType,System.Int32[])">
+      <summary>Initializes a new AddWeightedCommand class object with explicit parameters.</summary>
+      <param name="type">Value that indicates the operation to perform.</param>
+      <param name="factor">Array of values that represent weights associated with the images in the list. Used only if the type parameter is set to AddWeighted or AverageWeighted. This parameter only accepts positive values.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AddWeightedCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this method.</summary>
+      <returns>Character string that contains the name of this method.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AddWeightedCommand.DestinationImage">
+      <summary>Gets the RasterImage object that references the resulting image on which the effect is applied.</summary>
+      <value>The RasterImage object that references the resulting image on which the effect is applied.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AddWeightedCommand.Factor">
+      <summary>Gets or sets an array of values that represent weights associated with the images in the list.</summary>
+      <value>Array of values that represent weights associated with the images in the specified list. Used only if Type property is set to AddWeighted or AverageWeighted. This property only accepts positive values.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AddWeightedCommand.FactorLength">
+      <summary>Gets or sets the length of the factor property</summary>
+      <value>An integer that specifies the length for the factor property</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AddWeightedCommand.Type">
+      <summary>Gets or sets a value that indicates the operation to perform.</summary>
+      <value>Value that indicates the operation to perform.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.AdjustTintCommand">
+      <summary>Adjusts the image tint by changing the colors in an image by using two separate color wheel rotations.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AdjustTintCommand.#ctor">
+      <summary>Initializes a new AdjustTintCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AdjustTintCommand.#ctor(System.Int32,System.Int32)">
+      <summary>Initializes a new AdjustTintCommand class object with explicit parameters.</summary>
+      <param name="angleA">Value that represents the amount of change in the A angle. Valid values range between -18000 and 18000.</param>
+      <param name="angleB">Value that represents the amount of change in the B angle. Valid values range between -18000 and 18000.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AdjustTintCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this command.</summary>
+      <returns>Character string that contains the name of this command.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AdjustTintCommand.AngleA">
+      <summary>Gets or sets the angular amount to change the A angle on which the filter is applied.</summary>
+      <value>Value that represents the amount of change in the A angle, in hundredths of degrees. Valid values range between -18000 and 18000.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AdjustTintCommand.AngleB">
+      <summary>Gets or sets the angular amount to change the B angle on which the filter is applied.</summary>
+      <value>Value that represents the amount of change in the B angle, in hundredths of degrees. Valid values range between -18000 and 18000.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommand">
+      <summary>Performs specific mathematical or logical operations on the colors of the image.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommand.#ctor">
+      <summary>Initializes a new ApplyMathematicalLogicCommand with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommand.#ctor(System.Int32,Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags)">
+      <summary>Initializes a new ApplyMathematicalLogicCommand with explicit parameters.</summary>
+      <param name="factor">Mathematical or logical operation factor.</param>
+      <param name="flags">Flags that indicate the channel that will be used, the treatment of the input pixel values, the mathematical operation, and the treatment of the output pixel values. Use a bitwise OR ( &amp;#166; ) to specify one flag from each group.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>Character string that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommand.Factor">
+      <summary>Mathematical or logical operation factor.</summary>
+      <value>Mathematical or logical operation factor.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommand.Flags">
+      <summary>Flags that indicate the channel that will be used, the treatment of the input pixel values, the mathematical operation, and the treatment of the output pixel values.</summary>
+      <value>Flags that indicate the channel that will be used, the treatment of the input pixel values, the mathematical operation, and the treatment of the output pixel values. Use a bitwise OR ( &amp;#166; ) to specify one flag from each group.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.AutoBinaryCommand">
+      <summary>Applies binary segmentation to the image using an automatically calculated threshold based on a two-peak method of statistical analysis of the histogram. This command is available in the Document/Medical Toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AutoBinaryCommand.#ctor">
+      <summary>Initializes a new AutoBinaryCommand with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AutoBinaryCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>Character string that contains the name of this class.</returns>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.AutoColorLevelCommand">
+      <summary>Applies one of several types of automatic color leveling to an image. This function is useful for pre-processing images for the purpose of improving barcode recognition results.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.#ctor">
+      <summary>Initializes a new AutoColorLevelCommand object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.#ctor(Leadtools.ImageProcessing.Color.AutoColorLevelCommandType,Leadtools.ImageProcessing.Color.AutoColorLevelCommandFlags)">
+      <summary>Initializes a new AutoColorLevelCommand object with explicit parameters.</summary>
+      <param name="type">Value that indicates the type of leveling to perform.</param>
+      <param name="flag">Flag that indicates whether a method will process the image or not.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.#ctor(System.Int32,System.Int32,Leadtools.ImageProcessing.Color.AutoColorLevelCommandType,Leadtools.ImageProcessing.Color.AutoColorLevelCommandFlags)">
+      <summary>Initializes a new AutoColorLevelCommand object with explicit parameters.</summary>
+      <param name="blackClip">Value that represents the percentage of black pixels to clip from the image, in hundredths of a percent. Valid values range from 0 to 10000 (which represents 100). Best results are found using 0.3 to 0.9 . The default is 50, which indicates to clip 0.5 of the black pixels.</param>
+      <param name="whiteClip">Value that represents the percentage of white pixels to clip from the image, in hundredths of a percent. Valid values range from 0 to 10000 (which represents 100). The default is 50, which indicates to clip 0.5 of the white pixels.</param>
+      <param name="type">Value that indicates the type of leveling to perform.</param>
+      <param name="flag">Flag that indicates whether the method will process the image or not.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>Character string that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.BlackClip">
+      <summary>Gets or sets a value that represents the percentage of black pixels to clip from the image, in hundredths of a percent.</summary>
+      <value>Valid values range from 0 to 10000 (which represents 100). Best results are found using 0.3 to 0.9 . The default value is 50, which indicates to clip 0.5 of the black pixels.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.Blue">
+      <summary>Gets the color leveling information for the Blue channel when the Type property is set to AutoColorLevelCommandType.Level.</summary>
+      <value>The color leveling information for the Blue channel. If AutoColorLevelCommandFlags.NoProcess is not set in Flag property, you can set the value of this property as null. If AutoColorLevelCommandFlags.NoProcess is set in Flag property, then this property cannot be null.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.Flag">
+      <summary>Gets or sets a value that indicates whether the method will process the image.</summary>
+      <value>The method to process the image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.Green">
+      <summary>Gets the color leveling information for the Green channel when the Type property is set to AutoColorLevelCommandType.Level.</summary>
+      <value>The color leveling information for the Green channel. If AutoColorLevelCommandFlags.NoProcess is not set in Flag property, you can set the value of this property as null. If AutoColorLevelCommandFlags.NoProcess is set in Flag property, then this property cannot be null.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.Master">
+      <summary>Gets the color leveling information for the Master channel when the Type property is set to either AutoColorLevelCommandType.Contrast or AutoColorLevelCommandType.Intensity.</summary>
+      <value>The color leveling information for the Master channel. If AutoColorLevelCommandFlags.NoProcess is not set in Flag property, you can set the value of this property as null. If AutoColorLevelCommandFlags.NoProcess is set in Flag property, then this property cannot be null.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.Red">
+      <summary>Gets the color leveling information for the Red channel when the Type property is set to AutoColorLevelCommandType.Level.</summary>
+      <value>The color leveling information for the Red channel. If AutoColorLevelCommandFlags.NoProcess is not set in Flag property, you can set the value of this property as null. If AutoColorLevelCommandFlags.NoProcess is set in Flag property, then this property cannot be null.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.Type">
+      <summary>Gets or sets a value that indicates the type of leveling to perform.</summary>
+      <value>The type of leveling to perform.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.AutoColorLevelCommand.WhiteClip">
+      <summary>Gets or sets a value that represents the percentage of white pixels to clip from the image, in hundredths of a percent.</summary>
+      <value>Valid values range from 0 to 10000 (which represents 100). The default value is 50, which indicates to clip 0.5 of the white pixels.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.BalanceColorCommandFactor">
+      <summary>Defines the information used by the BalanceColorsCommand class.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.BalanceColorCommandFactor.#ctor">
+      <summary>Initializes a new BalanceColorCommandFactor class with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.BalanceColorCommandFactor.#ctor(System.Double,System.Double,System.Double)">
+      <summary>Initializes a new BalanceColorCommandFactor class with explicit parameters.</summary>
+      <param name="toRed">Value that represents the percentage of the red color value that should be distributed to the red component</param>
+      <param name="toGreen">Value that represents the percentage of the green color value that should be distributed to the green component</param>
+      <param name="toBlue">Value that represents the percentage of the blue color value that should be distributed to the blue component</param>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.BalanceColorCommandFactor.ToBlue">
+      <summary>Gets or sets a value that represents the percentage of the blue color value that should be distributed to the red component.</summary>
+      <value>Value that represents the percentage of the blue color value that should be distributed to the red component. Possible values are 0.0 to 100.0.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.BalanceColorCommandFactor.ToGreen">
+      <summary>Gets or sets a value that represents the percentage of the green color value that should be distributed to the red component.</summary>
+      <value>Value that represents the percentage of the green color value that should be distributed to the red component. Possible values are 0.0 to 100.0.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.BalanceColorCommandFactor.ToRed">
+      <summary>Gets or sets a value that represents the percentage of the red color value that should be distributed to the red component.</summary>
+      <value>Value that represents the percentage of the red color value that should be distributed to the red component. Possible values are 0.0 to 100.0.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.BalanceColorsCommand">
+      <summary>Redistributes the RGB values of a specific image, using the values in the BalanceColorCommandFactor class.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.BalanceColorsCommand.#ctor">
+      <summary>Initializes a new BalanceColorsCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.BalanceColorsCommand.#ctor(Leadtools.ImageProcessing.Color.BalanceColorCommandFactor,Leadtools.ImageProcessing.Color.BalanceColorCommandFactor,Leadtools.ImageProcessing.Color.BalanceColorCommandFactor)">
+      <summary>Initializes a new BalanceColorsCommand with explicit parameters.</summary>
+      <param name="redFactor">BalanceColorCommandFactor class that contains the values to use for redistributing the image's red values. Valid values for all class members must be within the range : 0.0 - 100.0.</param>
+      <param name="greenFactor">BalanceColorCommandFactor class that contains the values to use for redistributing the image's green values. Valid values for all class members must be within the range : 0.0 - 100.0.</param>
+      <param name="blueFactor">BalanceColorCommandFactor class that contains the values to use for redistributing the image's blue values. Valid values for all class members must be within the range : 0.0 - 100.0.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.BalanceColorsCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.BalanceColorsCommand.BlueFactor">
+      <summary>BalanceColorCommandFactor class that contains the values to use for redistributing the image's blue values.</summary>
+      <value>BalanceColorCommandFactor class that contains the values to use for redistributing the image's blue values. Valid values for all class members must be within the range : 0.0 - 100.0.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.BalanceColorsCommand.GreenFactor">
+      <summary>BalanceColorCommandFactor class that contains the values to use for redistributing the image's green values.</summary>
+      <value>BalanceColorCommandFactor class that contains the values to use for redistributing the image's green values. Valid values for all class members must be within the range : 0.0 - 100.0.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.BalanceColorsCommand.RedFactor">
+      <summary>BalanceColorCommandFactor class that contains the values to use for redistributing the image's red values.</summary>
+      <value>BalanceColorCommandFactor class that contains the values to use for redistributing the image's red values. Valid values for all class members must be within the range : 0.0 - 100.0.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ChangeContrastCommand">
+      <summary>Increases or decreases the contrast of the image.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeContrastCommand.#ctor">
+      <summary>Initializes a new ChangeContrastCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeContrastCommand.#ctor(System.Int32)">
+      <summary>Initializes a new ChangeContrastCommand class object with explicit parameters.</summary>
+      <param name="contrast">Amount of contrast change. Valid values are -1000 to +1000.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeContrastCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>Character string that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeContrastCommand.Contrast">
+      <summary>Gets or sets the amount of contrast change.</summary>
+      <value>Amount of contrast change. Valid values are -1000 to +1000.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ChangeHueCommand">
+      <summary>Changes the hue of colors in an image by rotating the color wheel.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeHueCommand.#ctor">
+      <summary>Initializes a new ChangeHueCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeHueCommand.#ctor(System.Int32)">
+      <summary>Initializes a new ChangeHueCommand class object with explicit parameters.</summary>
+      <param name="angle">Angular amount to change the hue, in degrees.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeHueCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>Character string that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueCommand.Angle">
+      <summary>Gets or sets a value that represents the angular amount to change the hue, in degrees.</summary>
+      <value>Angular amount to change the hue, in degrees.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommand">
+      <summary>Changes the hue, saturation and brightness of all colors or specific colors in the image.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommand.#ctor">
+      <summary>Initializes a new ChangeHueSaturationIntensityCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommand.#ctor(System.Int32,System.Int32,System.Int32,Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData[])">
+      <summary>Initializes a new ChangeHueSaturationIntensityCommand class object with explicit parameters.</summary>
+      <param name="hue">Angular amount to change the hue, in hundredths of a degree. Valid values range from -18000 through 18000. This value is divided internally by 100.</param>
+      <param name="saturation">Percentage amount to change saturation, in tenths of a percent. Valid values range from -1000 through 1000. This value is divided internally by 10. Negative values decrease the saturation of colors. Positive values increase the saturation. The saturation level is increased or decreased by a percentage of its present saturation level. For example, an increase of 20 of the current saturation level "L" will raise the new saturation level "L1" to a value L = 0.20 \* L. Likewise, increasing the saturation level 100 doubles the saturation level (L1 = L + 1.0 \* L). Decreasing the saturation level 100 will set the new saturation level to 0. This process is carried out for every pixel. The saturation is set to 1000 (maximum value) if the new value exceeds 1000).</param>
+      <param name="intensity">Percentage amount to change the intensity , in tenths of a percent. Valid values range from -1000 (black) through 1000 (white). This value is divided internally by 10. Positive values increase (or lighten) the brightness of the image. Negative values decrease (or darken) the brightness of the image.</param>
+      <param name="data">An array of ChangeHueSaturationIntensityCommandData classes that provides information about the color ranges used by this method.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this command.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommand.Data">
+      <summary>An array of ChangeHueSaturationIntensityCommandData classes that provides information about the color ranges used by this class.</summary>
+      <value>An array of ChangeHueSaturationIntensityCommandData classes that provides information about the color ranges used by this class.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommand.Hue">
+      <summary>Gets or sets a value that represents the angular amount to change the hue, in hundredths of degrees.</summary>
+      <value>Angular amount to change the hue, in hundredths of degrees. Valid values range from -18000 through 18000. This value is divided internally by 100.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommand.Intensity">
+      <summary>Gets or sets a value that represents the percentage amount to change the intensity , in tenths of a percent.</summary>
+      <value>Percentage amount to change the intensity , in tenths of percent. Valid values range from --1000 (black) through 1000 (white). This value is divided internally by 10. Positive values increase (or lighten) the brightness of the image. Negative values decrease (or darken) the brightness of the image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommand.Saturation">
+      <summary>Gets or sets a value that represents the percentage amount to change saturation, in tenths of percent.</summary>
+      <value>Percentage amount to change saturation, in tenths of a percent. Valid values range from -1000 through 1000. This value is divided internally by 10. Negative values decrease the saturation of colors. Positive values increase the saturation. The saturation level is increased or decreased by a percentage of its present saturation level. For example, an increase of 20 of the current saturation level "L" will raise the new saturation level "L1" to a value L = 0.20 \* L. Likewise, increasing the saturation level 100 doubles the saturation level (L1 = L + 1.0 \* L). Decreasing the saturation level 100 will set the new saturation level to 0. This process is carried out for every pixel. The saturation is set to 1000 (maximum value) if the new value exceeds 1000).</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData">
+      <summary>Defines the color range information used by the ChangeHueSaturationIntensityCommand class.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData.#ctor">
+      <summary>Initializes a new ChangeHueSaturationIntensityCommandData class with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Initializes a new ChangeHueSaturationIntensityCommandData class with explicit parameters.</summary>
+      <param name="hue">Angular amount to change the hue, in hundredths of degrees. Valid values range from -18000 through 18000. This value is divided internally by 100.</param>
+      <param name="saturation">Percentage amount to change saturation, in tenths of percent. Valid values range from -1000 through 1000. This value is divided internally by 10.</param>
+      <param name="intensity">Percentage amount to change the intensity , in tenths of percent. Valid values range from -1000 through 1000. This value is divided internally by 10.</param>
+      <param name="outerLow">Specifies the start of the color range to be changed. Valid values range from -359 through 359.</param>
+      <param name="outerHigh">Specifies the end of the color range to be changed. Valid values range is from -359 through 359.</param>
+      <param name="innerLow">Specifies the start of the color range to be fully changed. The valid range is between the OuterLow and OuterHigh values.</param>
+      <param name="innerHigh">Specifies the end of the color range to be fully changed. The valid range is between the OuterLow and OuterHigh values.</param>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData.Hue">
+      <summary>Gets or sets a value that represents the angular amount to change the hue, in hundredths of a degree.</summary>
+      <value>Angular amount to change the hue, in hundredths of a degree. Valid values range from -18000 through 18000. This value is divided internally by 100.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData.InnerHigh">
+      <summary>Gets or sets the ending color of the color range to be fully changed.</summary>
+      <value>Specifies the ending color of the color range to be fully changed. The valid range is between the OuterLow and OuterHigh values.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData.InnerLow">
+      <summary>Gets or sets the starting color of the color range to be fully changed.</summary>
+      <value>Specifies the starting color of the color range to be fully changed. The valid range is between the OuterLow and OuterHigh values.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData.Intensity">
+      <summary>Gets or sets a value that represents the percentage amount to change the intensity , in tenths of a percent.</summary>
+      <value>Percentage amount to change the intensity , in tenths of a percent. Valid values range from -1000 through 1000. This value is divided internally by 10.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData.OuterHigh">
+      <summary>Gets or sets the ending color of the color range to be changed.</summary>
+      <value>Specifies the ending color of the color range to be changed. Valid values range is from -359 through 359.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData.OuterLow">
+      <summary>Gets or sets the starting color of the color range to be changed.</summary>
+      <value>Specifies the starting color of the color range to be changed. Valid values range from -359 through 359.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeHueSaturationIntensityCommandData.Saturation">
+      <summary>Gets or sets a value that represents the percentage amount to change the saturation, in tenths of a percent.</summary>
+      <value>Percentage amount to change the saturation, in tenths of a percent. Valid values range from -1000 through 1000. This value is divided internally by 10.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ChangeIntensityCommand">
+      <summary>Changes the intensity (brightness) of the image.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeIntensityCommand.#ctor">
+      <summary>Initializes a new ChangeIntensityCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeIntensityCommand.#ctor(System.Int32)">
+      <summary>Initializes a new ChangeIntensityCommand class object with explicit parameters.</summary>
+      <param name="brightness">Amount to change the intensity. The intensity ranges from -1000 to 1000. A positive value increases (or lightens) the brightness of the image. A negative values decreases (or darkens) the brightness of the image.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeIntensityCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeIntensityCommand.Brightness">
+      <summary>Gets or sets a value that represents the amount to change the intensity.</summary>
+      <value>Amount to change the intensity. The intensity ranges from -1000 to 1000. A positive value increases (or lightens) the brightness of the image. A negative values decreases (or darkens) the brightness of the image.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ChangeSaturationCommand">
+      <summary>Increases or decreases the saturation of colors in an image.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeSaturationCommand.#ctor">
+      <summary>Initializes a new ChangeSaturationCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeSaturationCommand.#ctor(System.Int32)">
+      <summary>Initializes a new ChangeSaturationCommand class object with explicit parameters.</summary>
+      <param name="change">Amount to change saturation. Values are percentages between -1000 and +1000.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChangeSaturationCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChangeSaturationCommand.Change">
+      <summary>Gets or sets a value that represents the amount to change the saturation.</summary>
+      <value>Amount to change saturation. Values are percentages between -1000 and +1000.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ChannelMixerCommand">
+      <summary>Redistributes the RGB values of a specific image, using the values in the ChannelMixerCommandFactor classes.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChannelMixerCommand.#ctor">
+      <summary>Initializes a new ChannelMixerCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChannelMixerCommand.#ctor(Leadtools.ImageProcessing.Color.ChannelMixerCommandFactor,Leadtools.ImageProcessing.Color.ChannelMixerCommandFactor,Leadtools.ImageProcessing.Color.ChannelMixerCommandFactor)">
+      <summary>Initializes a new ChannelMixerCommand class object with explicit parameters.</summary>
+      <param name="redFactor">Contains the values to use for redistributing the image's red values.</param>
+      <param name="greenFactor">Contains the values to use for redistributing the image's green values.</param>
+      <param name="blueFactor">Contains the values to use for redistributing the image's blue values.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChannelMixerCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChannelMixerCommand.BlueFactor">
+      <summary>Gets or sets the values to use for redistributing the image's blue values.</summary>
+      <value>Values to use for redistributing the image's blue values.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChannelMixerCommand.GreenFactor">
+      <summary>Gets or sets the values to use for redistributing the image's green values.</summary>
+      <value>Values to use for redistributing the image's green values.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChannelMixerCommand.RedFactor">
+      <summary>Gets or sets the values to use for redistributing the image's red values.</summary>
+      <value>Values to use for redistributing the image's red values.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ChannelMixerCommandFactor">
+      <summary>Defines the color balancing information used by the ChannelMixerCommand class.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChannelMixerCommandFactor.#ctor">
+      <summary>Initializes a new ChannelMixerCommandFactor class with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ChannelMixerCommandFactor.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Initializes a new ChannelMixerCommandFactor class with explicit parameters.</summary>
+      <param name="red">Value that represents the percentage of the red color value that should be distributed to the red component. Valid values are -200 to 200.</param>
+      <param name="green">Value that represents the percentage of the green color value that should be distributed to the green component. Valid values are -200 to 200.</param>
+      <param name="blue">Value that represents the percentage of the blue color value that should be distributed to the blue component. Valid values are -200 to 200.</param>
+      <param name="constant">Value that represents the color value that should be added to the whole image. Valid values are -200 to 200.</param>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChannelMixerCommandFactor.Blue">
+      <summary>Gets or sets a value that represents the percentage of the blue color value that should be distributed to the blue component.</summary>
+      <value>Value that represents the percentage of the blue color value that should be distributed to the blue component. Valid values are -200 to 200.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChannelMixerCommandFactor.Constant">
+      <summary>Gets or sets a value that represents the color value that should be added to the whole image.</summary>
+      <value>Value that represents the color value that should be added to the whole image. Valid values are -200 to 200.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChannelMixerCommandFactor.Green">
+      <summary>Gets or sets a value that represents the percentage of the green color value that should be distributed to the green component.</summary>
+      <value>Value that represents the percentage of the green color value that should be distributed to the green component. Valid values are -200 to 200.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ChannelMixerCommandFactor.Red">
+      <summary>Gets or sets a value that represents the percentage of the red color value that should be distributed to the red component.</summary>
+      <value>Value that represents the percentage of the red color value that should be distributed to the red component. Valid values are -200 to 200.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorCountCommand">
+      <summary>Gets the number of unique colors in an image.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorCountCommand.#ctor">
+      <summary>Initializes a new ColorCountCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorCountCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorCountCommand.ColorCount">
+      <summary>Gets the number of unique colors in an image.</summary>
+      <value>The number of unique colors in an image.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommand">
+      <summary>Changes the distribution of the red, green, or blue channels. This command is available in the Imaging Pro and above toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommand.#ctor">
+      <summary>Initializes a new ColorIntensityBalanceCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommand.#ctor(Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommandData,Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommandData,Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommandData,System.Boolean)">
+      <summary>Initializes a new ColorIntensityBalanceCommand class object with explicit parameters.</summary>
+      <param name="shadows">class used to adjust the dark tones.</param>
+      <param name="midTone">class used to adjust the medium tones (midtones).</param>
+      <param name="highLight">class used to adjust the bright tones (highlights).</param>
+      <param name="luminance">Boolean flag that indicates whether to preserve luminance.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommand.HighLight">
+      <summary>Gets or sets information in a class used to adjust the bright tones (highlights).</summary>
+      <value>class that contains information used to adjust the bright tones (highlights).</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommand.Luminance">
+      <summary>Boolean flag that indicates whether to preserve luminance.</summary>
+      <value>Boolean value that indicates whether to preserve luminance.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommand.MidTone">
+      <summary>Gets or sets information in a class used to adjust the medium tones (midtones).</summary>
+      <value>class that contains values used to adjust the medium tones (midtones).</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommand.Shadows">
+      <summary>Gets or sets information in a class used to adjust the dark tones.</summary>
+      <value>class that contains values used to adjust the dark tones.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommandData">
+      <summary>Defines the balance tone information used by the ColorIntensityBalanceCommand class.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommandData.#ctor">
+      <summary>Initializes a new ColorIntensityBalanceCommandData class with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommandData.#ctor(System.Int32,System.Int32,System.Int32)">
+      <summary>Initializes a new ColorIntensityBalanceCommandData class with explicit parameters.</summary>
+      <param name="red">Value to be used for adjusting or balancing the red channel. Valid values range from -100 to 100. Values &gt; 0 increase the red component. Values &lt; 0 decrease the red component. Using 0 leaves the red component unchanged.</param>
+      <param name="green">Value to be used for adjusting or balancing the green channel. Valid values range from -100 to 100. Values &gt; 0 increase the green component value. Values &lt; 0 decrease the green component value. Using 0 leaves the green component unchanged.</param>
+      <param name="blue">Value to be used for adjusting or balancing the blue channel. Valid values range from -100 to 100. Values &gt; 0 increase the blue component value. Values &lt; 0 decrease the blue component value. Using 0 leaves the blue component unchanged.</param>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommandData.Blue">
+      <summary>Gets or sets a value to be used for adjusting or balancing the blue channel.</summary>
+      <value>Value to be used for adjusting or balancing the blue channel. Valid values range from -100 to 100. Values &gt; 0 increase the blue component value. Values &lt; 0 decrease the blue component value. Using 0 leaves the blue component unchanged.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommandData.Green">
+      <summary>Gets or sets a value to be used for adjusting or balancing the green channel.</summary>
+      <value>Value to be used for adjusting or balancing the green channel. Valid values range from -100 to 100. Values greater than 0 increase the green component value. Values less than 0 decrease the green component value. Using 0 leaves the green component unchanged.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorIntensityBalanceCommandData.Red">
+      <summary>Gets or sets a value to be used for adjusting or balancing the red channel.</summary>
+      <value>Value to be used for adjusting or balancing the red channel. Valid values range from -100 to 100. Values greater than 0 increase the red component. Values less than 0 decrease the red component. Using 0 leaves the red component unchanged.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorLevelCommand">
+      <summary>Applies color leveling to an image. It changes the image shadows, midtones and highlights. This function is useful for pre-processing images for the purpose of improving barcode recognition results.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorLevelCommand.#ctor">
+      <summary>Initializes a new ColorLevelCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorLevelCommand.#ctor(Leadtools.ImageProcessing.Color.ColorLevelCommandData,Leadtools.ImageProcessing.Color.ColorLevelCommandData,Leadtools.ImageProcessing.Color.ColorLevelCommandData,Leadtools.ImageProcessing.Color.ColorLevelCommandData,Leadtools.ImageProcessing.Color.ColorLevelCommandFlags)">
+      <summary>Initializes a new ColorLevelCommand class object with explicit parameters.</summary>
+      <param name="master">Specifies the color-leveling information for the master channel when used in the ColorLevelCommand class. When used in AutoColorLevelCommand with the flag Contrast or Intensity, it retrieves the color-leveling information of the master channel.</param>
+      <param name="red">Specifies the color-leveling information for the red channel when used in the ColorLevelCommand class. When used in AutoColorLevelCommand with the flag Level, it retrieves the color-leveling information of the red channel.</param>
+      <param name="green">Specifies the color-leveling information for the green channel when used in the ColorLevelCommand class. When used in AutoColorLevelCommand with the flag Level, it retrieves the color-leveling information of the green channel.</param>
+      <param name="blue">Specifies the color-leveling information for the blue channel when used in the ColorLevelCommand class. When used in AutoColorLevelCommand with the flag Level, it retrieves the color-leveling information of the blue channel.</param>
+      <param name="flags">Flag that indicates the channel being leveled.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorLevelCommand.#ctor(Leadtools.ImageProcessing.Color.ColorLevelCommandFlags)">
+      <summary>Initializes a new ColorLevelCommand class object with explicit parameters.</summary>
+      <param name="flags">Flag that indicates the channel being leveled.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorLevelCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorLevelCommand.Blue">
+      <summary>Gets or sets the color-leveling information for the blue channel when used in the ColorLevelCommand class.</summary>
+      <value>Specifies the color-leveling information for the blue channel when used in the ColorLevelCommand class. When used in the AutoColorLevelCommand class with the flag Level, it retrieves the color-leveling information of the blue channel.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorLevelCommand.Flags">
+      <summary>Flag that indicates the channel being leveled.</summary>
+      <value>Flag that indicates the channel being leveled.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorLevelCommand.Green">
+      <summary>Gets or sets the color-leveling information for the green channel when used in the ColorLevelCommand class.</summary>
+      <value>Specifies the color-leveling information for the green channel when used in the ColorLevelCommand class. When used in the AutoColorLevelCommand class with the flag Level, it retrieves the color-leveling information of the green channel.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorLevelCommand.Master">
+      <summary>Gets or sets the color-leveling information for the master channel used in the ColorLevelCommand class.</summary>
+      <value>Color-leveling information for the master channel used in the ColorLevelCommand class. When used in the AutoColorLevelCommand class with the flag Contrast or Intensity, it retrieves the color-leveling information of the master channel.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorLevelCommand.Red">
+      <summary>Gets or sets the color-leveling information for the red channel when used in the ColorLevelCommand class.</summary>
+      <value>Specifies the color-leveling information for the red channel when used in the ColorLevelCommand class. When used in the AutoColorLevelCommand class, with the flag Level, it retrieves the color-leveling information of the red channel.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorLevelCommandData">
+      <summary>The ColorLevelCommandData class contains color-leveling information for a specific color channel.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorLevelCommandData.#ctor">
+      <summary>Initializes a new ColorLevelCommandData class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorLevelCommandData.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Initializes a new ColorLevelCommandData class object with explicit parameters.</summary>
+      <param name="minimumInput">Value that specifies the image's shadows to be mapped. Valid values range from 0 to 255 for 8-bit, 0 to 4095 for 12-bit and 0 to 65535 for 16-bit images. Any value greater than or equal to this will be considered a shadow and will be remapped to the value in MinimumOutput.</param>
+      <param name="maximumInput">Value that specifies the image's highlights to be mapped. Valid values range from 0 to 255 for 8-bit, 0 to 4095 for 12-bit and 0 to 65535 for 16-bit images. Any value greater than or equal to this will be considered a highlight and will be remapped to the value in MaximumOutput.</param>
+      <param name="minimumOutput">Value that specifies the value to which the shadows will be mapped. Valid values range from 0 to 255 for 8-bit, 0 to 4095 for 12-bit and 0 to 65535 for 16-bit images.</param>
+      <param name="maximumOutput">Value that specifies the value to which the highlights will be mapped. Valid values range from 0 to 255 for 8-bit, 0 to 4095 for 12-bit and 0 to 65535 for 16-bit images.</param>
+      <param name="gamma">Value that represents the gamma value. This value is used to modify the midtones of the image. The value in this member is a 100 times the actual value. Therefore, if uGamma = 167 then the actual gamma value is 1.67. Likewise, if you want to use a gamma of 1.75, set this member to 175. The default value is DEFAULT_GAMMA, which is 100 (actual gamma value of 1.00) which does not change the gamma value of the image.</param>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorLevelCommandData.Gamma">
+      <summary>Gets or sets a value that represents the gamma value.</summary>
+      <value>Value that represents the gamma value. This value is used to modify the midtones of the image. The value in this member is a 100 times the actual value. Therefore, if uGamma = 167 then the actual gamma value is 1.67. Likewise, if you want to use a gamma of 1.75, set this property to 175. The default value is DEFAULT_GAMMA, which is 100 (actual gamma value of 1.00) which does not change the gamma value of the image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorLevelCommandData.MaximumInput">
+      <summary>Gets or sets a value that specifies the image's highlights to be mapped.</summary>
+      <value>Value that specifies the image's highlights to be mapped. Valid values range from 0 to 255 for 8-bit, 0 to 4095 for 12-bit and 0 to 65535 for 16-bit images. Any value greater than or equal to this will be considered a highlight and will be remapped to the value in MaximumOutput.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorLevelCommandData.MaximumOutput">
+      <summary>Gets or sets a value that specifies the value to which the highlights will be mapped.</summary>
+      <value>Value that specifies the value to which the highlights will be mapped. Valid values range from 0 to 255 for 8-bit, 0 to 4095 for 12-bit and 0 to 65535 for 16-bit images.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorLevelCommandData.MinimumInput">
+      <summary>Gets or sets a value that specifies the image's shadows to be mapped.</summary>
+      <value>Value that specifies the image's shadows to be mapped. Valid values range from 0 to 255 for 8-bit, 0 to 4095 for 12-bit and 0 to 65535 for 16-bit images. Any value greater than or equal to this will be considered a shadow and will be remapped to the value in MinimumOutput.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorLevelCommandData.MinimumOutput">
+      <summary>Gets or sets a value that specifies the value to which the shadows will be mapped.</summary>
+      <value>Value that specifies the value to which the shadows will be mapped. Valid values range from 0 to 255 for 8-bit, 0 to 4095 for 12-bit and 0 to 65535 for 16-bit images.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorMergeCommand">
+      <summary>Creates a color image by merging grayscale images that were created as color separations. You can use this to recombine the images that the ColorSeparateCommand class creates.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorMergeCommand.#ctor">
+      <summary>Initializes a new ColorMergeCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorMergeCommand.#ctor(Leadtools.ImageProcessing.Color.ColorMergeCommandType)">
+      <summary>Initializes a new ColorMergeCommand class object with explicit parameters.</summary>
+      <param name="type">Value that indicates the type of separation that was used to create the grayscale images.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorMergeCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorMergeCommand.DestinationImage">
+      <summary>Gets the ILEADRaster object that references the target image.</summary>
+      <value>ILEADRaster object that references the target image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorMergeCommand.Type">
+      <summary>Gets or sets a value that represents the type of separation that was used to create the grayscale images.</summary>
+      <value>Value that represents the type of separation that was used to create the grayscale images.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorReplaceCommand">
+      <summary>Replaces the specified color by adjusting values of hue, saturation and brightness.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorReplaceCommand.#ctor">
+      <summary>Initializes a new ColorReplaceCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorReplaceCommand.#ctor(Leadtools.ImageProcessing.Color.ColorReplaceCommandColor[],System.Int32,System.Int32,System.Int32)">
+      <summary>Initializes a new ColorReplaceCommandclass object with explicit parameters.</summary>
+      <param name="colors">An array of ColorReplaceCommandColor classes that provides information about the replacement color used by this class.</param>
+      <param name="hue">Angular amount to change the hue, in hundredths of degrees. Valid values range from -18000 to 18000. This value is divided internally by 100.</param>
+      <param name="saturation">Amount to change saturation, in tenths of a percent. Valid values range from -1000 to 1000. This value is divided internally by 10. Negative values decrease the saturation of colors. Positive values increase the saturation. The saturation level is increased or decreased by a percentage of its present saturation level. For example, an increase of 20 of the current saturation level "L" will raise the new saturation level "L1" to a value L = 0.20 \* L. Likewise, increasing the saturation level 100 doubles the saturation level (L1 = L + 1.0 \* L). Decreasing the saturation level 100 will set the new saturation level to 0. The saturation is set to 1000 (maximum value) if the new value exceeds 1000).</param>
+      <param name="brightness">Amount to change the brightness, in tenths of a percent. Valid values range from -1000 to 1000. This value is divided internally by 10. Positive values increase (or lighten) the brightness of the image. Negative values decrease (or darken) the brightness of the image.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorReplaceCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>string that is the name of this method.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorReplaceCommand.Brightness">
+      <summary>Gets or sets a value that represents the amount to change the brightness, in tenths of a percent.</summary>
+      <value>Amount to change the brightness, in tenths of a percent. Valid values range from -1000 to 1000. This value is divided internally by 10. Positive values increase (or lighten) the brightness of the image. Negative values decrease (or darken) the brightness of the image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorReplaceCommand.Colors">
+      <summary>Gets or sets an array of ColorReplaceCommandColor classes that provides information about the replacement colors used by this class.</summary>
+      <value>An array of ColorReplaceCommandColor classes that provides information about the replacement colors used by this class.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorReplaceCommand.Hue">
+      <summary>Gets or sets a value that represents the angular amount to change the hue, in hundredths of degrees.</summary>
+      <value>Angular amount to change the hue, in hundredths of degrees. Valid values range from -18000 to 18000. This value is divided internally by 100.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorReplaceCommand.Saturation">
+      <summary>Gets or sets a value that represents the amount to change saturation, in tenths of a percent.</summary>
+      <value>Amount to change saturation, in tenths of a percent. Valid values range from -1000 to 1000. This value is divided internally by 10. Negative values decrease the saturation of colors. Positive values increase the saturation. The saturation level is increased or decreased by a percentage of its present saturation level. For example, an increase of 20 of the current saturation level "L" will raise the new saturation level "L1" to a value L = 0.20 \* L. Likewise, increasing the saturation level 100 doubles the saturation level (L1 = L + 1.0 \* L). Decreasing the saturation level 100 will set the new saturation level to 0. The saturation is set to 1000 (maximum value) if the new value exceeds 1000).</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorReplaceCommandColor">
+      <summary>Defines the information used by ColorReplaceCommand class.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorReplaceCommandColor.#ctor">
+      <summary>Initializes a new ColorReplaceCommandColor class with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorReplaceCommandColor.#ctor(Leadtools.RasterColor,System.Int32)">
+      <summary>Initializes a new ColorReplaceCommandColor class with explicit parameters.</summary>
+      <param name="replacedColor">Value that represents the color to be replaced.</param>
+      <param name="fuzziness">Value that indicates the + or - range of the color being replaced. This property only accepts nonzero positive values.</param>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorReplaceCommandColor.Color">
+      <summary>Gets or sets a value that represents the color to be replaced.</summary>
+      <value>Value of the color to be replaced.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorReplaceCommandColor.Fuzziness">
+      <summary>Gets or sets a value used to indicate the range of colors to be replaced.</summary>
+      <value>Value used to indicate the range of colors to be replaced. This property only accepts nonzero positive values.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorSeparateCommand">
+      <summary>Separates an image by color plane to produce one grayscale image per plane. You can specify any of several color-space models, including CMYK.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorSeparateCommand.#ctor">
+      <summary>Initializes a new ColorSeparateCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorSeparateCommand.#ctor(Leadtools.ImageProcessing.Color.ColorSeparateCommandType)">
+      <summary>Initializes a new ColorSeparateCommand class object with explicit parameters.</summary>
+      <param name="type">Value that represents the type of separation that was used to create the grayscale images.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorSeparateCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorSeparateCommand.DestinationImage">
+      <summary>Gets the RasterImage object that references the target image.</summary>
+      <value>RasterImage object that references the target image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorSeparateCommand.Type">
+      <summary>Gets or sets a value that indicates the type of separation that was used to create the grayscale images.</summary>
+      <value>The type of separation that was used to create the grayscale images.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorThresholdCommand">
+      <summary>Using any one of eight color spaces, resets those image's pixel component values that fall inside or outside of a specified range.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorThresholdCommand.#ctor">
+      <summary>Initializes a new ColorThresholdCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorThresholdCommand.#ctor(Leadtools.ImageProcessing.Color.ColorThresholdCommandType,Leadtools.ImageProcessing.Color.ColorThresholdCommandComponent[])">
+      <summary>Initializes a new ColorThresholdCommand class object with explicit parameters.</summary>
+      <param name="type">Value that represents the color space on which the threshold is based.</param>
+      <param name="components">Array of 3 ColorThresholdCommandComponent classes that contains the properties used to compare and modify each component.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorThresholdCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorThresholdCommand.ColorSpace">
+      <summary>Gets or sets the color space on which the threshold is based.</summary>
+      <value>Value that represents the color space on which the threshold is based.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorThresholdCommand.Components">
+      <summary>Gets or sets an array of 3 ColorThresholdCommandComponent classes that contains the properties used to compare and modify each component.</summary>
+      <value>Array of 3 ColorThresholdCommandComponent classes that contains the properties used to compare and modify each component.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorThresholdCommandComponent">
+      <summary>ColorThresholdCommandComponent class contains the values to be used for thresholding and redistributing the image's color component values for the ColorThresholdCommand class.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorThresholdCommandComponent.#ctor">
+      <summary>Initializes a new ColorThresholdCommandComponent class with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ColorThresholdCommandComponent.#ctor(System.Int32,System.Int32,Leadtools.ImageProcessing.Color.ColorThresholdCommandFlags)">
+      <summary>Initializes a new ColorThresholdCommandComponent class with explicit parameters.</summary>
+      <param name="minimumRange">Value that represents the minimum boundary used to threshold a specific color.</param>
+      <param name="maximumRange">Value that represents the maximum boundary used to threshold a specific color.</param>
+      <param name="flags">Flags that represent the value that should be distributed to the thresholded component.</param>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorThresholdCommandComponent.Flags">
+      <summary>Gets or sets values that represent the treatment of the values within the threshold range, the treatment of a pixel that falls on the threshold and new values for rejected values.</summary>
+      <value>Values that represent the treatment of the values within the threshold range, the treatment of a pixel that falls on the threshold and new values for rejected values.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorThresholdCommandComponent.MaximumRange">
+      <summary>Gets or sets a value that represents the maximum boundary used to threshold a specific color.</summary>
+      <value>Value that represents the maximum boundary used to threshold a specific color.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ColorThresholdCommandComponent.MinimumRange">
+      <summary>Gets or sets a value that represents the minimum boundary used to threshold a specific color.</summary>
+      <value>Value that represents the minimum boundary used to threshold a specific color.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ContrastBrightnessIntensityCommand">
+      <summary>Applies contrast, brightness and intensity adjustments to enhance the image tonal range. This class is available in the Imaging Pro and above toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ContrastBrightnessIntensityCommand.#ctor">
+      <summary>Initializes a new ContrastBrightnessIntensityCommand class objects with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ContrastBrightnessIntensityCommand.#ctor(System.Int32,System.Int32,System.Int32)">
+      <summary>Initializes a new ContrastBrightnessIntensityCommand class object with explicit parameters.</summary>
+      <param name="contrast">Value that refers to the histogram stretching amount. It represents the amount of contrast change. The contrast ranges from -1000 to +1000. This value is divided internally by 1000. A positive value increases the contrast whereas a negative value decreases the contrast.</param>
+      <param name="brightness">Value that refers to colors intensities scale factor. It indicates the amount of brightness change. The brightness ranges from -1000 to 1000. This value is divided internally by 1000. A positive value increases (or lightens) the brightness of the image image. A negative value decreases (or darkens) the brightness of the image image.</param>
+      <param name="intensity">Value that refers to colors intensities shifting amount. It indicates the amount of intensity change. The intensity ranges from -1000 to +1000. This value is divided internally by 1000. A positive value lightens the brightness pixels whereas a negative value darkens the brightness pixels.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ContrastBrightnessIntensityCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ContrastBrightnessIntensityCommand.Brightness">
+      <summary>Gets or sets the amount of change in the brightness.</summary>
+      <value>Value that refers to the color intensity scale factor. The brightness ranges from -1000 to 1000. This value is divided internally by 1000. A positive value increases (or lightens) the brightness of the image. A negative value decreases (or darkens) the brightness of the image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ContrastBrightnessIntensityCommand.Contrast">
+      <summary>Gets or sets the amount of contrast change.</summary>
+      <value>Value that refers to the histogram stretching amount. The contrast ranges from -1000 to +1000. This value is divided internally by 1000. A positive value increases the contrast whereas a negative value decreases the contrast.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ContrastBrightnessIntensityCommand.Intensity">
+      <summary>Gets or sets the amount of change to the intensity.</summary>
+      <value>Value that refers to amount of shift in the color intensity. The intensity ranges from -1000 to +1000. This value is divided internally by 1000. A positive value lightens the brightness pixels whereas a negative value darkens the brightness pixels.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ConvertToColoredGrayCommand">
+      <summary>Converts an image to a grayscale image, then enhances the color components based on the class properties. This class is available in the Document Toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ConvertToColoredGrayCommand.#ctor">
+      <summary>Initializes a new ConvertToColoredGrayCommand with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ConvertToColoredGrayCommand.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Initializes a new ConvertToColoredGrayCommand class object with explicit parameters.</summary>
+      <param name="redFactor">Value that represents the percentage or weight given to the red value of each pixel in the image. Possible values are 0 to 1000.</param>
+      <param name="greenFactor">Value that represents the percentage or weight given to the green value of each pixel in the image. Possible values are 0 to 1000.</param>
+      <param name="blueFactor">Value that represents the percentage or weight given to the blue value of each pixel in the image. Possible values are 0 to 1000.</param>
+      <param name="redGrayFactor">Additional weighting factor (percentage) used to modify the red component in the output pixel. This value can be negative. Possible values are -1000 to 1000.</param>
+      <param name="greenGrayFactor">Additional weighting factor (percentage) used to modify the green component in the output pixel. This value can be negative. Possible values are -1000 to 1000.</param>
+      <param name="blueGrayFactor">Additional weighting factor (percentage) used to modify the blue component in the output pixel. This value can be negative. Possible values are -1000 to 1000.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.ConvertToColoredGrayCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ConvertToColoredGrayCommand.BlueFactor">
+      <summary>Gets or sets a value that represents the percentage or weight given to the blue value of each pixel in the image.</summary>
+      <value>Value that represents the percentage or weight given to the blue value of each pixel in the image. Possible values are 0 to 1000.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ConvertToColoredGrayCommand.BlueGrayFactor">
+      <summary>Gets or sets an additional weighting factor (percentage) used to modify the blue component in the output pixel.</summary>
+      <value>Additional weighting factor (percentage) used to modify the blue component in the output pixel. This value can be negative. Possible values are -1000 to 1000.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ConvertToColoredGrayCommand.GreenFactor">
+      <summary>Gets or sets a value that represents the percentage or weight given to the green value of each pixel in the image.</summary>
+      <value>Value that represents the percentage or weight given to the green value of each pixel in the image. Possible values are 0 to 1000.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ConvertToColoredGrayCommand.GreenGrayFactor">
+      <summary>Gets or sets an additional weighting factor (percentage) used to modify the green component in the output pixel.</summary>
+      <value>Additional weighting factor (percentage) used to modify the green component in the output pixel. This value can be negative. Possible values are -1000 to 1000.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ConvertToColoredGrayCommand.RedFactor">
+      <summary>Gets or sets a value that represents the percentage or weight given to the red value of each pixel in the image.</summary>
+      <value>Value that represents the percentage or weight given to the red value of each pixel in the image. Possible values are 0 to 1000.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.ConvertToColoredGrayCommand.RedGrayFactor">
+      <summary>Gets or sets an additional weighting factor (percentage) used to modify the red component in the output pixel.</summary>
+      <value>Additional weighting factor (percentage) used to modify the red component in the output pixel. This value can be negative. Possible values are -1000 to 1000.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.DesaturateCommand">
+      <summary>Converts the image to a grayscale level by reducing the saturation of each color to zero. The conversion will not change the color resolution.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.DesaturateCommand.#ctor">
+      <summary>Initializes a new DesaturateCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.DesaturateCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.DynamicBinaryCommand">
+      <summary>Converts an image into a black and white image without changing its bits per pixel by using a local threshold value for each pixel of the image. This function is useful for pre-processing images for the purpose of improving barcode recognition results.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.DynamicBinaryCommand.#ctor">
+      <summary>Initializes a new DynamicBinaryCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.DynamicBinaryCommand.#ctor(System.Int32,System.Int32)">
+      <summary>Initializes a new DynamicBinaryCommand class object with explicit parameters.</summary>
+      <param name="dimension">Dimensions of the neighborhood used when evaluating each pixel (Dimension x Dimension), in pixels. This should be at least 1.</param>
+      <param name="localContrast">Local contrast threshold. If the contrast of the area surrounding the pixel is less than the LocalContrast property, the pixel is converted to black or white using a global pre-calculated threshold. If the contrast of the area surrounding the pixel is higher than the LocalContrast property, the local threshold value is calculated and used. The range for the LocalContrast property is 0 to 255 for 8-bit, 0 to 4095 for 12-bit and 0 to 65535 for 16-bit.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.DynamicBinaryCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.DynamicBinaryCommand.Dimension">
+      <summary>Gets or sets the dimensions of the neighborhood used when evaluating each pixel (Dimension x Dimension), in pixels.</summary>
+      <value>Dimensions of the neighborhood used when evaluating each pixel (Dimension x Dimension), in pixels. This should be at least 1.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.DynamicBinaryCommand.LocalContrast">
+      <summary>Gets or set the local contrast threshold.</summary>
+      <value>Local contrast threshold. If the contrast of the area surrounding the pixel is less than the LocalContrast property, the pixel is converted to black or white using a global pre-calculated threshold. If the contrast of the area surrounding the pixel is higher than the LocalContrast property, the local threshold value is calculated and used. The range for the LocalContrast property is 0 to 255 for 8-bit, 0 to 4095 for 12-bit and 0 to 65535 for 16-bit.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.GammaCorrectCommand">
+      <summary>Adjusts the intensity of colors in an image by changing the gamma constant that is used to map the intensity values.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GammaCorrectCommand.#ctor">
+      <summary>Initializes a new GammaCorrectCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GammaCorrectCommand.#ctor(System.Int32)">
+      <summary>Initializes a new GammaCorrectCommand class object with explicit parameters.</summary>
+      <param name="gamma">Integer that represents the gamma value. It can be any number greater than 0.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GammaCorrectCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GammaCorrectCommand.Gamma">
+      <summary>Gets or sets an integer that represents the gamma value.</summary>
+      <value>Integer that represents the gamma value. It can be any number greater than 0.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.GammaCorrectExtendedCommand">
+      <summary>Adjusts the intensity of colors in an image by changing the gamma constant that is used to map the intensity values. Either of two different color spaces can be specified.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GammaCorrectExtendedCommand.#ctor">
+      <summary>Initializes a new GammaCorrectExtendedCommand with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GammaCorrectExtendedCommand.#ctor(System.Int32,Leadtools.ImageProcessing.Color.GammaCorrectExtendedCommandType)">
+      <summary>Initializes a new GammaCorrectExtendedCommand with explicit parameters.</summary>
+      <param name="gamma">Any value greater than 0 that represents the gamma value. This value is divided internally by 100.</param>
+      <param name="type">Flag that indicates which color space to use.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GammaCorrectExtendedCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that is the name of this method.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GammaCorrectExtendedCommand.Gamma">
+      <summary>Gets or sets the Gamma value.</summary>
+      <value>Any value greater than 0 that represents the gamma value. This value is divided internally by 100.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GammaCorrectExtendedCommand.Type">
+      <summary>Gets or sets the color space type.</summary>
+      <value>Enumeration that indicates the color space in which to apply the gamma correction.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.GrayScaleExtendedCommand">
+      <summary>Converts any image to a gray scale image without changing its resolution.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GrayScaleExtendedCommand.#ctor">
+      <summary>Initializes a new GrayScaleExtendedCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GrayScaleExtendedCommand.#ctor(System.Int32,System.Int32,System.Int32)">
+      <summary>Initializes a new GrayScaleExtendedCommand class object with explicit parameters.</summary>
+      <param name="redFactor">Value that represents the percentage or weight given to the red value of each pixel in the image. Possible values are 0 to 1000.</param>
+      <param name="greenFactor">Value that represents the percentage or weight given to the green value of each pixel in the image. Possible values are 0 to 1000.</param>
+      <param name="blueFactor">Value that represents the percentage or weight given to the blue value of each pixel in the image. Possible values are 0 to 1000.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GrayScaleExtendedCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleExtendedCommand.BlueFactor">
+      <summary>Gets or sets a value that represents the percentage or weight given to the blue value of each pixel in the image.</summary>
+      <value>Value that represents the percentage or weight given to the blue value of each pixel in the image. Possible values are 0 to 1000.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleExtendedCommand.GreenFactor">
+      <summary>Gets or sets a value that represents the percentage or weight given to the green value of each pixel in the image.</summary>
+      <value>Value that represents the percentage or weight given to the green value of each pixel in the image. Possible values are 0 to 1000.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleExtendedCommand.RedFactor">
+      <summary>Gets or sets a value that represents the percentage or weight given to the red value of each pixel in the image.</summary>
+      <value>Value that represents the percentage or weight given to the red value of each pixel in the image. Possible values are 0 to 1000.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommand">
+      <summary>Converts the grayscale image into a colored one by mixing or replacing the original values of the pixels with new colors. This class is available in the Imaging Pro and above toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommand.#ctor">
+      <summary>Initializes a new GrayScaleToDuotoneCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommand.#ctor(Leadtools.RasterColor[],Leadtools.RasterColor,Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommandMixingType)">
+      <summary>Initializes a new GrayScaleToDuotoneCommand class object with explicit parameters.</summary>
+      <param name="newColor">Array of RasterColor structures that specifies colors that will be mixed with the original gray values. If this parameter is set to null, the Color property must contain a valid color. Pass null when you want the command to create the array of colors, two colors when replacing both colors in a binary image, or 256 colors when using a custom array of colors.</param>
+      <param name="color">Used to create an array of colors internally. This parameter is used when the NewColor structure is set to null. This parameter is ignored if the NewColor value is something other than null.</param>
+      <param name="type">Enumeration that indicates whether colors will be mixed or replaced.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommand.Color">
+      <summary>Gets or sets an array of colors for internal use.</summary>
+      <value>An array of colors for internal use. This parameter is used when the NewColor structure is set to null. This parameter is ignored if the NewColor value is something other than null.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommand.NewColor">
+      <summary>Array of RasterColor structures that specifies an array of colors that will be mixed with the original gray values.</summary>
+      <value>Array of RasterColor structures that specifies an array of colors that will be mixed with the original gray values. If this parameter is set to null, the Color property must contain a valid color. Pass null when you want the command to create the array of colors, two colors when replacing both colors in a binary image, or 256 colors when using a custom array of colors.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommand.Type">
+      <summary>Gets or sets flags that indicate whether colors will be mixed or replaced.</summary>
+      <value>Value that indicates whether colors will be mixed or replaced.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommand">
+      <summary>Converts a grayscale image into a colored one by mixing or replacing the original values of the pixels with one or more new colors. This class is available in the Imaging Pro and above toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommand.#ctor">
+      <summary>Initializes a new GrayScaleToMultitoneCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this method.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommand.Colors">
+      <summary>Gets or sets an array of RasterColor structures that contain the colors that will be added to the grayscale image.</summary>
+      <value>Array of RasterColor structures that contain the colors that will be added to the grayscale image. This property is ignored when the Distribution property is set to UserDefined. If the toolkit is generating the gradient colors, the user sets the desired base color(s) in this property when GrayScaleToMultitoneCommand is called. The number of entries in the array depends on the value of Tone: 1 for Monotone, 2 for Duotone, 3 for Tritone, 4 for Quadtone. When the toolkit generates the array of gradient colors.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommand.Distribution">
+      <summary>Gets or sets a flag that indicates the source of the colors to be added to the image.</summary>
+      <value>Value that indicates the source of the colors to be added to the image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommand.Gradient">
+      <summary>Gets or sets a user-defined two dimensional array of RasterColor structures that will hold the set of color shade gradients.</summary>
+      <value>User-defined two dimensional array of RasterColor structures that will hold the set of color shade gradients. This property is used when the Distribution property is set to UserDefined.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommand.Tone">
+      <summary>Gets or sets a flag that indicates the number of colors to add to the grayscale image.</summary>
+      <value>Value that indicates the number of colors to add to the grayscale image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommand.Type">
+      <summary>Gets or sets a flag that indicates whether the new colors replace the old colors, or the new colors will be mixed with the old colors.</summary>
+      <value>Value that indicates whether the new colors replace the old colors, or the new colors will be mixed with the old colors.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.HistogramCommand">
+      <summary>Creates an array that charts how many times each intensity level occurs in an image. This class can chart red, green, and blue separately or together. It is used for all resolutions, including 12 and 16-bit grayscale.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.HistogramCommand.#ctor">
+      <summary>Initializes a new HistogramCommand with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.HistogramCommand.#ctor(Leadtools.ImageProcessing.Color.HistogramCommandFlags)">
+      <summary>Initializes a new HistogramCommand class object with explicit parameters.</summary>
+      <param name="channel">Flags that indicate the channel for which to get the histogram and the bits to use in calculating the histogram.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.HistogramCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.HistogramCommand.Channel">
+      <summary>Gets or sets a flag that indicates the channel for which to get the histogram and the bits to use in calculating the histogram.</summary>
+      <value>Value that indicates the channel for which to get the histogram and the bits to use in calculating the histogram.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.HistogramCommand.Histogram">
+      <summary>An array of 32-bit integers that charts the number of times each intensity level occurs in the image.</summary>
+      <value>An array of 64-bit integers that charts the number of times each intensity level occurs in the image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.HistogramCommand.HistogramLength">
+      <summary>Gets the length for the histogram property</summary>
+      <value>An integer that specifies the length for the histogram property</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.HistogramContrastCommand">
+      <summary>Increases or decreases the contrast of the image, using a histogram to determine the median brightness.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.HistogramContrastCommand.#ctor">
+      <summary>Initializes a new HistogramContrastCommand with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.HistogramContrastCommand.#ctor(System.Int32)">
+      <summary>Initializes a new HistogramContrastCommand class object with explicit parameters.</summary>
+      <param name="contrast">Amount of contrast change. Valid values are -1000 to +1000.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.HistogramContrastCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.HistogramContrastCommand.Contrast">
+      <summary>Gets or sets a value that represents the amount of contrast change.</summary>
+      <value>Value that represents the amount of contrast change. Valid values are -1000 to +1000.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.HistogramEqualizeCommand">
+      <summary>Linearizes the number of pixels, in an image, based on the specified color space. This can be used to bring out the detail in dark areas of an image. This function is useful for pre-processing images for the purpose of improving barcode recognition results.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.HistogramEqualizeCommand.#ctor">
+      <summary>Initializes a new HistogramEqualizeCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.HistogramEqualizeCommand.#ctor(Leadtools.ImageProcessing.Color.HistogramEqualizeType)">
+      <summary>Initializes a new HistogramEqualizeCommand class object with explicit parameters.</summary>
+      <param name="type">Flag that indicates which color space to equalize.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.HistogramEqualizeCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.HistogramEqualizeCommand.Type">
+      <summary>Gets or sets a flag that indicates which color space to equalize.</summary>
+      <value>Value that indicates which color space to equalize.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.IntensityDetectCommand">
+      <summary>Applies binary segmentation to an image by filtering a specific image to detect colors in a specific intensity range, in a specific color channel(s).</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.IntensityDetectCommand.#ctor">
+      <summary>Initializes a new IntensityDetectCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.IntensityDetectCommand.#ctor(System.Int32,System.Int32,Leadtools.RasterColor,Leadtools.RasterColor,Leadtools.ImageProcessing.Color.IntensityDetectCommandFlags)">
+      <summary>Initializes a new IntensityDetectCommand class object with explicit parameters.</summary>
+      <param name="low">Lowest intensity to detect. Possible values are between 0 and 255.</param>
+      <param name="high">Highest intensity to detect. Possible values are between 0 and 255.</param>
+      <param name="inColor">Color used to fill those pixels having an intensity value between LowThreshold and HighThreshold. This parameter has no effect if the Channel property is set to IntensityDetectCommandFlags.Master. If for example the Channel property is set to IntensityDetectCommandFlags.Red, then the red component of InColor will be used to fill the pixels having a red component value between LowThreshold and HighThreshold.</param>
+      <param name="outColor">Used to fill those pixels having an intensity value less than LowThreshold or greater than HighThreshold. This parameter has no effect if the Channel property is IntensityDetectCommandFlags.Master. If for example the Channel property is set to IntensityDetectCommandFlags.Red, then the red component of OutColor will be used to fill the pixels having a red component value less than LowThreshold or greater than HighThreshold.</param>
+      <param name="channel">Flag that indicates the channel to process.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.IntensityDetectCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.IntensityDetectCommand.Channel">
+      <summary>Gets or sets a flag that indicates the channel to process.</summary>
+      <value>Value that indicates the channel to process.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.IntensityDetectCommand.HighThreshold">
+      <summary>Gets or sets a value that represents the highest intensity to detect.</summary>
+      <value>Highest intensity to detect. Possible values are from 0 to 255.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.IntensityDetectCommand.InColor">
+      <summary>Gets or sets a color used to fill those pixels having an intensity value between LowThreshold and HighThreshold.</summary>
+      <value>Color used to fill those pixels having an intensity value between LowThreshold and HighThreshold. This property has no effect if the Channel property is set to IntensityDetectCommandFlags.Master. If for example the Channel property is set to IntensityDetectCommandFlags.Red, then the red component of InColor will be used to fill the pixels having a red component value between LowThreshold and HighThreshold.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.IntensityDetectCommand.LowThreshold">
+      <summary>Gets or sets a value that represents the lowest intensity to detect.</summary>
+      <value>Lowest intensity to detect. Possible values are from 0 to 255.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.IntensityDetectCommand.OutColor">
+      <summary>Gets or sets a color used to fill those pixels having an intensity value less than LowThreshold or greater than HighThreshold.</summary>
+      <value>Color used to fill those pixels having an intensity value less than LowThreshold or greater than HighThreshold. This property has no effect if the Channel property is IntensityDetectCommandFlags.Master. If for example the Channel property is set to Red, then the red component of OutColor will be used to fill the pixels having a red component value less than LowThreshold or greater than HighThreshold.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.InvertCommand">
+      <summary>Inverts the colors in the specified image, giving it the appearance of a photographic negative.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.InvertCommand.#ctor">
+      <summary>Initializes a new InvertCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.InvertCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that is the name of this method.</returns>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.LightControlCommand">
+      <summary>Lightens or darkens all or part of an image by remapping the pixel values. This function is useful for pre-processing images for the purpose of improving barcode recognition results.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.LightControlCommand.#ctor">
+      <summary>Initializes a new LightControlCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.LightControlCommand.#ctor(System.Int32[],System.Int32[],System.Int32[],Leadtools.ImageProcessing.Color.LightControlCommandType)">
+      <summary>Initializes a new LightControlCommand class object with explicit parameters.</summary>
+      <param name="lowerAverage">An array that contains the new average pixel value for those pixels with values between 0 and the average pixel value for the entire image. The size of the array equals one, if Type is LightControlCommandType.Yuv or LightControlCommandType.Gray, or three, if Type is LightControlCommandType.Rgb. If Type is LightControlCommandType.Rgb the first element corresponds to the new blue lower average value, the second element to the green, and the last element to the red.</param>
+      <param name="average">An array that contains the new average pixel value for the entire image. The size of the array equals one, if Type is LightControlCommandType.Yuv or LightControlCommandType.Gray, or three, if Type is LightControlCommandType.Rgb. If Type is LightControlCommandType.Rgb the first element corresponds to the new blue average value, the second element to the green, and the last element to the red.</param>
+      <param name="upperAverage">An array that contains the new average pixel value for those pixels with values between the average pixel value for the entire image and the highest pixel value in the image. The size of the array equals either one if Type is LightControlCommandType.Yuv or LightControlCommandType.Gray or three if Type is LightControlCommandType.Rgb where the first element corresponds to the new blue upper side average value, the second element to the green, and the last element to the red.</param>
+      <param name="type">Flag that indicates which color space to remap.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.LightControlCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that is the name of this method.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LightControlCommand.Average">
+      <summary>Gets or sets an array that contains the new average pixel value for the entire image.</summary>
+      <value>An array that contains the new average pixel value for the entire image. The size of the array equals one, if Type is LightControlCommandType.Yuv or LightControlCommandType.Gray, or three, if Type is LightControlCommandType.Rgb. If Type is LightControlCommandType.Rgb the first element corresponds to the new blue average value, the second element to the green, and the last element to the red.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LightControlCommand.LowerAverage">
+      <summary>Gets or sets an array that contains the new average pixel value for those pixels with values between 0 and the average pixel value for the entire image.</summary>
+      <value>An array that contains the new average pixel value for those pixels with values between 0 and the average pixel value for the entire image. The size of the array equals one, if Type is LightControlCommandType.Yuv or LightControlCommandType.Gray, or three, if Type is LightControlCommandType.Rgb. If Type is LightControlCommandType.Rgb the first element corresponds to the new blue lower average value, the second element to the green, and the last element to the red.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LightControlCommand.Type">
+      <summary>Gets or sets a value that indicates which color space to remap.</summary>
+      <value>Value that indicates which color space to remap.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LightControlCommand.UpperAverage">
+      <summary>An array that contains the new average pixel value for those pixels with values between the average pixel value for the entire image and the highest pixel value in the image.</summary>
+      <value>An array contain the new average pixel value for those pixels with values between the average pixel value for the entire image and the highest pixel value in the image. The size of the array equals either one if Type is LightControlCommandType.Yuv or LightControlCommandType.Gray or three if Type is LightControlCommandType.Rgb where the first element corresponds to the new blue upper side average value, the second element to the green, and the last element to the red.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.LineProfileCommand">
+      <summary>Allocates three arrays and updates them with the R, G and B profile for each pixel in a specific line.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.LineProfileCommand.#ctor">
+      <summary>Initializes a new LineProfileCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.LineProfileCommand.#ctor(Leadtools.LeadPoint,Leadtools.LeadPoint)">
+      <summary>Initializes a new LineProfileCommand class object with explicit parameters. The RedBuffer, GreenBuffer and BlueBuffer properties are updated with the corresponding color information about the pixels between the points specified in the firstPoint and secondPoint parameters.</summary>
+      <param name="firstPoint">The starting point for the line.</param>
+      <param name="secondPoint">The end point for the line.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.LineProfileCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LineProfileCommand.BlueBuffer">
+      <summary>Array that is allocated and updated with the blue values for the line specified by the FirstPoint and SecondPoint properties.</summary>
+      <value>Gets an array that is allocated and updated with the blue values for the line specified by the FirstPoint and SecondPoint properties. The array is allocated by this class.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LineProfileCommand.FirstPoint">
+      <summary>Gets or sets the starting point for the line.</summary>
+      <value>The starting point for the line.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LineProfileCommand.GreenBuffer">
+      <summary>Array that is allocated and updated with the green values for the line specified by the FirstPoint and SecondPoint properties.</summary>
+      <value>Array that is allocated and updated with the green values for the line specified by the FirstPoint and SecondPoint properties. The array is allocated by this class.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LineProfileCommand.Length">
+      <summary>Gets the length for each of the redBuffer, greenBuffer and blueBuffer properties</summary>
+      <value>An integer that specifies the length for each of the redBuffer, greenBuffer and blueBuffer properties</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LineProfileCommand.RedBuffer">
+      <summary>Array that is allocated and updated with the red values for the line specified by the FirstPoint and SecondPoint properties.</summary>
+      <value>Array that is allocated and updated with the red values for the line specified by the FirstPoint and SecondPoint properties. The array is allocated by this class.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LineProfileCommand.SecondPoint">
+      <summary>Gets or sets the end point for the line.</summary>
+      <value>The end point for the line.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.LocalHistogramEqualizeCommand">
+      <summary>Linearizes the number of pixels locally in an image, based on a specific color space. This can be used to bring out the detail in dark areas of an image, and smooth the edges between blocks. This class is available in the Medical Toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.LocalHistogramEqualizeCommand.#ctor">
+      <summary>Initializes a new LocalHistogramEqualizeCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.LocalHistogramEqualizeCommand.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,Leadtools.ImageProcessing.Color.HistogramEqualizeType)">
+      <summary>Initializes a new LocalHistogramEqualizeCommand class object with explicit parameters.</summary>
+      <param name="width">The width of the local histogram equalizer rectangle in pixels. The width should be more than zero.</param>
+      <param name="height">The height of the local histogram equalizer rectangle in pixels. The height should be more than zero.</param>
+      <param name="widthExtension">The extension of the width of the local histogram equalizer rectangle, in pixels.</param>
+      <param name="heightExtension">The extension of the height of the local histogram equalizer rectangle, in pixels.</param>
+      <param name="smooth">Size of the area to be used when smoothing the edges between localized blocks. Possible values are between 0 and 7, but if Height is less than or equal to 7 then the maximum value for this item is Height - 1. If Smooth = 0 the edges will not be smoothed.</param>
+      <param name="type">Flag that indicates which color space to equalize.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.LocalHistogramEqualizeCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LocalHistogramEqualizeCommand.Height">
+      <summary>Gets or sets the height of the local histogram equalizer rectangle in pixels.</summary>
+      <value>The height of the local histogram equalizer rectangle in pixels. The height should be more than zero.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LocalHistogramEqualizeCommand.HeightExtension">
+      <summary>Gets or sets the extension of the height of the local histogram equalizer rectangle, in pixels.</summary>
+      <value>The extension of the height of the local histogram equalizer rectangle, in pixels.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LocalHistogramEqualizeCommand.Smooth">
+      <summary>Gets or sets the size of the area to be used when smoothing the edges between localized blocks.</summary>
+      <value>Size of the area to be used when smoothing the edges between localized blocks. Possible values are between 0 and 7, but if Height is less than or equal to 7 then the maximum value for this item is Height - 1. If Smooth = 0 the edges will not be smoothed.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LocalHistogramEqualizeCommand.Type">
+      <summary>Flag that indicates which color space to equalize.</summary>
+      <value>Value that indicates which color space to equalize.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LocalHistogramEqualizeCommand.Width">
+      <summary>Gets or sets the width of the local histogram equalizer rectangle in pixels.</summary>
+      <value>The width of the local histogram equalizer rectangle in pixels. The width should be more than zero.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.LocalHistogramEqualizeCommand.WidthExtension">
+      <summary>Gets or sets the extension of the width of the local histogram equalizer rectangle, in pixels.</summary>
+      <value>The extension of the width of the local histogram equalizer rectangle, in pixels.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.MathematicalFunctionCommand">
+      <summary>Re-maps the image colors according to a mathematical function such as: square, logarithm, square root, sine and cosine.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.MathematicalFunctionCommand.#ctor">
+      <summary>Initializes a new MathematicalFunctionCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.MathematicalFunctionCommand.#ctor(Leadtools.ImageProcessing.Color.MathematicalFunctionCommandType,System.Int32)">
+      <summary>Initializes a new MathematicalFunctionCommand class object with explicit parameters.</summary>
+      <param name="type">Flag that indicates the function to be applied.</param>
+      <param name="factor">Value that is used as an amplitude factor when squaring, taking the logarithm of or taking the square root of the color values and as a frequency factor when taking the sine or cosine of the color values. The factor value is divided internally by different amounts, according to the type of the function being used. These amounts are as follows:</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.MathematicalFunctionCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.MathematicalFunctionCommand.Factor">
+      <summary>Gets or sets a value used as an amplitude factor if the Type property is Square, Square Root, or Logarithm, and is used as a frequency factor if the Type property is Sine or Cosine.</summary>
+      <value>Value used as an amplitude factor when squaring, taking the logarithm of or taking the square root of the color values and as a frequency factor when taking the sine or cosine of the color values. The value of the Factor property is divided internally by different amounts, according to the type of math operation being performed. These amounts are as follows:</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.MathematicalFunctionCommand.Type">
+      <summary>Gets or sets a value that indicates the type of mathematical operation to be performed on each pixel's values.</summary>
+      <value>Value that indicates the type of mathematical operation to be performed on each pixel's values.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.MultiplyCommand">
+      <summary>Increases or decreases the brightness in the image by multiplying the colors in a specific image by a factoring value divided by 100.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.MultiplyCommand.#ctor">
+      <summary>Initializes a new MultiplyCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.MultiplyCommand.#ctor(System.Int32)">
+      <summary>Initializes a new MultiplyCommand class object with explicit parameters.</summary>
+      <param name="factor">An integer which represents the factor to be used when multiplying image values. The factor used is equal to factor/100. Only positive values are accepted.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.MultiplyCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.MultiplyCommand.Factor">
+      <summary>Gets or sets an integer which represents the factor to be used when multiplying image values.</summary>
+      <value>An integer which represents the factor to be used when multiplying image values. The factor used is equal to Factor/100. Only positive values are accepted.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.PosterizeCommand">
+      <summary>Imposes a poster effect on an image by quantizing the image's colors to a specified number of color levels per plane. For example, two levels means two of red, two of green, and two of blue.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.PosterizeCommand.#ctor">
+      <summary>Initializes a new PosterizeCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.PosterizeCommand.#ctor(System.Int32)">
+      <summary>Initializes a new PosterizeCommand class object with explicit parameters.</summary>
+      <param name="levels">The number of color levels to use. Valid values are 2 through 64.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.PosterizeCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.PosterizeCommand.Levels">
+      <summary>Gets or sets the number of color levels to use.</summary>
+      <value>The number of color levels to use. Valid values are 2 through 64.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.RemapHueCommand">
+      <summary>Uses a lookup table to change an image's hue values. The saturation and value tables change S and V values only if a particular hue value is marked as non-zero in the Mask property. It is used for all resolutions, including 48 and 64-bit images.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.RemapHueCommand.#ctor">
+      <summary>Initializes a new RemapHueCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.RemapHueCommand.#ctor(System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32)">
+      <summary>Initializes a new RemapHueCommand class object with explicit parameters.</summary>
+      <param name="mask">Lookup table that identifies which values in the hueTable, saturationTable and valueTable are valid. If Mask\[i\] is non-zero, then hueTable, saturationTable and valueTable are to be used. If Mask\[i\] is 0 then hueTable, saturationTable and valueTable are ignored. If Mask is null, all entries in the hueTable, saturationTable and valueTable are used.</param>
+      <param name="hueTable">Hue look up table. If the Mask table value for a particular pixel hue is non-zero, then the hue is changed to the corresponding entry in hueTable. For example, if a pixel value has a hue of 85 and Mask\[85\] is non-zero, the hue is changed to hueTable\[85\]. If hueTable is null, the hue of each pixel is unchanged.</param>
+      <param name="saturationTable">Saturation look up table. If the Mask table value for a particular pixel hue is non-zero, then the saturation is changed to the corresponding entry in saturationTable. For example, if a pixel value has a hue of 85 and Mask\[85\] is non-zero, the saturation is changed to saturationTable\[85\]. If hueTable is null, the saturation is changed to saturationTable\[85\]. If saturationTable is null, the saturation of each pixel is unchanged.</param>
+      <param name="valueTable">Value look up table. If the Mask table value for a particular pixel hue is non-zero, then the value is changed to the corresponding entry in valueTable. For example, if a pixel value has a hue of 85 and Mask\[85\] is non-zero, the value is changed to valueTable\[85\]. If hueTable is null, the value is changed to ValueTable\[85\]. If valueTable is null, the value of each pixel is unchanged.</param>
+      <param name="lookUpTableLength">Length of the lookup table. Possible values are 65536 for 16-bit image, 4096 for 12-bit image, 256 for 8-bit image</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.RemapHueCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemapHueCommand.HueTable">
+      <summary>Gets or sets the hue look up table.</summary>
+      <value>Hue look up table. If the Mask table value for a particular pixel hue is non-zero, then the hue is changed to the corresponding entry in the HueTable property. For example, if a pixel value has a hue of 85 and Mask\[85\] is non-zero, the hue is changed to HueTable\[85\]. If HueTable is null, the hue of each pixel is unchanged.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemapHueCommand.LookUpTableLength">
+      <summary>Gets or sets the length of the lookup table.</summary>
+      <value>Length of the lookup table. Possible values are 65536 for a 16-bit image, 4096 for a 12-bit image, 256 for an 8-bit image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemapHueCommand.Mask">
+      <summary>Gets or sets the lookup table that identifies which values in the HueTable, SaturationTable and ValueTable properties are valid.</summary>
+      <value>Lookup table that identifies which values in the HueTable, SaturationTable and ValueTable properties are valid. If Mask\[i\] is non-zero, then the HueTable, SaturationTable and ValueTable properties are to be used. If Mask\[i\] is 0 then the HueTable, SaturationTable and ValueTable properties are ignored. If Mask is null, all entries in the HueTable, SaturationTable and ValueTable properties are used.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemapHueCommand.SaturationTable">
+      <summary>Gets or sets the saturation look up table.</summary>
+      <value>Saturation look up table. If the Mask table value for a particular pixel hue is non-zero, then the saturation is changed to the corresponding entry in the SaturationTable property. For example, if a pixel value has a hue of 85 and Mask\[85\] is non-zero, the saturation is changed to SaturationTable\[85\]. If HueTable is null, the saturation is changed to SaturationTable\[85\]. If SaturationTable is null, the saturation of each pixel is unchanged.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemapHueCommand.ValueTable">
+      <summary>Gets or sets the value look up table.</summary>
+      <value>Value look up table. If the Mask table value for a particular pixel hue is non-zero, then the value is changed to the corresponding entry in ValueTable. For example, if a pixel value has a hue of 85 and Mask\[85\] is non-zero, the value is changed to ValueTable\[85\]. If HueTable is null, the value is changed to ValueTable\[85\]. If ValueTable is null, the value of each pixel is unchanged.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.RemapIntensityCommand">
+      <summary>Uses a lookup table to change an image's intensity values. You can apply the change to red, green, blue, or all color channels.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.RemapIntensityCommand.#ctor">
+      <summary>Initializes a new RemapIntensityCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.RemapIntensityCommand.#ctor(Leadtools.ImageProcessing.Color.RemapIntensityCommandFlags,System.Int32[])">
+      <summary>Initializes a new RemapIntensityCommand class object with explicit parameters.</summary>
+      <param name="flags">Determines the color channel that will be used. For more information, refer to RasterColorChannel.</param>
+      <param name="lookupTable">Table of integers containing lookup values.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.RemapIntensityCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemapIntensityCommand.Flags">
+      <summary>Flags that indicate the color plane to update, whether to change the high bit and whether LookupTable contains normal or stretched data.</summary>
+      <value>Value that indicates the color plane to update, whether to change the high bit and whether the LookupTable contains normal or stretched data. For more information, refer to RasterColorChannel.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemapIntensityCommand.LookupTable">
+      <summary>Gets or sets a table of integers that represent lookup values.</summary>
+      <value>Table of integers that represent lookup values.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemapIntensityCommand.LookUpTableLength">
+      <summary>Gets or sets the length for the lookUpTable property</summary>
+      <value>An integer that specifies the length for the lookUpTable property</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.RemoveRedEyeCommand">
+      <summary>Removes the "red eye" effect in color images by converting the red color in the eye to a new color.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.RemoveRedEyeCommand.#ctor">
+      <summary>Initializes a new RemoveRedEyeCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.RemoveRedEyeCommand.#ctor(Leadtools.RasterColor,System.Int32,System.Int32)">
+      <summary>Initializes a new RemoveRedEyeCommand class object with explicit parameters.</summary>
+      <param name="newColor">Contains the new color value used to replace the red color in the eyes.</param>
+      <param name="threshold">Threshold value that indicates which pixels will be changed by this command. All pixels with a red component value greater than this value will be changed. Pixels with a red component value less than this value will not be changed. This value is between 0 and 255.</param>
+      <param name="lightness">"Percentage" value that indicates whether the pixels that are replaced are lightened or darkened. If this value is greater than 100, the replaced pixels will be lightened. If this value is less than 100, the replaced pixels will be darkened. This command preserves the lightness of the original pixels and substitutes the red color with the new color.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.RemoveRedEyeCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemoveRedEyeCommand.Lightness">
+      <summary>Gets or sets a "percentage" value that indicates whether the pixels that are replaced are lightened or darkened.</summary>
+      <value>"Percentage" value that indicates whether the pixels that are replaced are lightened or darkened. If this value is greater than 100, the replaced pixels will be lightened. If this value is less than 100, the replaced pixels will be darkened. This method preserves the lightness of the original pixels and substitutes the red color with the new color.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemoveRedEyeCommand.NewColor">
+      <summary>Gets or sets the new color value used to replace the red color in the eyes.</summary>
+      <value>The new color value used to replace the red color in the eyes.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.RemoveRedEyeCommand.Threshold">
+      <summary>Gets or sets a value that indicates which pixels will be changed.</summary>
+      <value>Threshold value that indicates which pixels will be changed. All pixels with a red component value greater than this value will be changed. Pixels with a red component value less than this value will not be changed. This value is between 0 and 255.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.SampleTargetCommand">
+      <summary>Corrects color values by shifting the sample colors to the target colors. This command is available in the Imaging Pro and above toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SampleTargetCommand.#ctor">
+      <summary>Initializes a new SampleTargetCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SampleTargetCommand.#ctor(Leadtools.RasterColor,Leadtools.RasterColor,Leadtools.ImageProcessing.Color.SampleTargetCommandFlags)">
+      <summary>Initializes a new SampleTargetCommand class object with explicit parameters.</summary>
+      <param name="sampleColor">Color value that represents the sample color. The red value for red channel, green value for green channel, blue value for blue channel.</param>
+      <param name="targetColor">Color value that represents the target color. The red value for red channel, green value for green channel, blue value for blue channel.</param>
+      <param name="flags">Flags that indicate the channel for which to shift the color and how to remap the other values for that channel. You can use a bit wise OR ( &amp;#166; ) to specify one flag from each group.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SampleTargetCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SampleTargetCommand.Flags">
+      <summary>Gets or sets a value that indicates the channel for which to shift the color and how to remap the other values for that channel.</summary>
+      <value>Value that indicates the channel for which to shift the color and how to remap the other values for that channel. You can use a bit wise OR ( &amp;#166; ) to specify one flag from each group.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SampleTargetCommand.SampleColor">
+      <summary>Gets or sets the sample color.</summary>
+      <value>Color value that represents the sample color. The red value for red channel, green value for green channel, blue value for blue channel.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SampleTargetCommand.TargetColor">
+      <summary>Gets or sets the target color.</summary>
+      <value>Color value that represents the target color. The red value for red channel, green value for green channel, blue value for blue channel.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.SegmentCommand">
+      <summary>Divides the image into segments where each segment's pixels have approximately the same color (homogenous color). This command is available in the Imaging Pro and above toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SegmentCommand.#ctor">
+      <summary>Initializes a new SegmentCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SegmentCommand.#ctor(System.Int32,Leadtools.ImageProcessing.Color.SegmentCommandFlags)">
+      <summary>Initializes a new SegmentCommand class object with explicit parameters.</summary>
+      <param name="threshold">The tolerance value of each segment. Valid values for this parameter are: 0 to 255 for 1, 2, 3, 4, 5, 6, 7, 8, 24, and 32-bit images, 0 to 4095 for 12-bit images and 0 to 65535 for 16, 48, and 64-bit images.</param>
+      <param name="flags">Flag that indicates the color space used in the segmentation. For a list of possible values, refer to SegmentCommandFlags.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SegmentCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this command.</summary>
+      <returns>String that contains the name of this command.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SegmentCommand.Flags">
+      <summary>Gets or sets a flag that indicates the color space used in the segmentation.</summary>
+      <value>Flag that indicates the color space used in the segmentation. For a list of possible values, refer to SegmentCommandFlags.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SegmentCommand.Threshold">
+      <summary>Gets or sets the tolerance value of each segment.</summary>
+      <value>The tolerance value of each segment. Valid values for this property are: 0 to 255 for 1, 2, 3, 4, 5, 6, 7, 8, 24, and 32-bit images, 0 to 4095 for 12-bit images and 0 to 65535 for 16, 48, and 64-bit images.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.SelectiveColorCommand">
+      <summary>Changes the color of an image by altering the definitions of one or more colors used by the image. This class is available in the Imaging Pro and above toolkits.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SelectiveColorCommand.#ctor">
+      <summary>Initializes a new SelectiveColorCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SelectiveColorCommand.#ctor(Leadtools.ImageProcessing.Color.SelectiveColorCommandData[])">
+      <summary>Initializes a new SelectiveColorCommand class object with explicit parameters.</summary>
+      <param name="colorsData">Array of 9 SelectiveColorCommandData class that contains the selected colors along with the CMYK values for each.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SelectiveColorCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SelectiveColorCommand.ColorsData">
+      <summary>Gets or sets an array of 9 SelectiveColorCommandData classes.</summary>
+      <value>Array of 9 SelectiveColorCommandData classes that contains the selected colors along with the CMYK values for each.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.SelectiveColorCommandData">
+      <summary>The SelectiveColorCommandData class contains the information needed for a single "Selected Color", which is used mainly in the SelectiveColorCommand class.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SelectiveColorCommandData.#ctor">
+      <summary>Initializes a new SelectiveColorCommandData class with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SelectiveColorCommandData.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Initializes a new SelectiveColorCommandData class with explicit parameters.</summary>
+      <param name="cyan">Value that specifies the percentage of cyan in a color. Valid values range from -100 to 100, which is interpreted as -100 to 100.</param>
+      <param name="magenta">Value that specifies the percentage of magenta in a color. Valid values range from -100 to 100, which is interpreted as -100 to 100.</param>
+      <param name="yellow">Value that specifies the percentage of yellow in a color. Valid values range from -100 to 100, which is interpreted as -100 to 100.</param>
+      <param name="black">Value that specifies the percentage of black in a color. Valid values range from -100 to 100, which is interpreted as -100 to 100.</param>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SelectiveColorCommandData.Black">
+      <summary>Gets or sets a value that specifies the percentage of black in a color.</summary>
+      <value>Value that specifies the percentage of black in a color. Valid values range from -100 to 100, which is interpreted as -100 to 100.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SelectiveColorCommandData.Cyan">
+      <summary>Gets or sets a value that specifies the percentage of cyan in a color.</summary>
+      <value>Value that specifies the percentage of cyan in a color. Valid values range from -100 to 100, which is interpreted as -100 to 100.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SelectiveColorCommandData.Magenta">
+      <summary>Gets or sets a value that specifies the percentage of magenta in a color.</summary>
+      <value>Value that specifies the percentage of magenta in a color. Valid values range from -100 to 100, which is interpreted as -100 to 100.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SelectiveColorCommandData.Yellow">
+      <summary>Gets or sets a value that specifies the percentage of yellow in a color.</summary>
+      <value>Value that specifies the percentage of yellow in a color. Valid values range from -100 to 100, which is interpreted as -100 to 100.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.SolarizeCommand">
+      <summary>Applies an effect that mimics the accidental exposure of photographic film to light. It does so by inverting all color data with an intensity value greater than or equal to the threshold that you specify.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SolarizeCommand.#ctor">
+      <summary>Initializes a new SolarizeCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SolarizeCommand.#ctor(System.Int32)">
+      <summary>Initializes a new SolarizeCommand class object with explicit parameters.</summary>
+      <param name="threshold">Value that represents the threshold at or above which colors are to be inverted. The valid range is 0-255.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SolarizeCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this command.</summary>
+      <returns>String that contains the name of this command.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SolarizeCommand.Threshold">
+      <summary>Gets or sets a value that represents the threshold at or above which colors are to be inverted.</summary>
+      <value>The valid range is from 0 - 65535 for 64-bit, 48-bit and 16-bit grayscale images and from 0 - 4095 for 12-bit grayscale images. Otherwise, it is from 0 to 255.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.StretchIntensityCommand">
+      <summary>Increases the contrast in an image by centering, maximizing, and proportioning the range of intensity values.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.StretchIntensityCommand.#ctor">
+      <summary>Initializes a new StretchIntensityCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.StretchIntensityCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.SwapColorsCommand">
+      <summary>Swaps the specified color channels.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SwapColorsCommand.#ctor">
+      <summary>Initializes a new SwapColorsCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SwapColorsCommand.#ctor(Leadtools.ImageProcessing.Color.SwapColorsCommandType)">
+      <summary>Initializes a new SwapColorsCommand class object with explicit parameters.</summary>
+      <param name="type">Value that indicates which color channels to swap.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.SwapColorsCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>String that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.SwapColorsCommand.Type">
+      <summary>Gets or sets an enumerated value that indicates which color channels to swap.</summary>
+      <value>Enumerated value that indicates which color channels to swap.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.TemperatureCommand">
+      <summary>Changes the look of the image by making it appear colder or hotter.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.TemperatureCommand.#ctor">
+      <summary>Initializes a new TemperatureCommand class object with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.TemperatureCommand.#ctor(System.Int32)">
+      <summary>Initializes a new TemperatureCommand class object with explicit parameters.</summary>
+      <param name="factor">The temperature's value.</param>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.Color.TemperatureCommand.ToString">
+      <summary>Overridden. Returns a meaningful name for this class.</summary>
+      <returns>Character string that contains the name of this class.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.Color.TemperatureCommand.Factor">
+      <summary>Gets or sets a value that represents the temperature value.</summary>
+      <value>The Temperature's value.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.AdaptiveContrastCommandType">
+      <summary>Enumeration flags that identify the adjustment method.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AdaptiveContrastCommandType.Exponential">
+      <summary>Apply exponential adjustment.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AdaptiveContrastCommandType.Linear">
+      <summary>Apply linear adjustment.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.AddCommandType">
+      <summary>Enumeration flags that identify the operation to perform.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AddCommandType.Average">
+      <summary>Average the images in the list.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AddCommandType.Add">
+      <summary>Add the images in the list.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.AddWeightedCommandType">
+      <summary>Enumeration flags that identify the operation to perform.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AddWeightedCommandType.Average">
+      <summary>Average the images in the list.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AddWeightedCommandType.Add">
+      <summary>Add the images in the list.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AddWeightedCommandType.AverageWeighted">
+      <summary>Average the images in the list, according to the array of weight factors in either the Factor property or the factor parameter in the constructor.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AddWeightedCommandType.AddWeighted">
+      <summary>Add the images in the list, according to the array of weight factors in either the Factor property or the factor parameter in the constructor.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>4</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags">
+      <summary>Enumeration flags that identify the channel that will be used, the treatment of the input pixel values, the mathematical operation, and the treatment of the output pixel values.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.Master">
+      <summary>All channels.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.ValueDoNothing">
+      <summary>No change.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationAnd">
+      <summary>Combine each pixel component value and the Factor property using a bitwise AND (&amp;). (pixel = pixel &amp; Factor)</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.ResultDoNothing">
+      <summary>No change.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.Red">
+      <summary>Red channel only.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.Green">
+      <summary>Green channel only.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000002</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.Blue">
+      <summary>Blue channel only.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000003</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.ValueNot">
+      <summary>Invert the color, resulting in its complement.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000010</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.ValueZero">
+      <summary>Change all bits to 0.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000020</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.ValueOne">
+      <summary>Change all bits to 1.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000030</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationOr">
+      <summary>Combine each pixel component value and the Factor property using a bitwise OR ( ¦ ).</summary>
+      <value>0x00000100</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationXor">
+      <summary>Combine each pixel component value and the Factor property using a bitwise XOR (^). (pixel = pixel ^ Factor)</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000200</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationAdd">
+      <summary>Add pixel component value to the Factor property, clamping the result to the maximum allowed pixel value. (pixel = min(pixel + Factor, MaximumPixelValue) )</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000300</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationSubtractFactor">
+      <summary>Subtract each pixel component value from the Factor property, clamping the result to the allowed pixel range. (pixel = min(max(Factor - pixel, MinimumPixelValue), MaximumPixelValue) )</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000400</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationSubtractValue">
+      <summary>Subtract the Factor property from each pixel component value, clamping the result to the allowed pixel range. (pixel = min(max(pixel - Factor), MinimumPixelValue, MaximumPixelValue) )</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000500</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationAbsoluteDifference">
+      <summary>Calculate the Absolute difference between the Factor property and each pixel component value. (pixel = abs(pixel - Factor))</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000600</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationMultiply">
+      <summary>Multiply each pixel component value by Factor/100. (pixel = pixel * Factor / 100)</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000700</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationDivisionByFactor">
+      <summary>Divide each pixel component value by Factor/100. An error will be returned if Factor = 0. (pixel = pixel * 100 / Factor)</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000800</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationDivisionByValue">
+      <summary>Divide the Factor property by each pixel value. If the pixel value is 0, the result is set to the maximum allowed pixel value. (pixel = pixel ? min(Factor / pixel, MaximumPixelValue) : MaximumPixelValue)</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000900</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationAverage">
+      <summary>Use the average of the each pixel component value and the Factor property. (pixel = (pixel+Factor) / 2).</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000A00</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationMinimum">
+      <summary>Use the lesser of the pixel component values and the Factor property. (pixel = min(pixel, Factor) )</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000B00</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.OperationMaximum">
+      <summary>Use the greater of the pixel component values and the Factor property. (pixel = max(pixel, Factor) )</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000C00</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.ResultNot">
+      <summary>Invert the color, resulting in its complement.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00001000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.ResultZero">
+      <summary>Change all bits to 0.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00002000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ApplyMathematicalLogicCommandFlags.ResultOne">
+      <summary>Change all bits to 1.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00003000</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.AutoColorLevelCommandFlags">
+      <summary>Enumeration flags that identify whether the method will process the image.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AutoColorLevelCommandFlags.None">
+      <summary>No change.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AutoColorLevelCommandFlags.NoProcess">
+      <summary>Do not process the image. Just update the Master, Red, Green, and Blue properties with the color leveling information used. The color leveling information used depends on which of the other flags was set with AutoColorLevelCommandFlags.NoProcess. Only one other flag may be set with AutoColorLevelCommandFlags.NoProcess.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000004</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.AutoColorLevelCommandType">
+      <summary>Enumeration flags that identify the type of leveling to perform.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AutoColorLevelCommandType.None">
+      <summary>No change.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AutoColorLevelCommandType.Level">
+      <summary>Perform leveling on the individual R, G and B channels, treating each of the R, G and B channels as a separate entity. It introduces color cast on the image.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AutoColorLevelCommandType.Contrast">
+      <summary>Perform leveling on the Master channel (the grayscale values of the pixels). No color cast will be introduced.</summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.AutoColorLevelCommandType.Intensity">
+      <summary>Perform leveling on the RGB channel (the sum of the R, G, and B channels). No color cast will be introduced.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>3</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorLevelCommandFlags">
+      <summary>Enumeration flags that identify the channel being leveled.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorLevelCommandFlags.None">
+      <summary>No change.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorLevelCommandFlags.Red">
+      <summary>Red channel.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorLevelCommandFlags.Green">
+      <summary>Green channel.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000010</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorLevelCommandFlags.Blue">
+      <summary>Blue channel.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000100</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorLevelCommandFlags.Master">
+      <summary>Master channel.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00001000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorLevelCommandFlags.All">
+      <summary>All channels.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00001111</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorMergeCommandType">
+      <summary>The type of separation that was used to create the grayscale images.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorMergeCommandType.Rgb">
+      <summary>Merge images from three RGB planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorMergeCommandType.Cmyk">
+      <summary>Merge images from four CMYK planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorMergeCommandType.Hsv">
+      <summary>Merge images from three HSV planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorMergeCommandType.Hls">
+      <summary>Merge images from three HLS planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorMergeCommandType.Cmy">
+      <summary>Merge images from three CMY planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorMergeCommandType.Yuv">
+      <summary>Merge images from three YUV planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorMergeCommandType.Xyz">
+      <summary>Merge images from three XYZ planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorMergeCommandType.Lab">
+      <summary>Merge images from three LAB planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>7</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorMergeCommandType.YcrCb">
+      <summary>Merge images from three YCRCB planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>8</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorMergeCommandType.Sct">
+      <summary>Merge images from three SCT planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>9</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorSeparateCommandType">
+      <summary>The type of separation that was used to create the grayscale images.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorSeparateCommandType.Rgb">
+      <summary>Create images from the three RGB planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorSeparateCommandType.Cmyk">
+      <summary>Create images from the four CMYK planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorSeparateCommandType.Hsv">
+      <summary>Create images from the three HSV planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorSeparateCommandType.Hls">
+      <summary>Create images from the three HLS planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorSeparateCommandType.Cmy">
+      <summary>Create images from the three CMY planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorSeparateCommandType.Yuv">
+      <summary>Create images from the three YUV planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorSeparateCommandType.Xyz">
+      <summary>Create images from the three XYZ planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorSeparateCommandType.Lab">
+      <summary>Create images from the three LAB planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>7</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorSeparateCommandType.Ycrcb">
+      <summary>Create images from the three YCRCB planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>8</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorSeparateCommandType.Sct">
+      <summary>Create images from the three SCT planes.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>9</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorThresholdCommandFlags">
+      <summary>Flags that represent the treatment of the values within the threshold range, the treatment of a pixel that falls on the threshold and new values for rejected values.These flags have a FlagsAttribute attribute that allows a bitwise combination of its member values.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandFlags.BandBass">
+      <summary>The values falling outside the range are modified.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandFlags.EffectChannel">
+      <summary>Each channel component is modified independently.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandFlags.SetToMinimum">
+      <summary>The rejected values are set to 0.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandFlags.BandReject">
+      <summary>The values falling inside the range are modified.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandFlags.EffectAll">
+      <summary>The pixel is rejected by the test if one of the components is rejected.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000010</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandFlags.SetToMaximum">
+      <summary>The rejected values are set to the maximum value.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000100</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandFlags.SetToClamp">
+      <summary>The rejected component values less than the MinimumRange property go to the minimum value in the used color space component. Rejected component values greater than the MaximumRange property go to the maximum value in the used color space component. This works only with the EffectChannel flag.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000200</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.ColorThresholdCommandType">
+      <summary>Color space on which the threshold is based.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandType.Rgb">
+      <summary>RGB color space.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandType.Hsv">
+      <summary>HSV color space.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandType.Hls">
+      <summary>HLS color space</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandType.Xyz">
+      <summary>XYZ color space</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandType.YcrCb">
+      <summary>YCrCb color space</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandType.Yuv">
+      <summary>YUV color space</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandType.Lab">
+      <summary>LAB color space</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.ColorThresholdCommandType.Cmy">
+      <summary>CMY color space</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>7</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.GammaCorrectExtendedCommandType">
+      <summary>Enumeration that indicates the color space in which to apply the Gamma correction.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.GammaCorrectExtendedCommandType.RgbSpace">
+      <summary>Adjust the intensity of the pixel colors across the RGB color space.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.GammaCorrectExtendedCommandType.YuvSpace">
+      <summary>Adjust the intensity of the pixel colors across the YUV color space</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommandMixingType">
+      <summary>This enumeration will contain all Types needed to indicate which color space is selected.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommandMixingType.MixWithOldValue">
+      <summary>Mix the old colors with the new ones.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.GrayScaleToDuotoneCommandMixingType.ReplaceOldWithNew">
+      <summary>Replace the old colors with the new ones.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommandDistributionType">
+      <summary>Flag that indicates the source of the colors to be added to the image.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommandDistributionType.Linear">
+      <summary>Use the linear gradient from dark to light, generated by the toolkit. If this flag is set, LEADTOOLS will ignore the Gradient property and use an array of colors generated by the toolkit.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommandDistributionType.UserDefined">
+      <summary>Use the user-defined gradient in the Gradient property.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommandToneType">
+      <summary>Flag that indicates the number of colors to add to the grayscale image.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommandToneType.Monotone">
+      <summary>Add one color.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommandToneType.Duotone">
+      <summary>Add two colors.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommandToneType.Tritone">
+      <summary>Add three colors.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.GrayScaleToMultitoneCommandToneType.Quadtone">
+      <summary>Add four colors.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>3</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.HistogramCommandFlags">
+      <summary>Flags that indicate which channel to use.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramCommandFlags.LowHighBits">
+      <summary>Use only the bits between the LowBit and HighBit values.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramCommandFlags.Master">
+      <summary>All channels.</summary>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramCommandFlags.Red">
+      <summary>Red channel only.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramCommandFlags.Green">
+      <summary>Green channel only.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000002</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramCommandFlags.Blue">
+      <summary>Blue channel only.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000003</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramCommandFlags.AllBits">
+      <summary>Use all the bits for calculating the histogram (the LowBit and HighBit values are ignored.)</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000010</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramCommandFlags.Force256">
+      <summary>Force the resulted histogram array to 256 entries length.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000100</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.HistogramEqualizeType">
+      <summary>This enumeration will contain all types needed to indicate which color space is selected.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramEqualizeType.None">
+      <summary>No Flags.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramEqualizeType.Rgb">
+      <summary>Linearizes the number of pixels across the RGB color space.(separated channels).</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramEqualizeType.Yuv">
+      <summary>Linearizes the number of pixels across the YUV color space.(Best results).</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.HistogramEqualizeType.Gray">
+      <summary>Linearizes the number of pixels per gray level in a gray level representation of the image.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>4</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.IntensityDetectCommandFlags">
+      <summary>Flag that indicates the channel to process.This flag has a FlagsAttribute attribute that allows a bitwise combination of its member values.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.IntensityDetectCommandFlags.Master">
+      <summary>Grayscale Channel.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.IntensityDetectCommandFlags.Red">
+      <summary>Red Channel.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.IntensityDetectCommandFlags.Green">
+      <summary>Green Channel.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000010</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.IntensityDetectCommandFlags.Blue">
+      <summary>Blue Channel.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000100</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.LightControlCommandType">
+      <summary>Indicates which color space to remap.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.LightControlCommandType.Rgb">
+      <summary>Use the histogram of the RGB color space. (separated channels).</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.LightControlCommandType.Yuv">
+      <summary>Use the histogram of the YUV color space.(Best results).</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.LightControlCommandType.Gray">
+      <summary>Use the histogram of a gray level representation of the image.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>4</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.MathematicalFunctionCommandType">
+      <summary>Value that indicates the function used by the MathematicalFunctionCommand class object.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.MathematicalFunctionCommandType.Square">
+      <summary>Square function.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.MathematicalFunctionCommandType.Logarithm">
+      <summary>Logarithmic function.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.MathematicalFunctionCommandType.SquareRoot">
+      <summary>Square root function.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.MathematicalFunctionCommandType.Sine">
+      <summary>Sine function.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.MathematicalFunctionCommandType.Cosine">
+      <summary>Cosine function.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>4</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.RemapIntensityCommandFlags">
+      <summary>Flags that indicate the color plane to update, whether to change the high bit and whether the LookupTable contains normal or stretched data.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.RemapIntensityCommandFlags.Master">
+      <summary>All channels.</summary>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.RemapIntensityCommandFlags.Red">
+      <summary>Red channel only.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.RemapIntensityCommandFlags.Green">
+      <summary>Green channel only.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000002</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.RemapIntensityCommandFlags.Blue">
+      <summary>Blue channel only.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000003</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.RemapIntensityCommandFlags.ChangeHighBit">
+      <summary>Change the high bit of the image according to the used data of the LookupTable.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000010</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.RemapIntensityCommandFlags.Normal">
+      <summary>The data in the LookupTable is normal data, in this case the LookupTable length should be equal to 2^(HighBit - LowBit + 1).</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000100</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.SampleTargetCommandFlags">
+      <summary>Enumerated values that indicate the channel for which to shift the color, and how to remap the other values for that channel.This enumeration has a FlagsAttribute attribute that allows a bitwise combination of its member values.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SampleTargetCommandFlags.None">
+      <summary>Reserved.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SampleTargetCommandFlags.Red">
+      <summary>Shift the color in the red channel.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SampleTargetCommandFlags.Green">
+      <summary>Shift the color in the green channel.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000002</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SampleTargetCommandFlags.Blue">
+      <summary>Shift the color in the blue channel.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000003</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SampleTargetCommandFlags.Rgb">
+      <summary>Shift the color in the red, green, and blue channels.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000004</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SampleTargetCommandFlags.Low">
+      <summary>Remap the shadow values for the channel set in the flags parameter or the Flags property.</summary>
+      <platforms>NET</platforms>
+      <value>0x00000010</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SampleTargetCommandFlags.Mid">
+      <summary>Remap the midtone values for the channel set in the flags parameter or the Flags property</summary>
+      <platforms>NET</platforms>
+      <value>0x00000020</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SampleTargetCommandFlags.High">
+      <summary>Remap the highlight values for the channel set in the flags parameter or the Flags property</summary>
+      <platforms>NET</platforms>
+      <value>0x00000030</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.SegmentCommandFlags">
+      <summary>This enumeration indicates the color space used in the segmentation.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SegmentCommandFlags.None">
+      <summary>No Flags selected.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000000</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SegmentCommandFlags.Rgb">
+      <summary>Comparison done on red, green and blue difference.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000001</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SegmentCommandFlags.Y">
+      <summary>Comparison done on Y channel difference of YUV space.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000002</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SegmentCommandFlags.U">
+      <summary>Comparison done on U channel difference of YUV space.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000003</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SegmentCommandFlags.V">
+      <summary>Comparison done on V channel difference of YUV space.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000004</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SegmentCommandFlags.Uv">
+      <summary>Comparison done on U and V channels difference of YUV space.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000005</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SegmentCommandFlags.NgtvUv">
+      <summary>Consider negative values of U and V of YUV color space. This flag is used only with U or V flags.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0x00000010</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.SelectiveCommandColorTypes">
+      <summary>This enumerated type serves as an index into an array of SelectiveColorCommandData classes. The class at the index contains information on the corresponding color.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SelectiveCommandColorTypes.Red">
+      <summary>Index into the array of SelectiveColorCommandData classes (ColorsData property or the colorsData parameter of the constructor). The class at this index contains information on the Red values.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SelectiveCommandColorTypes.Yellow">
+      <summary>Index into the array of SelectiveColorCommandData classes (ColorsData property or the colorsData parameter of the constructor). The class at this index contains information on the Yellow values.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SelectiveCommandColorTypes.Green">
+      <summary>Index into the array of SelectiveColorCommandData classes (ColorsData property or the colorsData parameter of the constructor). The class at this index contains information on the Green values.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SelectiveCommandColorTypes.Cyan">
+      <summary>Index into the array of SelectiveColorCommandData classes (ColorsData property or the colorsData parameter of the constructor). The class at this index contains information on the Cyan values.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SelectiveCommandColorTypes.Blue">
+      <summary>Index into the array of SelectiveColorCommandData classes (ColorsData property or the colorsData parameter of the constructor). The class at this index contains information on the Blue values.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SelectiveCommandColorTypes.Magenta">
+      <summary>Index into the array of SelectiveColorCommandData classes (ColorsData property or the colorsData parameter of the constructor). The class at this index contains information on the Magenta values.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SelectiveCommandColorTypes.White">
+      <summary>Index into the array of SelectiveColorCommandData classes (ColorsData property or the colorsData parameter of the constructor). The class at this index contains information on the White values.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SelectiveCommandColorTypes.Neutral">
+      <summary>Index into the array of SelectiveColorCommandData classes (ColorsData property or the colorsData parameter of the constructor). The class at this index contains information on the Neutral values.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>7</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SelectiveCommandColorTypes.Black">
+      <summary>Index into the array of SelectiveColorCommandData classes (ColorsData property or the colorsData parameter of the constructor). The class at this index contains information on the Black values.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>8</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing.Color.SwapColorsCommandType">
+      <summary>Enumerated values that indicate which color channels to swap.</summary>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SwapColorsCommandType.RedGreen">
+      <summary>Swap the red and green channels. (Change red to green and green to red.)</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SwapColorsCommandType.RedBlue">
+      <summary>Swap the red and blue channels. (Change red to blue and blue to red.)</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SwapColorsCommandType.GreenBlue">
+      <summary>Swap the green and blue channels. (Change green to blue and blue to green.)</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SwapColorsCommandType.RedGreenBlueRed">
+      <summary>Change red to green, green to blue and blue to red.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>8</value>
+    </member>
+    <member name="F:Leadtools.ImageProcessing.Color.SwapColorsCommandType.RedBlueGreenRed">
+      <summary>Change red to blue, blue to green and green to red.</summary>
+      <platforms>NET, Java, Android, iOS</platforms>
+      <value>16</value>
+    </member>
+  </members>
+</doc>

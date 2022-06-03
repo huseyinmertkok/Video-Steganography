@@ -49,6 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -57,6 +58,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.richTextBox1);
             this.panel2.Controls.Add(this.label7);
@@ -226,6 +228,7 @@
             this.button5.TabIndex = 11;
             this.button5.Text = "Uncover";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label8
             // 
@@ -247,6 +250,7 @@
             this.button3.TabIndex = 8;
             this.button3.Text = "Choose File";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 
@@ -275,6 +279,18 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Sitka Small", 9F);
+            this.label10.ForeColor = System.Drawing.Color.IndianRed;
+            this.label10.Location = new System.Drawing.Point(59, 502);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(245, 18);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Please Wait For the Process to Finish...";
+            this.label10.Visible = false;
             // 
             // Form1
             // 
@@ -324,6 +340,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
     }
 }
 

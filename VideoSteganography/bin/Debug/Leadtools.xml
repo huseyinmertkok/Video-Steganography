@@ -1,0 +1,1521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Leadtools</name>
+  </assembly>
+  <members>
+    <member name="T:Leadtools.GeometryTools">
+      <summary>Utility helper class for common geometry functions.  </summary>
+    </member>
+    <member name="M:Leadtools.GeometryTools.getBoundingRect">
+      <summary>Gets the rectangle that contains all the points in an array.  </summary>
+      <param name="points">Source points.</param>
+      <returns>The rectangle that contains all the points in the array.</returns>
+    </member>
+    <member name="M:Leadtools.GeometryTools.getCenterPoint">
+      <summary>Gets the point of a rectangle.  </summary>
+      <param name="rect">Source rectangle.</param>
+      <returns>The center point of the rectangle.</returns>
+    </member>
+    <member name="M:Leadtools.GeometryTools.getCornerPoints">
+      <summary>Gets the four corner points of a rectangle.  </summary>
+      <param name="rect">Source rectangle.</param>
+      <returns>Array of four points that define the corners of this rectangle.</returns>
+    </member>
+    <member name="T:Leadtools.ImageLoader">
+      <summary>Loads an HTML, SVG, or other XML element from a URL.</summary>
+    </member>
+    <member name="M:Leadtools.ImageLoader.#ctor">
+      <summary>Initializes a new [ImageLoader].</summary>
+    </member>
+    <member name="M:Leadtools.ImageLoader.abort">
+      <summary>Aborts the current [ImageLoader] while guaranteeing that callbacks for [Done], [Fail], and [Always] will not be run.</summary>
+    </member>
+    <member name="M:Leadtools.ImageLoader.dispose">
+      <summary>Clears the [ImageLoader] instance.</summary>
+    </member>
+    <member name="M:Leadtools.ImageLoader.run">
+      <summary>Runs the [ImageLoader].</summary>
+    </member>
+    <member name="E:Leadtools.ImageLoader.always">
+      <summary>Occurs after either the [Done] or [Fail] event handlers have fired.</summary>
+    </member>
+    <member name="E:Leadtools.ImageLoader.done">
+      <summary>Occurs when the image has loaded successfully.</summary>
+    </member>
+    <member name="E:Leadtools.ImageLoader.fail">
+      <summary>Occurs when the image has failed to load.</summary>
+    </member>
+    <member name="E:Leadtools.ImageLoader.preRun">
+      <summary>Occurs when the [Run] method is called, sending out [ImageLoaderPreRunEventArgs].</summary>
+    </member>
+    <member name="E:Leadtools.ImageLoader.PreSend">
+      <summary>Occurs before an image request is made, sending out [ImageLoaderPreSendEventArgs].</summary>
+    </member>
+    <member name="P:Leadtools.ImageLoader.ajaxOptions">
+      <summary>An [ImageLoaderAjaxOptions] object to use when loading an image via AJAX.</summary>
+      <value>An [ImageLoaderAjaxOptions] instance to use when loading an image via AJAX. The default value is a new instance of [ImageLoaderAjaxOptions] with default values.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.ajaxWithCredentials">
+      <summary>Indicates whether to send credentials with the XMLHttpRequest for an image.</summary>
+      <value>**true** if the image should send credentials with the image; **false** otherwise. The default value is [DefaultAjaxWithCredentials], which is **false**.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.canRun">
+      <summary>Indicates whether the [ImageLoader] instance can be run.</summary>
+      <value>**true** if the [ImageLoader] is not working ([IsWorking]) and has not been aborted ([IsAborted]).</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.element">
+      <summary>The loaded image element, when [Run] is successful.</summary>
+      <value>The loaded result of the [ImageLoader] request.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.error">
+      <summary>An error describing the reason for the image load failure from [Run].</summary>
+      <value>An error object if the image load failed; otherwise, **null**.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.height">
+      <summary>The height of the successfully loaded [Element].</summary>
+      <value>The height of the loaded [Element], in pixels, if it exists when the image has loaded; otherwise, 0.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.imagesHolder">
+      <summary>The HTML Element to use for temporary image loading, when necessary.</summary>
+      <value>The HTML Element to use for temporary image loading. The default value is **null**.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.imgCrossOrigin">
+      <summary>Indicates how to handle cross-origin image requests.</summary>
+      <value>A string indicating what the `crossOrigin` attribute of the HTMLImageElement used in the request should be set to. The default value is **'anonymous'**. Any string is acceptable, but other important values include **'use-credentials'** and **null**.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.isAborted">
+      <summary>Indicates that the [ImageLoader] has been aborted.</summary>
+      <value>**true** if [Abort] has been called; otherwise, **false**.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.isHTMLImageElement">
+      <summary>Indicates if [Element] exists and is an HTMLImageElement.</summary>
+      <value>**true** if the result image [Element] is an HTMLImageElement; **false** otherwise.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.isWorking">
+      <summary>A boolean indicating whether the [ImageLoader] is trying to load an image.</summary>
+      <value>[IsWorking] becomes **true** after the [PreRun] event completes without [Abort] or [Dispose] being called and without cancellation from [ImageLoaderPreRunEventArgs.Cancel].</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.processAjaxData">
+      <summary>A callback used to access binary data from an [ImageLoaderUrlMode.ajaxDataUrl] response.</summary>
+      <value>An [ImageLoaderProcessAjaxDataCallback] callback function. The default value is a callback function that immediately sends the byte array forward.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.tag">
+      <summary>A reference object to distinguish ImageLoader instances.</summary>
+      <value>Reference object to distinguish ImageLoader instances. Default value is **null**.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.url">
+      <summary>The URL to load for the image request.</summary>
+      <value>The URL to load for the image. Default value is **null**.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.urlMode">
+      <summary>Represents the type of loading that will occur when [Run] is called.</summary>
+      <value>A value of [ImageLoaderUrlMode] indicating the type of loading that will occur. The default value is [ImageLoaderUrlMode.ImageUrl].</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.width">
+      <summary>The width of the successfully loaded [Element].</summary>
+      <value>The width of the loaded [Element], in pixels, if it exists when the image has loaded; otherwise, 0.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.workingImageElement">
+      <summary>The HTMLImageElement used in the image request.</summary>
+      <value>**null** by default. Can be set to a custom HTMLImageElement to use for the image request. Otherwise, a new HTMLImageElement will be created as needed.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoader.xhr">
+      <summary>The XMLHttpRequest object used in the image data request.</summary>
+      <value>**null** by default. Can be set to a custom XMLHttpRequest object to use for the image request. Otherwise, a new XMLHttpRequest object will be created as needed.</value>
+    </member>
+    <member name="F:Leadtools.ImageLoader.DefaultAjaxWithCredentials">
+      <summary>Indicates the default for [AjaxWithCredentials].</summary>
+    </member>
+    <member name="F:Leadtools.ImageLoader.DefaultImgCrossOrigin">
+      <summary>Indicates the default for [ImgCrossOrigin].</summary>
+    </member>
+    <member name="T:Leadtools.ImageLoaderAjaxOptions">
+      <summary>Provides options for use with an ImageLoader AJAX load.</summary>
+    </member>
+    <member name="M:Leadtools.ImageLoaderAjaxOptions.#ctor">
+      <summary>Initializes a new ImageLoaderAjaxOptions object.</summary>
+    </member>
+    <member name="P:Leadtools.ImageLoaderAjaxOptions.headers">
+      <summary>A dictionary of key-value headers for the XMLHttpRequest.</summary>
+      <value>Dictionary of key-value headers for the XMLHttpRequest. Default value is an empty dictionary.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoaderAjaxOptions.method">
+      <summary>The AJAX method to use for the XMLHTTPRequest (GET or POST), case-insensitive.</summary>
+      <value>**GET** or **POST**.</value>
+    </member>
+    <member name="P:Leadtools.ImageLoaderAjaxOptions.postData">
+      <summary>Serialized data to send with the POST request.</summary>
+      <value>A string containing the serialized data.</value>
+    </member>
+    <member name="T:Leadtools.ImageLoaderPreRunEventArgs">
+      <summary>Provides data for the [ImageLoader.PreRun] event.</summary>
+    </member>
+    <member name="M:Leadtools.ImageLoaderPreRunEventArgs.#ctor">
+      <summary>Initializes a new ImageLoaderPreRunEventArgs object.</summary>
+    </member>
+    <member name="P:Leadtools.ImageLoaderPreRunEventArgs.cancel">
+      <summary>Indicates whether or not to cancel the image load of an [ImageLoader].</summary>
+      <value>**true** to cancel the image request. The default is **false**.</value>
+    </member>
+    <member name="T:Leadtools.ImageLoaderPreSendEventArgs">
+      <summary>Provides data for the [ImageLoader.PreSend] event.</summary>
+    </member>
+    <member name="M:Leadtools.ImageLoaderPreSendEventArgs.#ctor">
+      <summary>Initializes a new ImageLoaderPreSendEventArgs object.</summary>
+    </member>
+    <member name="P:Leadtools.ImageLoaderPreSendEventArgs.cancel">
+      <summary>Indicates whether or not to cancel the image load of an [ImageLoader].</summary>
+      <value>**true** to cancel the image request. The default is **false**.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessing">
+      <summary>Provides support for image processing on an HTML5 ImageData.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.#ctor">
+      <summary>Initializes a new instance of ImageProcessing.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.abort">
+      <summary>Abort the current image processing.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessing.run">
+      <summary>Run the current image processing.</summary>
+    </member>
+    <member name="E:Leadtools.ImageProcessing.completed">
+      <summary>Occurs when the command finishes running.</summary>
+    </member>
+    <member name="E:Leadtools.ImageProcessing.error">
+      <summary>Occurs when an error occurs when the command is running.</summary>
+    </member>
+    <member name="E:Leadtools.ImageProcessing.progress">
+      <summary>Occurs while the command is running to provide progress report.</summary>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.arguments">
+      <summary>Get the dictionary to add the arguments for the current image processing command to.</summary>
+      <value>The dictionary to add the arguments for the current image processing command to.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.command">
+      <summary>Gets or sets the name of the image processing command to run.</summary>
+      <value>The name of the image processing command to run.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.imageData">
+      <summary>Gets or sets the source HTML5 canvas image data.</summary>
+      <value>The source HTML5 canvas image data for the image processing.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.isRunning">
+      <summary>Gets a value that indicate whether the image processing command is currently running.</summary>
+      <value>**true** if the image processing command is currently running, otherwise; **false**.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.jsFilePath">
+      <summary>Gets or sets the path to JavaScript file containing the image processing functions to use.</summary>
+      <value>The path to JavaScript file containing the image processing functions to use.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessing.runInMainThread">
+      <summary>Force running this image processing operation in the current thread.</summary>
+      <value>**true** to not use a web worker and run this image processing operation in the current thread, otherwise;</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessingCompletedEventArgs">
+      <summary>Contains data for the ImageProcessing.Completed event.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessingCompletedEventArgs.#ctor">
+      <summary>Initializes a new instance of ImageProcessingCompletedEventArgs.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessingCompletedEventArgs.create">
+      <summary>Initializes a new instance of ImageProcessingCompletedEventArgs with the specified values.</summary>
+      <param name="imageData">The result HTML5 canvas image data.</param>
+      <param name="results">Dictionary that contains the extra results.</param>
+      <returns>Newly created object.</returns>
+    </member>
+    <member name="P:Leadtools.ImageProcessingCompletedEventArgs.imageData">
+      <summary>Gets the result HTML5 canvas image data.</summary>
+      <value>HTML5 **ImageData** that contains the result of the current image processing function applied to the original image.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessingCompletedEventArgs.results">
+      <summary>Gets a dictionary that contains the extra results.</summary>
+      <value>A dictionary that contains the extra results (if any).</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessingErrorEventArgs">
+      <summary>Contains data for the ImageProcessing.Error event.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessingErrorEventArgs.#ctor">
+      <summary>Initializes a new instance of ImageProcessingErrorEventArgs with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessingErrorEventArgs.create">
+      <summary>Creates a new instance of ImageProcessingErrorEventArgs with the specified parameters.</summary>
+      <param name="error">The error object.</param>
+    </member>
+    <member name="P:Leadtools.ImageProcessingErrorEventArgs.error">
+      <summary>Gets the current image processing error object.</summary>
+      <value>The current image processing error object.</value>
+    </member>
+    <member name="T:Leadtools.ImageProcessingProgressEventArgs">
+      <summary>Contains data for the ImageProcessing.Progress event.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessingProgressEventArgs.#ctor">
+      <summary>Initializes a new instance of ImageProcessingProgressEventArgs with default parameters.</summary>
+    </member>
+    <member name="M:Leadtools.ImageProcessingProgressEventArgs.create">
+      <summary>Creates a new instance of ImageProcessingProgressEventArgs with the specified parameters.</summary>
+      <param name="percentage">Current operation completion percentage (0 to 100).</param>
+    </member>
+    <member name="P:Leadtools.ImageProcessingProgressEventArgs.cancel">
+      <summary>Gets or sets a value that indicate whether to abort the current image processing operation.</summary>
+      <value>**true** to abort the current image processing operation, otherwise; **false**. Default value is **false**.</value>
+    </member>
+    <member name="P:Leadtools.ImageProcessingProgressEventArgs.percentage">
+      <summary>Gets the current image processing completion percentage.</summary>
+      <value>The current image processing completion percentage (0 to 100).</value>
+    </member>
+    <member name="T:Leadtools.LeadCollection">
+      <summary>Represents a dynamic data collection that provides notifications when items get added, removed, or when the whole list is refreshed.</summary>
+    </member>
+    <member name="M:Leadtools.LeadCollection.#ctor">
+      <summary>Initializes a new empty instance of the LeadCollection class.</summary>
+    </member>
+    <member name="M:Leadtools.LeadCollection.add">
+      <summary>Adds an object to the end of the LeadCollection.</summary>
+      <param name="item">The object to be added to the end of the LeadCollection. The value can be **null**.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.addRange">
+      <summary>Adds the array of objects to the end of the LeadCollection.</summary>
+      <param name="items">The items to add to the collection.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.clear">
+      <summary>Removes all items from the LeadCollection.</summary>
+    </member>
+    <member name="M:Leadtools.LeadCollection.clearItems">
+      <summary>Removes all items from the collection.</summary>
+    </member>
+    <member name="M:Leadtools.LeadCollection.contains">
+      <summary>Determines whether an item is in the LeadCollection.</summary>
+      <param name="item">The object to locate in the LeadCollection. The value can be **null**.</param>
+      <returns>This method determines equality using the default equality comparer of the type of values in the list.</returns>
+    </member>
+    <member name="M:Leadtools.LeadCollection.indexOf">
+      <summary>Searches for the specified object and returns the 0-based index of the first occurrence within the entire LeadCollection.</summary>
+      <param name="item">The object to locate. The value can be **null**.</param>
+      <returns>The 0-based index of the first occurrence of item within the entire LeadCollection, if found; otherwise -1.</returns>
+    </member>
+    <member name="M:Leadtools.LeadCollection.insert">
+      <summary>Inserts an item into the LeadCollection at the specified index.</summary>
+      <param name="index">The 0-based index at which item should be inserted.</param>
+      <param name="item">The object to insert. The value can be **null**.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.insertItem">
+      <summary>Inserts an item into the LeadCollection at the specified index.</summary>
+      <param name="index">The 0-based index at which item should be inserted.</param>
+      <param name="item">The object to insert. The value can be **null**.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.insertItemRange">
+      <summary>Inserts an array of items into the LeadCollection at the specified index.</summary>
+      <param name="index">The 0-based index at which items should be inserted.</param>
+      <param name="items">An array of items to insert. Items may be **null**.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.insertRange">
+      <summary>Inserts an array of items into the LeadCollection at the specified index.</summary>
+      <param name="index">The 0-based index at which items should be inserted.</param>
+      <param name="items">An array of items to insert. Items may be **null**.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.move">
+      <summary>Moves the item at the specified index to a new location in the collection.</summary>
+      <param name="oldIndex">The 0-based index specifying the location of the item to be moved.</param>
+      <param name="newIndex">The 0-based index specifying the new location of the item.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.moveItem">
+      <summary>Moves the item at the specified index to a new location in the collection.</summary>
+      <param name="oldIndex">The 0-based index specifying the location of the item to be moved.</param>
+      <param name="newIndex">The 0-based index specifying the new location of the item.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.onCollectionChanged">
+      <summary>Raises the CollectionChanged event with the provided arguments.</summary>
+      <param name="e">Event data.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.remove">
+      <summary>Removes the first occurrence of a specific object from the LeadCollection.</summary>
+      <param name="item">The object to remove from the LeadCollection. The value can be **null**.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.removeAt">
+      <summary>Removes the item at the specified index of the LeadCollection.</summary>
+      <param name="index">The 0-based index of the item to remove.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.removeItem">
+      <summary>Removes the item at the specified index of the collection.</summary>
+      <param name="index">The 0-based index of the item to remove.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.removeItemRange">
+      <summary>Removes the items at the specified index of the collection.</summary>
+      <param name="index">The 0-based index of the item to remove.</param>
+      <param name="count">The number of items to remove.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.removeRange">
+      <summary>Removes the items at the specified index of the collection.</summary>
+      <param name="index">The 0-based index of the item to remove.</param>
+      <param name="count">The number of items to remove.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.setItem">
+      <summary>Replaces the item at the specified index.</summary>
+      <param name="index">The 0-based index of the item to replace.</param>
+      <param name="item">The new value of the item.</param>
+    </member>
+    <member name="M:Leadtools.LeadCollection.toArray">
+      <summary>Gets an array of the items in this collection.</summary>
+      <returns>An array of the items in this collection.</returns>
+    </member>
+    <member name="E:Leadtools.LeadCollection.collectionChanged">
+      <summary>Occurs when an item is added, removed, changed, moved, or the entire list is refreshed.</summary>
+    </member>
+    <member name="P:Leadtools.LeadCollection.count">
+      <summary>Gets the number of items contained in the LeadCollection.</summary>
+      <value>The number of items contained in the LeadCollection.</value>
+    </member>
+    <member name="P:Leadtools.LeadCollection.item">
+      <summary>Gets or sets the item at the specified index.</summary>
+      <value>The item at the specified index.</value>
+    </member>
+    <member name="T:Leadtools.LeadEvent">
+      <summary>LEADTOOLS support for JavaScript events.</summary>
+    </member>
+    <member name="M:Leadtools.LeadEvent.create">
+      <summary>Creates a new LeadEvent object.</summary>
+      <param name="target">The target class. Must not be **null**.</param>
+      <param name="eventName">The event name. Must not be **null** or empty.</param>
+      <returns>The event object.</returns>
+    </member>
+    <member name="M:Leadtools.LeadEvent.invoke">
+      <summary>Invokes this event with the specified sender and data.</summary>
+      <param name="sender">The object sending the event..</param>
+      <param name="e">The event data.</param>
+    </member>
+    <member name="T:Leadtools.LeadEventArgs">
+      <summary>Represents the base class for classes that contain event data, and provides a value to use for events that do not include event data.  </summary>
+    </member>
+    <member name="F:Leadtools.LeadEventArgs.empty">
+      <summary>Provides a value to use with events that do not have event data.  </summary>
+    </member>
+    <member name="T:Leadtools.LeadEventType">
+      <summary>Default event object.  </summary>
+    </member>
+    <member name="T:Leadtools.LeadLengthD">
+      <summary>Stores a length value.</summary>
+    </member>
+    <member name="M:Leadtools.LeadLengthD.#ctor">
+      <summary>Creates a new LeadLengthD object.</summary>
+    </member>
+    <member name="M:Leadtools.LeadLengthD.clone">
+      <summary>Creates an exact copy of this LeadLengthD object.</summary>
+      <returns>A LeadLengthD that is an exact copy of the original **LeadLengthD** object.</returns>
+    </member>
+    <member name="M:Leadtools.LeadLengthD.create">
+      <summary>Initializes a new LeadLengthD object with explicit parameters.</summary>
+      <param name="value">Specifies the value of the LeadLengthD.</param>
+      <returns>A LeadLengthD.</returns>
+    </member>
+    <member name="M:Leadtools.LeadLengthD.equals">
+      <summary>Specifies whether two LeadLengthD objects contain the same values.</summary>
+      <param name="length1">The first LeadLengthD object to use in the comparison.</param>
+      <param name="length2">The second LeadLengthD object to use in the comparison.</param>
+      <returns>Target Platforms</returns>
+    </member>
+    <member name="M:Leadtools.LeadLengthD.fromJSON">
+      <summary>Converts a JSON-compatible dictionary object to a new LeadLengthD instance.</summary>
+      <param name="jsonObject">A JavaScript JSON-compatible object that describes the LeadLengthD instance.</param>
+      <returns>a new LeadLengthD instance to describe the JSON object.</returns>
+    </member>
+    <member name="M:Leadtools.LeadLengthD.toJSON">
+      <summary>Converts this LeadLengthD to a JSON-compatible dictionary object.</summary>
+      <returns>a JavaScript JSON-compatible object to describe the LeadLengthD instance.</returns>
+    </member>
+    <member name="M:Leadtools.LeadLengthD.toString">
+      <summary>Converts this LeadLengthD to a human-readable string.</summary>
+    </member>
+    <member name="P:Leadtools.LeadLengthD.value">
+      <summary>Gets or sets the value of this LeadLengthD.</summary>
+      <value>The value of this LeadLengthD.</value>
+    </member>
+    <member name="T:Leadtools.LeadMatrix">
+      <summary>Represents a 3x3 affine transformation matrix used for transformations in 2-D space.</summary>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.#ctor">
+      <summary>Initializes a new instance of LeadMatrix</summary>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.append">
+      <summary>Appends the specified LeadMatrix to this LeadMatrix.</summary>
+      <param name="matrix">The matrix to append to this LeadMatrix.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.clone">
+      <summary>Creates an exact copy of this LeadMatrix.</summary>
+      <returns>A LeadMatrix that is an exact copy of the original **LeadMatrix**.</returns>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.create">
+      <summary>Creates a new LeadMatrix with the specified values.</summary>
+      <param name="m11">The new LeadMatrix M11 coefficient.</param>
+      <param name="m12">The new LeadMatrix M12 coefficient.</param>
+      <param name="m21">The new LeadMatrix M21 coefficient.</param>
+      <param name="m22">The new LeadMatrix M22 coefficient.</param>
+      <param name="offsetX">The new  LeadMatrix OffsetX coefficient.</param>
+      <param name="offsetY">The new  LeadMatrix OffsetY coefficient.</param>
+      <returns>The resulting LeadMatrix</returns>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.equals">
+      <summary>Compares two LeadMatrix objects to determine whether they contain the same coordinates.</summary>
+      <param name="matrix1">The first object to use in the comparison.</param>
+      <param name="matrix2">The second object to use in the comparison.</param>
+      <returns>Target Platforms</returns>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.fromJSON">
+      <summary>Converts a JSON-compatible dictionary object to a new LeadMatrix instance.</summary>
+      <param name="jsonObject">A JavaScript JSON-compatible object that describes the LeadMatrix instance.</param>
+      <returns>a new LeadMatrix instance to describe the JSON object.</returns>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.invert">
+      <summary>Inverts this LeadMatrix.</summary>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.multiply">
+      <summary>Multiplies a LeadMatrix by another LeadMatrix.</summary>
+      <param name="trans1">The first LeadMatrix to multiply.</param>
+      <param name="trans2">The secondLeadMatrix to multiply.</param>
+      <returns>The result of multiplying trans1 by trans2.</returns>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.prepend">
+      <summary>Prepends the specified LeadMatrix onto this LeadMatrix.</summary>
+      <param name="matrix">The matrix to prepend to this LeadMatrix.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.rotate">
+      <summary>Applies a rotation of the specified angle about the origin of this LeadMatrix.</summary>
+      <param name="angle">The angle of rotation.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.rotateAt">
+      <summary>Rotates this matrix about the specified point.</summary>
+      <param name="angle">The angle, in degrees, to rotate this matrix.</param>
+      <param name="centerX">The x-coordinate of the point to rotate this matrix around.</param>
+      <param name="centerY">The y-coordinate of the point to rotate this matrix around.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.rotateAtPrepend">
+      <summary>Prepends a rotation of the specified angle at the specified point to this LeadMatrix.</summary>
+      <param name="angle">The angle, in degrees, to rotate this matrix.</param>
+      <param name="centerX">The x-coordinate of the point to rotate this matrix around.</param>
+      <param name="centerY">The y-coordinate of the point to rotate this matrix around.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.rotatePrepend">
+      <summary>Prepends a rotation of the specified angle to this LeadMatrix.</summary>
+      <param name="angle">The angle of rotation.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.scale">
+      <summary>Appends the specified scale vector to this LeadMatrix.</summary>
+      <param name="scaleX">The value by which to scale this LeadMatrix along the x-axis.</param>
+      <param name="scaleY">The value by which to scale this LeadMatrix along the y-axis.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.scaleAt">
+      <summary>Scales this LeadMatrix by the specified amount about the specified point.</summary>
+      <param name="scaleX">The value by which to scale this LeadMatrix along the x-axis.</param>
+      <param name="scaleY">The value by which to scale this LeadMatrix along the y-axis.</param>
+      <param name="centerX">The x-coordinate of the scale operation's center point.</param>
+      <param name="centerY">The y-coordinate of the scale operation's center point.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.scaleAtPrepend">
+      <summary>Prepends the specified scale about the specified point of this LeadMatrix.</summary>
+      <param name="scaleX">The value by which to scale this LeadMatrix along the x-axis.</param>
+      <param name="scaleY">The value by which to scale this LeadMatrix along the y-axis.</param>
+      <param name="centerX">The x-coordinate of the scale operation's center point.</param>
+      <param name="centerY">The y-coordinate of the scale operation's center point.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.scalePrepend">
+      <summary>Prepends the specified scale vector to this LeadMatrix.</summary>
+      <param name="scaleX">The value by which to scale this LeadMatrix along the x-axis.</param>
+      <param name="scaleY">The value by which to scale this LeadMatrix along the y-axis.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.setIdentity">
+      <summary>Changes this LeadMatrix into an identity matrix.</summary>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.skew">
+      <summary>Appends a skew of the specified degrees in the x and y dimensions to this LeadMatrix.</summary>
+      <param name="skewX">The angle in the x dimension to skew this LeadMatrix.</param>
+      <param name="skewY">The angle in the y dimension to skew this LeadMatrix.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.skewPrepend">
+      <summary>Prepends a skew of the specified degrees in the x and y dimensions to this LeadMatrix.</summary>
+      <param name="skewX">The angle in the x dimension to skew this LeadMatrix.</param>
+      <param name="skewY">The angle in the y dimension to skew this LeadMatrix.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.toJSON">
+      <summary>Converts this LeadMatrix to a JSON-compatible dictionary object.</summary>
+      <returns>A JavaScript JSON-compatible object to describe the LeadMatrix instance.</returns>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.toString">
+      <summary>Converts this LeadMatrix to a human-readable string.</summary>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.transformPoint">
+      <summary>Transforms the specified point by the LeadMatrix and returns the result.</summary>
+      <param name="point">The point to transform.</param>
+      <returns>The LeadPointD by this LeadMatrix.</returns>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.transformPoints">
+      <summary>Transforms the specified points by this LeadMatrix.</summary>
+      <param name="points">The points to transform. The original points in the array are replaced by their transformed values.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.transformRect">
+      <summary>Transforms the specified rect by the LeadMatrix and returns the result.</summary>
+      <param name="rect">The rectangle to transform.</param>
+      <returns>The LeadRectD by this LeadMatrix.</returns>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.transformVector">
+      <summary>Transforms the specified vector point by the LeadMatrix and returns the result.</summary>
+      <param name="point">The point to transform.</param>
+      <returns>The LeadPointD by this LeadMatrix.</returns>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.translate">
+      <summary>Appends a translation of the specified offsets to this LeadMatrix.</summary>
+      <param name="offsetX">The amount to offset this LeadMatrix along the x-axis.</param>
+      <param name="offsetY">The amount to offset this LeadMatrix along the y-axis.</param>
+    </member>
+    <member name="M:Leadtools.LeadMatrix.translatePrepend">
+      <summary>Prepends a translation of the specified offsets to this LeadMatrix.</summary>
+      <param name="offsetX">The amount to offset this LeadMatrix along the x-axis.</param>
+      <param name="offsetY">The amount to offset this LeadMatrix along the y-axis.</param>
+    </member>
+    <member name="P:Leadtools.LeadMatrix.determinant">
+      <summary>Gets the determinant of this LeadMatrix.</summary>
+      <value>The determinant of this LeadMatrix.</value>
+    </member>
+    <member name="P:Leadtools.LeadMatrix.hasInverse">
+      <summary>Gets a value that indicates whether this LeadMatrix is invertible.</summary>
+      <value>**true** if the matrix has an inverse; otherwise, it is **false**. The default is **true**.</value>
+    </member>
+    <member name="P:Leadtools.LeadMatrix.identity">
+      <summary>Gets an identity LeadMatrix.</summary>
+      <value>An identity matrix.</value>
+    </member>
+    <member name="P:Leadtools.LeadMatrix.isIdentity">
+      <summary>Gets a value that indicates whether this LeadMatrix is an identity matrix.</summary>
+      <value>**true** if the LeadMatrix object is an identity matrix; otherwise,</value>
+    </member>
+    <member name="P:Leadtools.LeadMatrix.m11">
+      <summary>Gets or sets the value of the first row and first column of this LeadMatrix.</summary>
+      <value>The value of the first row and first column of this LeadMatrix. The default value is 1.</value>
+    </member>
+    <member name="P:Leadtools.LeadMatrix.m12">
+      <summary>Gets or sets the value of the first row and second column of this LeadMatrix.</summary>
+      <value>The value of the first row and second column of this LeadMatrix. The default value is 1.</value>
+    </member>
+    <member name="P:Leadtools.LeadMatrix.m21">
+      <summary>Gets or sets the value of the second row and first column of this LeadMatrix.</summary>
+      <value>The value of the second row and first column of this LeadMatrix. The default value is 1.</value>
+    </member>
+    <member name="P:Leadtools.LeadMatrix.m22">
+      <summary>Gets or sets the value of the second row and second column of this LeadMatrix.</summary>
+      <value>The value of the second row and second column of this LeadMatrix. The default value is 1.</value>
+    </member>
+    <member name="P:Leadtools.LeadMatrix.offsetX">
+      <summary>Gets or sets the value of the third row and first column of this LeadMatrix.</summary>
+      <value>The value of the third row and first column of this LeadMatrix. The default value is 0.</value>
+    </member>
+    <member name="P:Leadtools.LeadMatrix.offsetY">
+      <summary>Gets or sets the value of the third row and first column of this LeadMatrix.</summary>
+      <value>The value of the third row and first column of this LeadMatrix. The default value is 0.</value>
+    </member>
+    <member name="T:Leadtools.LeadPointD">
+      <summary>Stores two numbers that represent the coordinates of a point (X and Y).</summary>
+    </member>
+    <member name="M:Leadtools.LeadPointD.#ctor">
+      <summary>Creates a new LeadPointD object.</summary>
+    </member>
+    <member name="M:Leadtools.LeadPointD.clone">
+      <summary>Creates an exact copy of this LeadPointD object.</summary>
+      <returns>A LeadPointD that is an exact copy of the original **LeadPointD** object.</returns>
+    </member>
+    <member name="M:Leadtools.LeadPointD.create">
+      <summary>Initializes a new LeadPointD object with explicit parameters.</summary>
+      <param name="x">Specifies the X-coordinate of the LeadPointD.</param>
+      <param name="y">Specifies the Y-coordinate of the LeadPointD.</param>
+      <returns>A LeadPointD set to x and y set to y.</returns>
+    </member>
+    <member name="M:Leadtools.LeadPointD.equals">
+      <summary>Specifies whether two LeadPointD objects contain the same coordinates.</summary>
+      <param name="point1">The first LeadPointD object to use in the comparison.</param>
+      <param name="point2">The second LeadPointD object to use in the comparison.</param>
+      <returns>Target Platforms</returns>
+    </member>
+    <member name="M:Leadtools.LeadPointD.fromJSON">
+      <summary>Converts a JSON-compatible dictionary object to a new LeadPointD instance.</summary>
+      <param name="jsonObject">A JavaScript JSON-compatible object that describes the LeadPointD instance.</param>
+      <returns>a new LeadPointD instance to describe the JSON object.</returns>
+    </member>
+    <member name="M:Leadtools.LeadPointD.toJSON">
+      <summary>Converts this LeadPointD to a JSON-compatible dictionary object.</summary>
+      <returns>a JavaScript JSON-compatible object to describe the LeadPointD instance.</returns>
+    </member>
+    <member name="M:Leadtools.LeadPointD.toString">
+      <summary>Converts this LeadPointD to a human-readable string.</summary>
+    </member>
+    <member name="P:Leadtools.LeadPointD.empty">
+      <summary>Gets a value that represents a static empty LeadPointD.</summary>
+      <value>An empty LeadPointD object.</value>
+    </member>
+    <member name="P:Leadtools.LeadPointD.isEmpty">
+      <summary>Gets a value that indicates whether this instance of LeadPointD is Empty.</summary>
+      <value>**true** if this instance of point is Empty; otherwise, it is **false**.</value>
+    </member>
+    <member name="P:Leadtools.LeadPointD.x">
+      <summary>Gets or sets a value that represents the X coordinate for this LeadPointD.</summary>
+      <value>The x-coordinate of this LeadPointD.</value>
+    </member>
+    <member name="P:Leadtools.LeadPointD.y">
+      <summary>Gets or sets a value that represents the Y coordinate for this LeadPointD.</summary>
+      <value>The y-coordinate of this LeadPointD.</value>
+    </member>
+    <member name="T:Leadtools.LeadRectD">
+      <summary>Stores four numbers that represent the coordinates and size of a rectangle (X, Y, Width, and Height).</summary>
+    </member>
+    <member name="M:Leadtools.LeadRectD.#ctor">
+      <summary>Creates a new LeadRectD object.</summary>
+    </member>
+    <member name="M:Leadtools.LeadRectD.clone">
+      <summary>Creates an exact copy of this LeadRectD.</summary>
+      <returns>A LeadRectD that is an exact copy of the original **LeadRectD**.</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.contains">
+      <summary>Determines whether the specified point is contained within this LeadRectD.</summary>
+      <param name="x">The x-coordinate of the point to test.</param>
+      <param name="y">The y-coordinate of the point to test.</param>
+      <returns>Target Platforms</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.containsPoint">
+      <summary>Determines whether the specified point is contained within this LeadRectD.</summary>
+      <param name="point">The point to test.</param>
+      <returns>Target Platforms</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.containsRect">
+      <summary>Determines if the rectangular region represented by the specified value is entirely contained within this LeadRectD.</summary>
+      <param name="rect">The LeadRectD to be tested.</param>
+      <returns>This method returns **true** if the rectangular region represented by rect is entirely contained within the rectangular region represented by this LeadRectD; otherwise, it is **false**.</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.create">
+      <summary>Initializes a new LeadRectD object with explicit parameters.</summary>
+      <param name="x">Specifies the X coordinates of the LeadRectD.</param>
+      <param name="y">Specifies the Y coordinates of the LeadRectD.</param>
+      <param name="width">Specifies the width of the LeadRectD. Must be a value greater than or equal to 0.</param>
+      <param name="height">Specifies the height of the LeadRectD. Must be a value greater than or equal to 0.</param>
+      <returns>A LeadRectD set to x, y set to y, Width set to</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.equals">
+      <summary>Specifies whether two LeadRectD contain the same coordinates.</summary>
+      <param name="rect1">The first LeadRectD object to use in the comparison.</param>
+      <param name="rect2">The second LeadRectD object to use in the comparison.</param>
+      <returns>Target Platforms</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.fromJSON">
+      <summary>Converts a JSON-compatible dictionary object to a new LeadRectD instance.</summary>
+      <param name="jsonObject">A JavaScript JSON-compatible object that describes the LeadRectD instance.</param>
+      <returns>a new LeadRectD instance to describe the JSON object.</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.fromLTRB">
+      <summary>Creates a LeadRectD with the specified edge locations.</summary>
+      <param name="left">The x-coordinate of the upper-left corner of the LeadRectD.</param>
+      <param name="top">The y-coordinate of the upper-left corner of the LeadRectD.</param>
+      <param name="right">The x-coordinate of the lower-right corner of the LeadRectD.</param>
+      <param name="bottom">The y-coordinate of the lower-right corner of the LeadRectD.</param>
+      <returns>The resulting LeadRectD.</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.inflate">
+      <summary>Inflates this LeadRectD by the specified amount.</summary>
+      <param name="width">The amount to inflate this LeadRectD horizontally.</param>
+      <param name="height">The amount to inflate this LeadRectD vertically.</param>
+    </member>
+    <member name="M:Leadtools.LeadRectD.inflateRect">
+      <summary>Returns a LeadRectD resulting from inflating the specified rectangle by the specified amount.</summary>
+      <param name="rect">The rectangle to inflate.</param>
+      <param name="width">The amount to inflate this rect horizontally.</param>
+      <param name="height">The amount to inflate this rect vertically.</param>
+    </member>
+    <member name="M:Leadtools.LeadRectD.intersect">
+      <summary>Replaces this LeadRectD with the intersection of itself and the specified LeadRectD.</summary>
+      <param name="rect">The rectangle to intersect.</param>
+    </member>
+    <member name="M:Leadtools.LeadRectD.intersectRects">
+      <summary>Returns a LeadRectD that represents the intersection of two rectangles.</summary>
+      <param name="rect1">A rectangle to intersect.</param>
+      <param name="rect2">A rectangle to intersect</param>
+      <returns>A third LeadRectD the size of which represents the overlapped area of the two specified rectangles.</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.intersectsWith">
+      <summary>Determines if this LeadRectD intersects with a test value.</summary>
+      <param name="rect">The rectangle to test.</param>
+      <returns>This method returns **true** if there is any intersection; otherwise, it is **false**.</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.offset">
+      <summary>Adjusts the location of this rectangle by the specified amount.</summary>
+      <param name="offsetX">The x-amount to offset the location.</param>
+      <param name="offsetY">The y-amount to offset the location.</param>
+    </member>
+    <member name="M:Leadtools.LeadRectD.scale">
+      <summary>Scales this LeadRectD by the specified amount.</summary>
+      <param name="scaleX">Horizontal scale value</param>
+      <param name="scaleY">Vertical scale value</param>
+    </member>
+    <member name="M:Leadtools.LeadRectD.toJSON">
+      <summary>Converts this LeadRectD to a JSON-compatible dictionary object.</summary>
+      <returns>a JavaScript JSON-compatible object to describe the LeadRectD instance.</returns>
+    </member>
+    <member name="M:Leadtools.LeadRectD.toString">
+      <summary>Converts this LeadRectD to a human-readable string.</summary>
+    </member>
+    <member name="M:Leadtools.LeadRectD.union">
+      <summary>Combines this LeadRectD with the specified value.</summary>
+      <param name="rect">The rectangle to combine with.</param>
+    </member>
+    <member name="M:Leadtools.LeadRectD.unionRects">
+      <summary>Gets a LeadRectD that contains the union of two rectangles.</summary>
+      <param name="rect1">First rectangle.</param>
+      <param name="rect2">Second rectangle.</param>
+      <returns>A third LeadRectD the size of which represents the union of the area of the two specified rectangles.</returns>
+    </member>
+    <member name="P:Leadtools.LeadRectD.bottom">
+      <summary>Gets the y-coordinate of the bottom edge of this LeadRectD.</summary>
+      <value>The bottom edge of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.bottomLeft">
+      <summary>Gets a LeadPointD that represents the bottom-left edge of this LeadRectD.</summary>
+      <value>A LeadPointD that represents the bottom-left edge of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.bottomRight">
+      <summary>Gets a LeadPointD that represents the bottom-right edge of this LeadRectD.</summary>
+      <value>A LeadPointD that represents the bottom-right edge of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.empty">
+      <summary>Gets a value that represents a static empty LeadRectD.</summary>
+      <value>An empty LeadRectD object.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.height">
+      <summary>Gets or sets the height of this LeadRectD.</summary>
+      <value>The height of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.isEmpty">
+      <summary>Gets a value that indicates whether this instance of LeadRectD is Empty.</summary>
+      <value>**true** if this instance of rect is Empty; otherwise, it is **false**.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.left">
+      <summary>Gets the x-coordinate of the left edge of this LeadRectD.</summary>
+      <value>The left edge of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.location">
+      <summary>Gets or sets the coordinates of the upper-left corner of this LeadRectD.</summary>
+      <value>The upper-left corner coordinates of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.right">
+      <summary>Gets the x-coordinate of the right edge of this LeadRectD.</summary>
+      <value>The right edge of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.size">
+      <summary>Gets or sets the size of this LeadRectD.</summary>
+      <value>The width and height of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.top">
+      <summary>Gets the y-coordinate of the top edge of this LeadRectD.</summary>
+      <value>The top edge of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.topLeft">
+      <summary>Gets a LeadPointD that represents the top-left edge of this LeadRectD.</summary>
+      <value>A LeadPointD that represents the top-left edge of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.topRight">
+      <summary>Gets a LeadPointD that represents the top-right edge of this LeadRectD.</summary>
+      <value>A LeadPointD that represents the top-right edge of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.width">
+      <summary>Gets or sets the width of this LeadRectD.</summary>
+      <value>The width this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.x">
+      <summary>Gets or sets the x-coordinate of the upper-left corner of this LeadRectD.</summary>
+      <value>The x-coordinate of this LeadRectD.</value>
+    </member>
+    <member name="P:Leadtools.LeadRectD.y">
+      <summary>Gets or sets the y-coordinate of the upper-left corner of this LeadRectD.</summary>
+      <value>The y-coordinate of this LeadRectD.</value>
+    </member>
+    <member name="T:Leadtools.LeadSizeD">
+      <summary>Stores two numbers that represent the size (Width and Height).</summary>
+    </member>
+    <member name="M:Leadtools.LeadSizeD.#ctor">
+      <summary>Creates a new LeadSizeD object.</summary>
+    </member>
+    <member name="M:Leadtools.LeadSizeD.clone">
+      <summary>Creates an exact copy of this LeadSizeD object.</summary>
+      <returns>A LeadSizeD that is an exact copy of the original **LeadSizeD** object.</returns>
+    </member>
+    <member name="M:Leadtools.LeadSizeD.create">
+      <summary>Initializes a new LeadSizeD object with explicit parameters.</summary>
+      <param name="width">Specifies the width of the LeadSizeD. Must be a value greater than or equal to 0.</param>
+      <param name="height">Specifies the height of the LeadSizeD. Must be a value greater than or equal to 0.</param>
+      <returns>A LeadSizeD and height.</returns>
+    </member>
+    <member name="M:Leadtools.LeadSizeD.equals">
+      <summary>Specifies whether two LeadSizeD contain the same coordinates.</summary>
+      <param name="size1">The first LeadSizeD object to use in the comparison.</param>
+      <param name="size2">The second LeadSizeD object to use in the comparison.</param>
+      <returns>Target Platforms</returns>
+    </member>
+    <member name="M:Leadtools.LeadSizeD.fromJSON">
+      <summary>Converts a JSON-compatible dictionary object to a new LeadSizeD instance.</summary>
+      <param name="jsonObject">A JavaScript JSON-compatible object that describes the LeadSizeD instance.</param>
+      <returns>a new LeadSizeD instance to describe the JSON object.</returns>
+    </member>
+    <member name="M:Leadtools.LeadSizeD.toJSON">
+      <summary>Converts this LeadSizeD to a JSON-compatible dictionary object.</summary>
+      <returns>a JavaScript JSON-compatible object to describe the LeadSizeD instance.</returns>
+    </member>
+    <member name="M:Leadtools.LeadSizeD.toString">
+      <summary>Converts this LeadSizeD to a human-readable string.</summary>
+    </member>
+    <member name="P:Leadtools.LeadSizeD.empty">
+      <summary>Gets a value that represents a static empty LeadSizeD.</summary>
+      <value>An empty LeadSizeD object.</value>
+    </member>
+    <member name="P:Leadtools.LeadSizeD.height">
+      <summary>Gets or sets a value that represents the width for this LeadSizeD.</summary>
+      <value>Value that indicates the width of the size. Must be a value greater than or equal to 0.</value>
+    </member>
+    <member name="P:Leadtools.LeadSizeD.isEmpty">
+      <summary>Gets a value that indicates whether this instance of LeadSizeD is Empty.</summary>
+      <value>**true** if this instance of size is Empty; otherwise, it is **false**.</value>
+    </member>
+    <member name="P:Leadtools.LeadSizeD.width">
+      <summary>Gets or sets a value that represents the width for this LeadSizeD.</summary>
+      <value>Value that indicates the width of the size. Must be a value greater than or equal to 0.</value>
+    </member>
+    <member name="T:Leadtools.LTHelper">
+      <summary>Represents a helper class used by the various LEADTOOLS components to detect the current browser and operating system.</summary>
+    </member>
+    <member name="M:Leadtools.LTHelper.addClass">
+      <summary>Adds the specified class string to the HTML or SVG element's current class list.</summary>
+      <param name="element">HTML or SVG element to add the class to.</param>
+      <param name="className">The class string.</param>
+    </member>
+    <member name="M:Leadtools.LTHelper.base64Decode">
+      <summary>Decodes a Base 64 encoded string and returns the result as a byte array.</summary>
+      <param name="input">Input string containing the Base 64 encoded value.</param>
+      <returns>A byte array that contains the decoded values.</returns>
+    </member>
+    <member name="M:Leadtools.LTHelper.base64DecodeToArrayBuffer">
+      <summary>Decodes a Base 64 encoded string and returns the result as an array buffer.</summary>
+      <param name="input">Input string containing the Base 64 encoded value.</param>
+      <returns>An array buffer that contains the decoded values.</returns>
+    </member>
+    <member name="M:Leadtools.LTHelper.base64DecodeToByteArray">
+      <summary>Decodes a Base 64 encoded string and returns the result as a byte array.</summary>
+      <param name="input">Input string containing the Base 64 encoded value.</param>
+      <returns>A byte array that contains the decoded values.</returns>
+    </member>
+    <member name="M:Leadtools.LTHelper.base64Encode">
+      <summary>Encodes a byte array as Base 64 and returns the result.</summary>
+      <param name="input">Input byte array</param>
+      <param name="removeLinefeed">If **true**, then any line feed characters (hex values 10 followed by 13) will be removed and not encoded in the final result.</param>
+      <returns>A string that contains the resulting Base 64 encoded value.</returns>
+    </member>
+    <member name="M:Leadtools.LTHelper.base64EncodeFromArrayBuffer">
+      <summary>Encodes an array buffer as Base 64 and returns the result.</summary>
+      <param name="buffer">Input array buffer</param>
+      <returns>A string that contains the resulting Base 64 encoded value.</returns>
+    </member>
+    <member name="M:Leadtools.LTHelper.cancelAnimationFrame">
+      <summary>Cancels an animation frame, with a fallback for older browsers.</summary>
+      <param name="id">The `id` received from [RequestAnimationFrame].</param>
+    </member>
+    <member name="M:Leadtools.LTHelper.ensureUsableCanvas">
+      <summary>Helper method to ensure that a canvas of a given size is usable.</summary>
+      <param name="canvas">Input canvas element. Must not be null.</param>
+      <returns>The value used to scale the canvas to a usable size.</returns>
+    </member>
+    <member name="M:Leadtools.LTHelper.hasClass">
+      <summary>Checks an HTML or SVG element for the given class string.</summary>
+      <param name="element">HTML or SVG element to check.</param>
+      <param name="className">The class string.</param>
+      <returns>Like AddClass and RemoveClass, this method also works with browsers that do not support the HTML element **classList** property.</returns>
+    </member>
+    <member name="M:Leadtools.LTHelper.loadJS">
+      <summary>Helper method to dynamically load a JS file and add it to the script section of the current document.</summary>
+      <param name="fileName">Path to the JS file to load.</param>
+      <param name="callback">Function to call when the JS file has been loaded.</param>
+    </member>
+    <member name="M:Leadtools.LTHelper.log">
+      <summary>Logs messages to the `console` without causing errors on older browsers.</summary>
+      <param name="arg">Any argument to log to the `console`.</param>
+    </member>
+    <member name="M:Leadtools.LTHelper.logError">
+      <summary>Logs errors to the `console` without causing errors on older browsers.</summary>
+      <param name="arg">Any argument to log to the `console`.</param>
+    </member>
+    <member name="M:Leadtools.LTHelper.logWarning">
+      <summary>Logs warnings to the `console` without causing errors on older browsers.</summary>
+      <param name="arg">Any argument to log to the `console`.</param>
+    </member>
+    <member name="M:Leadtools.LTHelper.newGuid">
+      <summary>Creates a new GUID.</summary>
+      <returns>A new randomly generated globally unique identifier (GUID) value.</returns>
+    </member>
+    <member name="M:Leadtools.LTHelper.removeClass">
+      <summary>Removes the specified class string from the HTML or SVG element's current class list.</summary>
+      <param name="element">HTML or SVG element to remove the class from.</param>
+      <param name="className">The class string.</param>
+    </member>
+    <member name="M:Leadtools.LTHelper.removeJS">
+      <summary>Helper method to dynamically remove a JS file previously loaded from the script section of the current document.</summary>
+      <param name="fileName">Path to the JS file to remove.</param>
+    </member>
+    <member name="M:Leadtools.LTHelper.requestAnimationFrame">
+      <summary>Requests an animation frame, with a fallback for older browsers.</summary>
+      <param name="callback">The callback of type [LTRender] to run when the frame is ready.</param>
+      <returns>An `id` used for cancelling.</returns>
+    </member>
+    <member name="F:Leadtools.LTHelper.browser">
+      <summary>Gets or sets the current browser.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.device">
+      <summary>Gets or sets the current device.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.licenseDirectory">
+      <summary>The directory path where LEADTOOLS looks for the license file (Deprecated).</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.msPointerEnabled">
+      <summary>Gets or sets a value indicating whether the current browser supports the Windows 8 style touch input.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.OS">
+      <summary>Gets or sets the current operating system.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.requestCustomHeaders">
+      <summary>An object to set custom headers to for use when requesting the LEADTOOLS license files.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsAnimationFrame">
+      <summary>Gets or sets a value indicating whether the current browser supports the HTML 5 animation frame.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsCanvas">
+      <summary>Gets or sets a value indicating whether the current browser supports HTML 5 Canvas element.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsCSSTransitions">
+      <summary>Gets or sets a value indicating whether the current browser supports CSS3 Transitions, either through the normal `transition`rule or a vendor prefix such as `webkitTransition`/`webkit-transition`.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsFileReader">
+      <summary>Gets or sets a value indicating whether the current browser supports the File/FileReader API, including the File, FileReader, URL, and Blob objects.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsHTMLPointerEvents">
+      <summary>Gets or sets a value indicating whether the current browser supports the CSS rule `pointer-events` for HTML elements.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsMouse">
+      <summary>Gets or sets a value indicating whether the current browser supports mouse input.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsMultiTouch">
+      <summary>Gets or sets a value indicating whether the current browser supports multi-touch input.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsScroll">
+      <summary>Gets or sets a value indicating whether the current browser supports scrollbars.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsTouch">
+      <summary>Gets or sets a value indicating whether the current browser supports touch input.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsTransform">
+      <summary>Gets or sets a value indicating whether the current browser supports HTML transformation.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsTypedArray">
+      <summary>Gets or sets a value indicating whether the current browser supports HTML typed arrays.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsWebGL">
+      <summary>Gets or sets a value indicating whether the current browser supports WebGL.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.supportsWebWorker">
+      <summary>Gets or sets a value indicating whether the current browser supports HTML 5 Web Workers.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.vendor">
+      <summary>Gets or sets the current browser vendor.</summary>
+    </member>
+    <member name="F:Leadtools.LTHelper.version">
+      <summary>Gets or sets the current browser version.</summary>
+    </member>
+    <member name="T:Leadtools.LTVersion">
+      <summary>Holds properties about the version of LEADTOOLS being used.</summary>
+    </member>
+    <member name="P:Leadtools.LTVersion.file">
+      <summary>The file version as a dot-string.</summary>
+      <value>A string with version information separated by dots in the pattern `Major.Minor.Build.Revision`, like `20.0.3.11`.</value>
+    </member>
+    <member name="P:Leadtools.LTVersion.fileBuild">
+      <summary>The build file version.</summary>
+      <value>The "Build" file version in the pattern `Major.Minor.Build.Revision`, as a number.</value>
+    </member>
+    <member name="P:Leadtools.LTVersion.fileMajor">
+      <summary>The major file version.</summary>
+      <value>the "Major" file version in the pattern `Major.Minor.Build.Revision`, as a number.</value>
+    </member>
+    <member name="P:Leadtools.LTVersion.fileMinor">
+      <summary>The minor file version.</summary>
+      <value>the "Minor" file version in the pattern `Major.Minor.Build.Revision`, as a number.</value>
+    </member>
+    <member name="P:Leadtools.LTVersion.fileRevision">
+      <summary>The revision file version.</summary>
+      <value>The "Revision" file version in the pattern `Major.Minor.Build.Revision`, as a number.</value>
+    </member>
+    <member name="T:Leadtools.NotifyLeadCollectionChangedEventArgs">
+      <summary>Provides data for the [LeadCollection.CollectionChanged] event.</summary>
+    </member>
+    <member name="M:Leadtools.NotifyLeadCollectionChangedEventArgs.#ctor">
+      <summary>Initializes a new NotifyLeadCollectionChangedEventArgs object.</summary>
+    </member>
+    <member name="M:Leadtools.NotifyLeadCollectionChangedEventArgs.create">
+      <summary>Creates a new instance of NotifyLeadCollectionChangedEventArgs with the specified action.</summary>
+      <param name="action">Action to set.</param>
+      <returns>The object this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.NotifyLeadCollectionChangedEventArgs.createAdd">
+      <summary>Creates a new instance of NotifyLeadCollectionChangedEventArgs for an add operation.</summary>
+      <param name="newStartingIndex">0-based new starting index of the item(s)</param>
+      <returns>The object this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.NotifyLeadCollectionChangedEventArgs.createMove">
+      <summary>Creates a new instance of NotifyLeadCollectionChangedEventArgs for a move operation.</summary>
+      <param name="oldStartingIndex">0-based old starting index of the moved item(s)</param>
+      <param name="newStartingIndex">0-based new starting index of the moved item(s)</param>
+      <returns>The object this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.NotifyLeadCollectionChangedEventArgs.createRemove">
+      <summary>Creates a new instance of NotifyLeadCollectionChangedEventArgs for a remove operation.</summary>
+      <param name="index">0-based index of the item being removed.</param>
+      <returns>The object this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.NotifyLeadCollectionChangedEventArgs.createReplace">
+      <summary>Creates a new instance of NotifyLeadCollectionChangedEventArgs for a replace operation.</summary>
+      <param name="index">0-based index of the item being replaced.</param>
+      <returns>The object this method creates.</returns>
+    </member>
+    <member name="M:Leadtools.NotifyLeadCollectionChangedEventArgs.createReset">
+      <summary>Creates a new instance of NotifyLeadCollectionChangedEventArgs for a reset operation.</summary>
+      <returns>The object this method creates.</returns>
+    </member>
+    <member name="P:Leadtools.NotifyLeadCollectionChangedEventArgs.action">
+      <summary>Gets the action that caused the event.</summary>
+      <value>The action that caused the event.</value>
+    </member>
+    <member name="P:Leadtools.NotifyLeadCollectionChangedEventArgs.newItems">
+      <summary>Gets the list of new items involved in the change.</summary>
+      <value>An array of new items or moved items that still exist in the collection.</value>
+    </member>
+    <member name="P:Leadtools.NotifyLeadCollectionChangedEventArgs.newStartingIndex">
+      <summary>Gets the 0-based index at which the change occurred.</summary>
+      <value>The 0-based index at which new items are added or moved items now exist.</value>
+    </member>
+    <member name="P:Leadtools.NotifyLeadCollectionChangedEventArgs.oldItems">
+      <summary>Gets the list of old items involved in the change.</summary>
+      <value>A list of removed items or items that were moved but still exist in the collection.</value>
+    </member>
+    <member name="P:Leadtools.NotifyLeadCollectionChangedEventArgs.oldStartingIndex">
+      <summary>Gets the 0-based index at which a Move, Remove, or Replace action occurred.</summary>
+      <value>The 0-based index from which old items were removed or moved.</value>
+    </member>
+    <member name="T:Leadtools.RasterSupport">
+      <summary>Contains methods and properties to set the client LEADTOOLS license.</summary>
+    </member>
+    <member name="M:Leadtools.RasterSupport.isLocked">
+      <summary>Indicates whether support is locked for an optional feature, such as LEADTOOLS Document/Medical capabilities.  </summary>
+      <param name="support">Support type</param>
+      <returns>Refer to RasterSupport for more information.</returns>
+    </member>
+    <member name="M:Leadtools.RasterSupport.setLicenseBuffer">
+      <summary>Sets the runtime license for LEADTOOLS from a memory buffer and unlocks support for optional features such as LEADTOOLS Imaging Pro, Document, and Medical capabilities.  </summary>
+      <param name="licenseBuffer">Byte array containing the LEADTOOLS runtime license to set.</param>
+      <param name="developerKey">String containing the developer key.</param>
+    </member>
+    <member name="M:Leadtools.RasterSupport.setLicenseText">
+      <summary>Sets the runtime license for LEADTOOLS from a text string and unlocks support for optional features such as LEADTOOLS Imaging Pro, Document, and Medical capabilities.</summary>
+      <param name="licenseText">String containing the LEADTOOLS runtime license to set.</param>
+      <param name="developerKey">String containing the developer key.</param>
+    </member>
+    <member name="M:Leadtools.RasterSupport.setLicenseUri">
+      <summary>Sets the runtime license for LEADTOOLS from a URI and unlocks support for optional features such as LEADTOOLS Imaging Pro, Document, and Medical capabilities.</summary>
+      <param name="licenseUri">The URI to the license text. If **null**, the license file is requested from the RasterSupport.licenseDirectory.</param>
+      <param name="developerKey">String containing the developer key. If **null**, the developer key is requested from the RasterSupport.licenseDirectory.</param>
+      <param name="completed">A callback to be run once when the license check occurs. The callback receives one parameter of type SetLicenseUriResult containing the status of the operation.</param>
+    </member>
+    <member name="P:Leadtools.RasterSupport.kernelExpired">
+      <summary>Checks whether the LEADTOOLS kernel has expired.</summary>
+      <value>**true** if the LEADTOOLS kernel has expired; **false**, otherwise. The default value is **true**.</value>
+    </member>
+    <member name="P:Leadtools.RasterSupport.kernelType">
+      <summary>Gets the type of the LEADTOOLS kernel.  </summary>
+      <value>A RasterKernelType enumeration member indicating the LEADTOOLS kernel type. The default value is evaluation.</value>
+    </member>
+    <member name="F:Leadtools.RasterSupport.licenseDirectory">
+      <summary>The directory path where LEADTOOLS looks for the license file.  </summary>
+    </member>
+    <member name="F:Leadtools.RasterSupport.requestTimeout">
+      <summary>Number of milliseconds to wait while setting a license asynchronously.  </summary>
+    </member>
+    <member name="T:Leadtools.SetLicenseUriResult">
+      <summary>Result of calling RasterSupport.setLicenseUri.  </summary>
+    </member>
+    <member name="M:Leadtools.SetLicenseUriResult.#ctor">
+      <summary>Initializes a new instance of SetLicenseUriResult with the specified parameters.  </summary>
+      <param name="result">License set status.</param>
+      <param name="message">Error message if the operation was unsuccessful.</param>
+    </member>
+    <member name="F:Leadtools.SetLicenseUriResult.message">
+      <summary>Error message if the operation was unsuccessful.  </summary>
+    </member>
+    <member name="F:Leadtools.SetLicenseUriResult.result">
+      <summary>License set status.  </summary>
+    </member>
+    <member name="T:Leadtools.ImageLoaderProcessAjaxDataCallback">
+      <summary>A callback type for use with [ImageLoader.processAjaxData].</summary>
+      <param name="imageLoader">The [ImageLoader] used in the request.</param>
+      <param name="data">The binary data for the image, as a `Uint8Array` type.</param>
+      <param name="next">A callback function to be used to continue with the byte array after any changes have been made.</param>
+    </member>
+    <member name="T:Leadtools.LTRender">
+      <summary>A generic callback type with no parameters and a `void` return type.</summary>
+    </member>
+    <member name="T:Leadtools.ImageLoaderUrlMode">
+      <summary>Specifies the mode by which the image or XML will be loaded.</summary>
+    </member>
+    <member name="F:Leadtools.ImageLoaderUrlMode.ImageUrl">
+      <summary>Set the url to the `src` attribute of the workingImageElement. This is the typical way to load an HTML Image Element.</summary>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.ImageLoaderUrlMode.AjaxDataUrl">
+      <summary>Use an XMLHttpRequest (via xhr) to load the image or SVG as binary data.</summary>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.ImageLoaderUrlMode.AjaxXml">
+      <summary>Use an XMLHttpRequest (via xhr) to load the image or SVG directly.</summary>
+      <value>2</value>
+    </member>
+    <member name="T:Leadtools.LTBrowser">
+      <summary>Specifies the current browser.</summary>
+    </member>
+    <member name="F:Leadtools.LTBrowser.Unknown">
+      <summary>(0)Unknown browser.</summary>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.LTBrowser.InternetExplorer">
+      <summary></summary>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.LTBrowser.Firefox">
+      <summary></summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.LTBrowser.Chrome">
+      <summary></summary>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.LTBrowser.Safari">
+      <summary></summary>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.LTBrowser.Opera">
+      <summary></summary>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.LTBrowser.Android">
+      <summary></summary>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.LTBrowser.Edge">
+      <summary></summary>
+      <value>7</value>
+    </member>
+    <member name="T:Leadtools.LTDevice">
+      <summary>Specifies the current device.</summary>
+    </member>
+    <member name="F:Leadtools.LTDevice.Unknown">
+      <summary>(0)Unknown device.</summary>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.LTDevice.Desktop">
+      <summary></summary>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.LTDevice.Mobile">
+      <summary></summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.LTDevice.Tablet">
+      <summary></summary>
+      <value>3</value>
+    </member>
+    <member name="T:Leadtools.LTOS">
+      <summary>Specifies the current operating system.</summary>
+    </member>
+    <member name="F:Leadtools.LTOS.Unknown">
+      <summary>(0)Unknown operating system.</summary>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.LTOS.Windows">
+      <summary>(1)Generic Microsoft Windows.</summary>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.LTOS.Mac">
+      <summary>(2)Apple Mac OS X.</summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.LTOS.iOS">
+      <summary>(3)Apple iOS.</summary>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.LTOS.Android">
+      <summary></summary>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.LTOS.Linux">
+      <summary></summary>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.LTOS.Blackberry">
+      <summary>(6)Blackberry OS.</summary>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.LTOS.WebOS">
+      <summary>(7)Web OS.</summary>
+      <value>7</value>
+    </member>
+    <member name="F:Leadtools.LTOS.Windows7">
+      <summary></summary>
+      <value>8</value>
+    </member>
+    <member name="F:Leadtools.LTOS.Windows8">
+      <summary></summary>
+      <value>9</value>
+    </member>
+    <member name="F:Leadtools.LTOS.Windows10">
+      <summary></summary>
+      <value>10</value>
+    </member>
+    <member name="T:Leadtools.NotifyLeadCollectionChangedAction">
+      <summary>Describes the action that caused a CollectionChanged event.</summary>
+    </member>
+    <member name="F:Leadtools.NotifyLeadCollectionChangedAction.Add">
+      <summary>(0)One or more items were added to the collection.</summary>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.NotifyLeadCollectionChangedAction.Remove">
+      <summary>(1)One or more items were removed from the collection.</summary>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.NotifyLeadCollectionChangedAction.Replace">
+      <summary>(2)One or more items were replaced in the collection. In this case, the [NotifyLeadCollectionChangedEventArgs.OldStartingIndex] and [NotifyLeadCollectionChangedEventArgs.NewStartingIndex] will be the same.</summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.NotifyLeadCollectionChangedAction.Move">
+      <summary>(3)One or more items were moved within the collection. In this case, the [NotifyLeadCollectionChangedEventArgs.OldItems] and [NotifyLeadCollectionChangedEventArgs.NewItems] should have the same entries.</summary>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.NotifyLeadCollectionChangedAction.Reset">
+      <summary>(4)The content of the collection changed dramatically.</summary>
+      <value>4</value>
+    </member>
+    <member name="T:Leadtools.RasterKernelType">
+      <summary>Indicates the Leadtools Kernel type.  </summary>
+    </member>
+    <member name="F:Leadtools.RasterKernelType.Release">
+      <summary>Kernel is a Release build.</summary>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.RasterKernelType.Evaluation">
+      <summary>Kernel is an Evaluation build, and will expire at some point in the future. Kernel will also display an evaluation message box during execution.</summary>
+      <value>1</value>
+    </member>
+    <member name="T:Leadtools.RasterSupportType">
+      <summary>Indicates the optional LEADTOOLS feature to check.  </summary>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Document">
+      <summary>Support for LEADTOOLS Document features (ABC, ABIC, JPEG 2000, JBIG2, NITF, CMW, Document Cleanup, Annotations, JPIP and more). Also includes support for 12 bit grayscale, 16-bit grayscale, 48-bit color and 64-bit images. A LEADTOOLS Document license is required.</summary>
+      <value>0</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Barcodes1D">
+      <summary>Support for reading and writing Linear bar codes. This is available in the LEADTOOLS Barcode 1D Module.</summary>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Barcodes2D">
+      <summary>Support for reading and writing 2D bar codes. This is available in the LEADTOOLS Barcode 2D Module.</summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.RasterPdfRead">
+      <summary>Support for loading PDF, PS and EPS file formats as raster images. Available in selected LEADTOOLS products. If this support is locked, the PDF, PS and EPS files will not be loaded.</summary>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.RasterPdfSave">
+      <summary>Support for saving raster images as a PDF file. Available in selected LEADTOOLS products. Includes support for MRC PDF compression and JBIG2 support.</summary>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.PdfAdvanced">
+      <summary>Support for advanced PDF features.</summary>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Jbig2">
+      <summary>Support for the JBIG2 file format.</summary>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.OcrLEAD">
+      <summary>Support for the OCR features provided by the LEADTOOLS OCR Module - LEAD Engine. OCR add-on to Document and Medical Imaging toolkits.</summary>
+      <value>7</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.OcrPlus">
+      <summary>(Deprecated) Support for the OCR features provided by the OCR Plus engine. OCR add-on to Document and Medical Imaging toolkits.</summary>
+      <value>8</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.OcrLEADPdfOutput">
+      <summary>Support for saving OCR results from the LEADTOOLS OCR Module - LEAD Engine as a PDF file. This license is in addition to the cost of the OCR Plugin or Document Imaging.</summary>
+      <value>12</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.OcrPlusPdfOutput">
+      <summary>(Deprecated) Support for saving OCR results from the OCR Plus engine as a PDF file. This license is in addition to the cost of the OCR Plugin or Document Imaging.</summary>
+      <value>13</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Omr">
+      <summary>Support for the LEADTOOLS OMR Module. This supports the recognition of check boxes. Available in selected LEADTOOLS products.</summary>
+      <value>16</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.IcrPlus">
+      <summary>(Deprecated) Support for the ICR Module within the OCR Plus engine. This supports the recognition of handwritten text. Available in selected LEADTOOLS products</summary>
+      <value>17</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.DocumentWriters">
+      <summary>Support for LEADTOOLS Document Writer functionality.</summary>
+      <value>19</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.DocumentWritersPdf">
+      <summary>Support for PDF output when using the LEADTOOLS Document Writer functionality.</summary>
+      <value>20</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.PrintDriver">
+      <summary>Support for LEADTOOLS Virtual Printer Driver functionality.</summary>
+      <value>21</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.PrintDriverServer">
+      <summary>Support for LEADTOOLS Virtual Printer Driver functionality on Windows Server.</summary>
+      <value>22</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.PrintDriverNetwork">
+      <summary>Support for LEADTOOLS Virtual Network Printer Driver functionality.</summary>
+      <value>23</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Forms">
+      <summary>Support for Forms Recognition and Processing functionality. Available in selected LEADTOOLS products.</summary>
+      <value>24</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.MediaWriter">
+      <summary>Support for Data DVD Writing. Available in selected LEADTOOLS products.</summary>
+      <value>25</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Medical">
+      <summary>Support for the DICOM file format, document, and all medical features excluding DICOM Communication. Also includes support for 12 bit grayscale, 16-bit grayscale, 48-bit color and 64-bit images.</summary>
+      <value>26</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Medical3d">
+      <summary>Support for Medical 3D features.</summary>
+      <value>27</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.DicomCommunication">
+      <summary>Support for everything unlocked by Medical, plus support for DICOM Network Communication.</summary>
+      <value>28</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Vector">
+      <summary>Support for the Vector Features and Vector file formats. Available in selected LEADTOOLS products.</summary>
+      <value>30</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Cloud">
+      <summary>Support for LEADTOOLS Cloud SDK.</summary>
+      <value>31</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.AppStore">
+      <summary>Support for using LEADTOOLS in an App Store application (Windows Store, Apple Store, Android Store). A LEADTOOLS App Store license is required.</summary>
+      <value>32</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Basic">
+      <summary>Support for LEADTOOLS Basic features.</summary>
+      <value>33</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Hl7">
+      <summary>Support for the Medical HL7 features.</summary>
+      <value>34</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.MultimediaMediaStreaming">
+      <summary>Support for the Multimedia Streaming features.</summary>
+      <value>35</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Multimedia">
+      <summary>Support for the Multimedia features.</summary>
+      <value>37</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.MultimediaVideoStreaming">
+      <summary>Support for the Multimedia Video Streaming features.</summary>
+      <value>38</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.MultimediaMpeg2Transport">
+      <summary>Support for the MPEG2 Transport features.</summary>
+      <value>39</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Annotations">
+      <summary>Support for the Annotations features.</summary>
+      <value>40</value>
+    </member>
+    <member name="F:Leadtools.RasterSupportType.Svg">
+      <summary>Support for the SVG features.</summary>
+      <value>41</value>
+    </member>
+    <member name="T:Leadtools.RasterViewPerspective">
+      <summary>Indicates the view perspective of the image data.</summary>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.TopLeft">
+      <summary>Top-left of image is first in memory.</summary>
+      <value>1</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.BottomLeft180">
+      <summary>Same as TopLeft, which is BottomLeft rotated clockwise by 180 degrees.</summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.TopRight">
+      <summary>First row is the right side, first column is top side.</summary>
+      <value>2</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.BottomRight">
+      <summary>First row is the right side, first column is the bottom side.</summary>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.TopLeft180">
+      <summary>Same as BottomRight, which is TopLeft rotated clockwise by 180 degrees.</summary>
+      <value>3</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.BottomLeft">
+      <summary>Bottom-left of image is first in memory.</summary>
+      <value>4</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.BottomLeft90">
+      <summary>Same as LeftTop, which is BottomLeft rotated clockwise by 90 degrees.</summary>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.LeftTop">
+      <summary>First row is the left side, first column is the top side.</summary>
+      <value>5</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.RightTop">
+      <summary>First row is the right side, first column is top side.</summary>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.TopLeft90">
+      <summary>Same as RightTop, which is TopLeft rotated clockwise by 90 degrees.</summary>
+      <value>6</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.BottomLeft270">
+      <summary>Same as RightBottom, which is BottomLeft rotated clockwise by 270 degrees.</summary>
+      <value>7</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.RightBottom">
+      <summary>First row is the right side, first column is the bottom side.</summary>
+      <value>7</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.LeftBottom">
+      <summary>First row is the left side, first column is top side.</summary>
+      <value>8</value>
+    </member>
+    <member name="F:Leadtools.RasterViewPerspective.TopLeft270">
+      <summary>Same as LeftBottom, which is TopLeft rotated clockwise by 270 degrees.</summary>
+      <value>8</value>
+    </member>
+  </members>
+</doc>

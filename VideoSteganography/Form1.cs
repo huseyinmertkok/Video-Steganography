@@ -15,6 +15,9 @@ namespace VideoSteganography
     {
         VideoFile coverVideo;
         VideoFile newVideo;
+        VideoFile alreadyCoveredVideo;
+
+        Stegano stegano;
 
         public Form1()
         {
@@ -28,6 +31,7 @@ namespace VideoSteganography
             panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
             panel2.BackColor = Color.FromArgb(100, 0, 0, 0);
             panel3.BackColor = Color.FromArgb(100, 0, 0, 0);
+            stegano = new Stegano();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,10 +55,58 @@ namespace VideoSteganography
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog()
+            {
+                Multiselect = false,
+                ValidateNames = true,
+                Filter = "All Video Files|*.wmv;*.wav;*.mp3;*.mp4;*.mkv;*.avi"
+            })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    FileInfo fi = new FileInfo(ofd.FileName);
+                    alreadyCoveredVideo = new VideoFile(fi.FullName, Path.GetFileName(fi.FullName));
+                    label8.Text = Path.GetFileName(fi.FullName) + " <- Ready";
+                }
+            }
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
-            //File.Copy( Path.GetFullPath(coverVideo.getPath()), @"D:\Workspace\asp_net\test\test.mp4");
-            newVideo = new VideoFile(coverVideo.getFrameList(), coverVideo.getWidth(), coverVideo.getHeight(), coverVideo.getFilename());
+            if(coverVideo == null)
+            {
+                MessageBox.Show("Please Select Cover Video!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                newVideo = new VideoFile(coverVideo.GetFrameList(), coverVideo.GetWidth(), coverVideo.GetHeight(), coverVideo.GetFps(), coverVideo.GetBitrate(), richTextBox1.Text);
+                SaveFileDialog save = new SaveFileDialog();
+                save.DefaultExt = "mp4";
+                save.Filter = "Video File (*.mp4;)|*.mp4;";
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    FileInfo fi = new FileInfo(save.FileName);
+                    if (coverVideo.GetPath().Equals(fi.FullName))
+                    {
+                        MessageBox.Show("Please Choose a Different Path from Cover Video!", "Same Folders", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        label10.Visible = true; button4.Visible = false; button2.Visible = false;
+                        newVideo.AddSoundtoTheVideo(coverVideo, fi.FullName);
+                        label10.Visible = false; button4.Visible = true;button2.Visible = true;
+                    }
+                }
+            } 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Text = Stegano.UncoverMessageFromFrames(alreadyCoveredVideo.GetFrameList(), alreadyCoveredVideo.GetWidth(), alreadyCoveredVideo.GetHeight());
+            //Bitmap bitmap = new Bitmap(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + @"\META_DATA\images\2.bmp");
+            //richTextBox2.Text = Stegano.UncoverMessageFromImage(bitmap);
         }
     }
 }
