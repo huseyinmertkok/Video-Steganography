@@ -51,6 +51,7 @@ namespace VideoSteganography
                     FileInfo fi= new FileInfo(ofd.FileName);
                     coverVideo = new VideoFile(fi.FullName, Path.GetFileName(fi.FullName));
                     label7.Text = Path.GetFileName(fi.FullName) + " <- Ready";
+                    VideoFile.ExtractAudio(coverVideo);
                 }
             }
         }
@@ -81,22 +82,30 @@ namespace VideoSteganography
             }
             else
             {
-                newVideo = new VideoFile(coverVideo.GetFrameList(), coverVideo.GetWidth(), coverVideo.GetHeight(), coverVideo.GetFps(), coverVideo.GetBitrate(), richTextBox1.Text);
+                //newVideo = new VideoFile(coverVideo.GetFrameList(), coverVideo.GetWidth(), coverVideo.GetHeight(), coverVideo.GetFps(), coverVideo.GetBitrate(), richTextBox1.Text);
                 SaveFileDialog save = new SaveFileDialog();
-                save.DefaultExt = "mp4";
-                save.Filter = "Video File (*.mp4;)|*.mp4;";
+                save.DefaultExt = "avi";
+                save.Filter = "Avi File (*.avi;)|*.avi;";
                 if (save.ShowDialog() == DialogResult.OK)
                 {
                     FileInfo fi = new FileInfo(save.FileName);
                     if (coverVideo.GetPath().Equals(fi.FullName))
                     {
-                        MessageBox.Show("Please Choose a Different Path from Cover Video!", "Same Folders", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please Choose a Different Path from Cover Video!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        label10.Visible = true; button4.Visible = false; button2.Visible = false;
-                        newVideo.AddSoundtoTheVideo(coverVideo, fi.FullName);
-                        label10.Visible = false; button4.Visible = true;button2.Visible = true;
+                        if(richTextBox1.Text.Length <= 255 + 255 * 256)
+                        {
+                            label10.Visible = true; button4.Visible = false; button2.Visible = false;
+                            newVideo = new VideoFile(fi.FullName, coverVideo.GetFrameList(), coverVideo.GetWidth(), coverVideo.GetHeight(), coverVideo.GetFps(), coverVideo.GetBitrate(), richTextBox1.Text);
+                            label10.Visible = false; button4.Visible = true; button2.Visible = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Message Too Long!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        
                     }
                 }
             } 
@@ -104,9 +113,14 @@ namespace VideoSteganography
 
         private void button5_Click(object sender, EventArgs e)
         {
-            richTextBox2.Text = Stegano.UncoverMessageFromFrames(alreadyCoveredVideo.GetFrameList(), alreadyCoveredVideo.GetWidth(), alreadyCoveredVideo.GetHeight());
-            //Bitmap bitmap = new Bitmap(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + @"\META_DATA\images\2.bmp");
-            //richTextBox2.Text = Stegano.UncoverMessageFromImage(bitmap);
+            if(alreadyCoveredVideo == null)
+            {
+                MessageBox.Show("Please Select Video!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                richTextBox2.Text = Stegano.UncoverMessageFromFrames(alreadyCoveredVideo.GetFrameList(), alreadyCoveredVideo.GetWidth(), alreadyCoveredVideo.GetHeight());
+            }
         }
     }
 }

@@ -71,3 +71,17 @@ D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\SixLabors.I
 D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\System.Text.Encoding.CodePages.dll
 D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\SixLabors.ImageSharp.xml
 D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\System.Text.Encoding.CodePages.xml
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\Microsoft.Win32.Registry.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\NAudio.Asio.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\NAudio.Core.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\NAudio.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\NAudio.Midi.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\NAudio.Wasapi.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\NAudio.WinForms.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\NAudio.WinMM.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\System.Security.AccessControl.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\System.Security.Principal.Windows.dll
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\Microsoft.Win32.Registry.xml
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\NAudio.xml
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\System.Security.AccessControl.xml
+D:\Workspace\asp_net\VideoSteganography\VideoSteganography\bin\Debug\System.Security.Principal.Windows.xml

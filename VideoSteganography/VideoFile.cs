@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using Accord.Video.FFMPEG;
 using FFMpegSharp;
 using FFMpegSharp.FFMPEG;
+using AviFile;
+using NAudio.Wave;
 
 namespace VideoSteganography
 {
@@ -23,9 +25,7 @@ namespace VideoSteganography
         VideoFileReader reader;
         VideoFileWriter writer;
 
-        private List<Bitmap> FrameList;
-
-        
+        private List<Bitmap> FrameList;        
 
         public VideoFile(string path, string filename)
         {
@@ -41,9 +41,9 @@ namespace VideoSteganography
             FrameList = GetVideoFrames(FrameCount);
         }
 
-        public VideoFile(List<Bitmap> frames, int width, int height, double fps, int bitrate, string message)
+        public VideoFile(string path, List<Bitmap> frames, int width, int height, double fps, int bitrate, string message)
         {
-            Path = System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + @"\META_DATA\test.mp4";
+            Path = path;
             this.FrameCount = frames.Count();
             this.width = width;
             this.height = height;
@@ -58,14 +58,10 @@ namespace VideoSteganography
             frames = Stegano.HideTextToFrames(frames, message, width, height);
             FrameList = frames;
 
-            int i = 0;
-            foreach (Bitmap frame in frames)
-            {
-                frame.Save(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + @"\META_DATA\images\"+ i + ".bmp");
-                i++;
-            }
+            CreateVideoFromFrames();
 
-            FramesToVideo(FrameList);
+            MessageBox.Show("The video is ready in " + Path, "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         public List<Bitmap> GetFrameList()
@@ -121,46 +117,61 @@ namespace VideoSteganography
             return frames;
         }
 
-        public void FramesToVideo(List<Bitmap> frames)
+        public void CreateVideoFromFrames()
         {
-            using (FileStream fs = File.Create(Path))
-                writer = new VideoFileWriter();
-            writer.Open(Path, width, height, (int)fps, VideoCodec.MPEG4, bitrate);
-
-            for (int i = 0; i < FrameCount; i++)
+            
+            if (File.Exists(Path))
             {
-                writer.WriteVideoFrame(frames[i]);
+                File.Delete(Path);
+            }
+            
+            AviManager aviManager = new AviManager(Path, false);
+            VideoStream vstream = aviManager.AddVideoStream(false, (int) fps, FrameList[0]);
+
+            vstream.GetFrameOpen();
+            for (int i = 1; i < FrameList.Count; i++)
+            {
+                vstream.AddFrame(FrameList[i]);
             }
 
-            writer.Close();
+            var audioDir = System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + @"\META_DATA\audio.wav";
+            aviManager.AddAudioStream(audioDir, 0);
+
+            aviManager.Close();
+            vstream.GetFrameClose();
+
         }
 
 
-        public void AddSoundtoTheVideo(VideoFile audioVideo, String output)
+        public static void ExtractAudio(VideoFile audioVideo)
         {
             var audioDir = System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + @"\META_DATA\audio.mp3";
-            var newVideoDir = output;
 
             if (File.Exists(audioDir))
             {
                 File.Delete(audioDir);
-            }
-            if (File.Exists(newVideoDir))
-            {
-                File.Delete(newVideoDir);
             }
 
             new FFMpeg().ExtractAudio(
                 VideoInfo.FromPath(audioVideo.GetPath()),
                 new FileInfo(audioDir));
 
-            new FFMpeg().ReplaceAudio(VideoInfo.FromPath(this.Path),
-                new FileInfo(audioDir),
-                new FileInfo(newVideoDir));
-            File.Delete(audioDir);
-            File.Delete(this.Path);
+            var newAudioDir = System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + @"\META_DATA\audio.wav";
 
-            MessageBox.Show("Process is over!\n The location of your video: " + newVideoDir, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (File.Exists(newAudioDir))
+            {
+                File.Delete(newAudioDir);
+            }
+
+            using (Mp3FileReader mp3 = new Mp3FileReader(audioDir))
+            {
+                using (WaveStream pcm = WaveFormatConversionStream.CreatePcmStream(mp3))
+                {
+                    WaveFileWriter.CreateWaveFile(newAudioDir, pcm);
+                }
+            }
+
+            File.Delete(audioDir);
         }
 
     }

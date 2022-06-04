@@ -10,11 +10,6 @@ namespace VideoSteganography
     internal class Stegano
     {
 
-        public Stegano() 
-        { 
-        }
-
-
         public static List<Bitmap> HideTextToFrames(List<Bitmap> frames, string message, int width, int height)
         {
             List<Bitmap> tempFrames = frames;
@@ -23,33 +18,27 @@ namespace VideoSteganography
             string binaryCharIndex = "";
             int x = width - 3;
             int y = height - 1;
-            int R = 0; int G = 0; int B = 0;
 
 
             //First Frame Settings
             newColor = Color.FromArgb(0, 0, 0);
             pixel = tempFrames[0].GetPixel(x, y);
-            string binMessageLength = IntegerToBinary(message.Length);
-            R = pixel.R; G = pixel.G; B = pixel.B;
-            string binR = IntegerToBinary(R);
-            string binG = IntegerToBinary(G);
-            string binB = IntegerToBinary(B);
 
-            binR = binR.Remove(binR.Length - 2);
-            binR = binR + binMessageLength[0] + binMessageLength[1];
-
-            binG = binG.Remove(binG.Length - 3);
-            binG = binG + binMessageLength[2] + binMessageLength[3] + binMessageLength[4];
-
-            binB = binB.Remove(binB.Length - 3);
-            binB = binB + binMessageLength[5] + binMessageLength[6] + binMessageLength[7];
-
-            R = BinaryToInteger(binR); G = BinaryToInteger(binG); B = BinaryToInteger(binB);
+            int R = pixel.R;
+            int G;
+            int B;
+            
+            B = message.Length % 256;
+            G = message.Length / 256;
+            
 
             newColor = Color.FromArgb(R, G, B);
             tempFrames[0].SetPixel(x, y, newColor);
             //End of First Frame Settings
 
+            string binR = "";
+            string binG = "";
+            string binB = "";
             int frameCounter = 1;
             int messageCounter = 0;
             while (true)
@@ -104,21 +93,6 @@ namespace VideoSteganography
             return tempFrames;
         }
 
-        public static string UncoverMessageFromImage(Bitmap frame)
-        {
-            var message = "";
-            Color pixel;
-            int R, G, B;
-            pixel = frame.GetPixel(frame.Width - 3, frame.Height - 1);
-            R = pixel.R; G = pixel.G; B = pixel.B;
-            string binR = IntegerToBinary(R);
-            string binG = IntegerToBinary(G);
-            string binB = IntegerToBinary(B);
-            string binLetter = binR[6].ToString() + binR[7] + binG[5] + binG[6] + binG[7] + binB[5] + binB[6] + binB[7];
-            message += Convert.ToChar(BinaryToInteger(binLetter));
-            return message;
-        }
-
         public static string UncoverMessageFromFrames(List<Bitmap> frames, int width, int height)
         {
             string message = "";
@@ -131,11 +105,12 @@ namespace VideoSteganography
             pixel = tempFrames[0].GetPixel(x, y);
             
             R = pixel.R; G = pixel.G; B = pixel.B;
-            string binR = IntegerToBinary(R);
-            string binG = IntegerToBinary(G);
-            string binB = IntegerToBinary(B);
-            string binMessageLength =  "" + binR[6] + binR[7] + binG[5] + binG[6] + binG[7] + binB[5] + binB[6] + binB[7];
-            int messageLength = BinaryToInteger(binMessageLength);
+
+            int messageLength = B + G * 256;
+
+            string binR = "";
+            string binG = "";
+            string binB = "";
 
             int frameCounter = 1;
             int messageCounter = 0;
