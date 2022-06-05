@@ -16,15 +16,15 @@
 <h2>UI</h2>
 • The first screen when user runs the code.<br />
 <p align="center">
-  <img src="./photos/afterHide.png" title="UI">
+  <img src="./photos/firstLook.png" title="UI">
 </p>
 
 <h2>During Hide Process</h2>
 <p align="center">
-  <img src="./photos/afterUnhide.png" title="UI2">
+  <img src="./photos/afterHide.png" title="UI2">
 </p>
 
 <h2>After Unhide</h2>
 <p align="center">
-  <img src="./photos/firstLook.png" title="UI3">
+  <img src="./photos/afterUnhide.png" title="UI3">
 </p>
