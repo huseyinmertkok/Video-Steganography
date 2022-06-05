@@ -1,8 +1,13 @@
 <h1 align="center">Video-Steganography</h1>
 •This code allows user to hide text with up to 65.535 letters (including spaces).<br />
 •The code also allows user to reveal the text from videos.<br />
-•The G and B values of the last pixel of the first frame holds the lenght of the text. It's calculated as;<br />
-•B.value + G.value * 256;<br />
+•The G and B values of the last pixel of the first frame holds the lenght of the text.<br />
+It's calculated as;<br />
+
+<p align="center">
+  <b>B.value + G.value * 256</b><br>
+</p>
+
 •It's the reason why maximum text capacity is 65.553.<br />
 
 <h2>Dependencies</h2>
