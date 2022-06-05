@@ -139,6 +139,7 @@ namespace VideoSteganography
 
             aviManager.Close();
             vstream.GetFrameClose();
+            File.Delete(audioDir);
 
         }
 

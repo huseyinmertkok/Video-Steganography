@@ -86,6 +86,7 @@ namespace VideoSteganography
                 SaveFileDialog save = new SaveFileDialog();
                 save.DefaultExt = "avi";
                 save.Filter = "Avi File (*.avi;)|*.avi;";
+                label10.Visible = true; button4.Visible = false; button2.Visible = false;
                 if (save.ShowDialog() == DialogResult.OK)
                 {
                     FileInfo fi = new FileInfo(save.FileName);
@@ -97,9 +98,7 @@ namespace VideoSteganography
                     {
                         if(richTextBox1.Text.Length <= 255 + 255 * 256)
                         {
-                            label10.Visible = true; button4.Visible = false; button2.Visible = false;
                             newVideo = new VideoFile(fi.FullName, coverVideo.GetFrameList(), coverVideo.GetWidth(), coverVideo.GetHeight(), coverVideo.GetFps(), coverVideo.GetBitrate(), richTextBox1.Text);
-                            label10.Visible = false; button4.Visible = true; button2.Visible = true;
                         }
                         else
                         {
@@ -108,6 +107,7 @@ namespace VideoSteganography
                         
                     }
                 }
+                label10.Visible = false; button4.Visible = true; button2.Visible = true;
             } 
         }
 
